@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "4d34c72a-35dc-43cd-b83a-2f6322c49fb8",
+		"name": "test da-training-api-gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "7c2fe0d6-ec17-431b-b42d-f79f663d0e11",
+			"name": " post 405 para https://console.aws.amazon.com/apigateway/api/apigateway",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "11843b8e-9898-4573-9146-e753bcdaa090",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://console.aws.amazon.com"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "%5B%7B%22token%22%3A%22YoCcLZ0p8Ar%2B6KqKdi0MotfGZuUFQYkwgR5pXRpMQek%3D%22%2C%22version%22%3A%22hash-v1%22%7D%5D"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "es,en;q=0.9,en-US;q=0.8"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/hal+json"
+					},
+					{
+						"key": "Referer",
+						"value": "https://console.aws.amazon.com/apigateway/home?region=us-east-1"
+					},
+					{
+						"key": "Cookie",
+						"value": "aws-creds=eyJ2IjoyLCJlIjoiRmZrY3JKWGNkeUZiY2xnU2IxODBUWFRBWjRiOWFYVkh6MFBZazRrNSUyQkVF%0AalIlMkJHRXFweWpNRmFmVnJUc2tWbmkxMjVaSExYTjVGU2olMEFwVDY0NyUyRkpLeEFpa1R4cldu%0AZGFxZ1JEMHU5SmJ5YiUyQkd4d0Q1bkxuRjUxcnR2aHhNRDNtSGVGUU1JYmo3T25VZ1Z3VkhuSGpj%0AaEJhciUwQU1UY3ZaaUI4Yzc1aWZNbThCbHhkZTNHJTJGZ0Y4Y1AzWHQyT1hRamh6Q200N0c1VDFR%0Ad29GbFdvNHRkeWlNVEpMbUtHdUppUWQ0MTQ0UCUwQXg3MFhIJTJCTUtxdmFBUTUwREgwTEZIdEFO%0AUm5icHhjcXklMkJISmhyaHI4bGhZaElMTldTSlpiV3MxalUwY1FLQlR5UVlqMXMwemxkMDZHJTBB%0AYlp3VW1kMnF1VFg0c1hNc0olMkZnOW5XMjFPVlN3WVZZa3N2enZhQWhyc2pXWDZ4UEk4ajZpYUpy%0AZzQ3UVU3R2NlakduSzV1TTlrdUhpJTBBZ0M5JTJGMlolMkZ3MXFuUWU5TnA2VHhGYm41TEhET0Il%0AMkJCZkM1NmNMOFVBaTVOJTJCdyUyRkNYUXc1YjQ2N0RWMTZyQjRNZGtabUlCb1hKUXA1UWElMEFn%0AdnJna0pmTUk2a2F5UWZLREE3SFNaRkVDd3FEMWR5SlYxbm5KbmpoNkdDM3pwWUI2d2RYclBmVzM4%0ASWp6M0tCNkdPMnB2UVBhelo5JTBBQVZHdUc2YlhOMkY5OVY5dFZ3YmEzTGNpV1lFJTJCRkJybzVy%0AcnFHd2JLNm1CM051dTc0RHFjRUpJWTlXYzBDakM5WGx0d2lZMnN3SVJ3JTBBcmVYWEVVaFBBOENE%0AWVlMSnZzYzAydHVGS0loUmJEaDc2Q3V6MDYzTTVQUHkzSkl0dEF5UVBNN29LM0N6WWJ6RDRVaE8w%0AUCUyQjVLNDBBJTBBcW52VFh6eEszc2lCa1RnM04lMkJkME9qdUY5M3NKTGh3bzVZdnBjRXhabGtK%0AdDFkbG1oakVOU1RLTXhmc2NFZEdZa3BLMjA1T1B1QUhxJTBBVzRacWVyTzEzT29MNkUzc3VvWG5C%0AVnc2b3F0dmN1OE5sZUxFOUdpVXJCd0J4S1kxTDFsUSUyRjA2bGo5RjFFNHh5SllFY1hzUTRhUGRE%0AJTBBJTJCQTF6NFRhaCUyRjFEUnZEdWFaR1p0QjlGbUtDUndXeVRYNXZSUTM0Qks0dzQ0SWJHanoz%0AeiUyQlFrVmlMQTNUQkNaWkg2S3NaR1NFZ0QyMSUwQWl6ZXg0dyUyRjh6emUlMkZZajJZNjdhYVlO%0ATlhPOEV1UVFmcXZsJTJCcVhCU0FtWXczazFUTzVFMHI0dEhGSEVJWW5DUFBnNGxURkJlT09nN3Al%0AMEFINTZWRlg4a0ZJcE1Wc1dxVlZEQlI5YU4wQXV2dGFsZG9RajZOOGdmQndWSnJCTGJKVnc2SGt1%0AV1NsZkplSGRsMzhyRVdkWkppVHhxJTBBU2FPODYlMkJaclRDdXgwbDhBV2twUWNyUUc5a212R3F2%0AZFRsTTQ5R2QlMkZWbnBEYnpTcVBWZEZMbG9wNEFkUlJmdk95V0R0dDhnJTJCdVZkTiUwQVFOYklL%0AMUNvZ2dsN0ZEdjk3UnZFOWNDYSUyRkJxaFNyRlh1czJ2dTR2ODhKZ3o3bFFseGxGNWN0JTJGWEFj%0AQXFLbjhCUDZ6TVEzNG1uJTJGeTYlMEElMkJBMyUyRjlxRjE0NmhRTEFBUjM2UGsyUlE3QjhQJTJC%0Ab2RxcDhqNzVwNGJmV3NhR0FxZ28lMkIxJTJCelBybjRjSzB4b3NGeHlya2wyMXhoU3klMkZ6JTBB%0Ackk3N2JNNVZxaVpVVTV4blIlMkJXOHlXbHRzYnF3Nkc5dnRkcDd2SjlqRmIlMkJlMjF1MTdRVmZx%0AVU5XV0FWUHlYRmlKMVFrQTVlUDM5d2ElMEFXeUdiV1NINTZyWkFNTkIlMkZRaVprS1RsRDZReGlu%0AcEhWNjdrR3FydiUyQmZYVWk0RzMwM3VKQlJwb0dTQzVhRVhNU1NQMmZ0UU9JVDdYbiUwQWV3OGhT%0ARERZNVFPWXI1UnRBdjJnWlRsbHZoaTdTM28lMkZDTSUyRkJHVXFVV0FMb3RpVFNEU0tGMTRjcUo5%0AckVNU0NhdHY2Nmc4TXVxWkpTJTBBUUo5QWs5MFI5aExkRmRXc2hzNXdnNEpBdmN0M09IbXVEUzBq%0AeGJyaWRtMnpXOEs4WEVSWlZDQkN5aCUyRmE2JTJGZjNxOWdMc1lNYkpIMGklMEFUeEk0ODNGNGcx%0AaG15c1FQeXZtcEdQdmZGUm02JTJGVVNpbGNCODhrZVMlMkJnamEyU1Vkb05MVXRicnEiLCJhIjow%0ALCJrIjozOH0%3D; awsc-authTimer=%7B%22start%22%3A%221559769932891%22%2C%22signinStart%22%3A%221559769933203%22%2C%22freshAuth%22%3A%22false%22%2C%22adStart%22%3A%221559769935843%22%2C%22stop%22%3A%221559769935874%22%7D; session-id=143-7041241-7690366; session-id-time=2082787201l; i18n-prefs=USD; sp-cdn=\"L5Z9:AR\"; ubid-main=134-8464474-0867216; x-wl-uid=19ZnKfZkkIsK+9bzDQ1bNjUPYod/GBdaawc33pUYaV+61R12GH5n3d+Cxw40naWyN70EzXqj9WL4=; aws-priv=eyJ2IjoxLCJldSI6MCwic3QiOjB9; aws-target-static-id=1557859699635-37184; aws-target-data=%7B%22support%22%3A%221%22%7D; s_fid=0BA08D9AEA6BCF0A-03A071A0CF1F5163; _mkto_trk=id:112-TZM-766&token:_mch-aws.amazon.com-1557859701156-71358; lc-main=en_US; aws-ubid-main=552-3402004-0166124; aws-account-data=%7B%22marketplaceGroup%22%3A%22AWS%22%7D; noflush_Region=us-east-1; session-token=\"8Mk+syKKAlgYV2rTAZPylbgqReVosCp8oIXrF6LfeM5NU8bBjsyfpOj0bULyhxOoUPp5NGC9B31cGsohE+G8b3WwOFSK1BVMqBy+P5gQBiOmRey4eDFohj3h9NbClUaHOqHuiPpbQH0+zdTQdWauvau21TYM6lAI3CgEYvb0H2qKzAvSioL6NJGaqXUAPYr9N0oWOGWJjkWPzkDyEuWYwQ==\"; s_cc=true; aws-mkto-trk=id%3A112-TZM-766%26token%3A_mch-aws.amazon.com-1557859701156-71358; aws_lang=es; c_m=undefinedwww.google.comSearch%20Engine; aws-reg-aid=843223046275; aws-reg-guid=f09cf60c07712e9cc5215dcd751777822fe309a03bab3ff36d19edbcb14bc6c2; aws-business-metrics-last-visit=1559745529931; aws-userInfo=%7B%22arn%22%3A%22arn%3Aaws%3Aiam%3A%3A843223046275%3Aroot%22%2C%22alias%22%3A%22%22%2C%22username%22%3A%22juanpabloGlobant%22%2C%22keybase%22%3A%22hEJCcDLnjzTK%2Babbc0ZH1xdK1J6ORCM3a06eOyD%2B%2Brg%5Cu003d%22%2C%22issuer%22%3A%22http%3A%2F%2Fsignin.aws.amazon.com%2Fsignin%22%7D; awsc-actm=1559745570; s_sq=%5B%5BB%5D%5D; aws-target-visitor-id=1557859699639-391712.17_36; regStatus=registered; s_vn=1589395700292%26vn%3D24; s_dslv=1559763385024; s_nr=1559763385026-Repeat; JSESSIONID=3997886E3C3DEDF2926BD834D4851FA4; seance=%7B%22accountId%22%3A%22843223046275%22%2C%22iam%22%3Afalse%2C%22services%22%3A%5B%22AWSLambda%22%2C%22AmazonApiGateway%22%2C%22AmazonEC2%22%2C%22cloudwatch%22%2C%22lambda%22%5D%2C%22status%22%3A%22ACTIVE%22%2C%22exp%22%3A0%7D; noflush_awscnm=%7B%22hist%22%3A%5B%22iam%22%2C%22b%22%2C%22home%22%2C%22cw%22%2C%22lam%22%2C%22ag%22%5D%2C%22sc%22%3A%5B%5D%2C%22tm%22%3A%22tm-both%22%2C%22ea%22%3Atrue%7D"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"path\":\"/restapis/pmz9vo2uwe/resources/3fpjk4f6nf/methods/POST\",\"method\":\"POST\",\"contentString\":\"{\\\"pathWithQueryString\\\":\\\"/\\\",\\\"headers\\\":{},\\\"multiValueHeaders\\\":{},\\\"stageVariables\\\":{},\\\"withAuthorization\\\":false}\",\"region\":\"us-east-1\",\"headers\":{\"Accept\":\"application/hal+json\",\"X-CSRF-TOKEN\":\"%5B%7B%22token%22%3A%22YoCcLZ0p8Ar%2B6KqKdi0MotfGZuUFQYkwgR5pXRpMQek%3D%22%2C%22version%22%3A%22hash-v1%22%7D%5D\",\"Content-Type\":\"application/json\"},\"params\":{},\"operation\":\"angular-legacy\"}"
+				},
+				"url": {
+					"raw": "https://console.aws.amazon.com/apigateway/api/apigateway",
+					"protocol": "https",
+					"host": [
+						"console",
+						"aws",
+						"amazon",
+						"com"
+					],
+					"path": [
+						"apigateway",
+						"api",
+						"apigateway"
+					]
+				},
+				"description": "Generated from a curl request: \ncurl 'https://console.aws.amazon.com/apigateway/api/apigateway' -H 'Origin: https://console.aws.amazon.com' -H 'Accept-Encoding: gzip, deflate, br' -H 'X-CSRF-TOKEN: %5B%7B%22token%22%3A%22YoCcLZ0p8Ar%2B6KqKdi0MotfGZuUFQYkwgR5pXRpMQek%3D%22%2C%22version%22%3A%22hash-v1%22%7D%5D' -H 'Accept-Language: es,en;q=0.9,en-US;q=0.8' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36' -H 'Content-Type: application/json' -H 'Accept: application/hal+json' -H 'Referer: https://console.aws.amazon.com/apigateway/home?region=us-east-1' -H 'Cookie: aws-creds=eyJ2IjoyLCJlIjoiRmZrY3JKWGNkeUZiY2xnU2IxODBUWFRBWjRiOWFYVkh6MFBZazRrNSUyQkVF%0AalIlMkJHRXFweWpNRmFmVnJUc2tWbmkxMjVaSExYTjVGU2olMEFwVDY0NyUyRkpLeEFpa1R4cldu%0AZGFxZ1JEMHU5SmJ5YiUyQkd4d0Q1bkxuRjUxcnR2aHhNRDNtSGVGUU1JYmo3T25VZ1Z3VkhuSGpj%0AaEJhciUwQU1UY3ZaaUI4Yzc1aWZNbThCbHhkZTNHJTJGZ0Y4Y1AzWHQyT1hRamh6Q200N0c1VDFR%0Ad29GbFdvNHRkeWlNVEpMbUtHdUppUWQ0MTQ0UCUwQXg3MFhIJTJCTUtxdmFBUTUwREgwTEZIdEFO%0AUm5icHhjcXklMkJISmhyaHI4bGhZaElMTldTSlpiV3MxalUwY1FLQlR5UVlqMXMwemxkMDZHJTBB%0AYlp3VW1kMnF1VFg0c1hNc0olMkZnOW5XMjFPVlN3WVZZa3N2enZhQWhyc2pXWDZ4UEk4ajZpYUpy%0AZzQ3UVU3R2NlakduSzV1TTlrdUhpJTBBZ0M5JTJGMlolMkZ3MXFuUWU5TnA2VHhGYm41TEhET0Il%0AMkJCZkM1NmNMOFVBaTVOJTJCdyUyRkNYUXc1YjQ2N0RWMTZyQjRNZGtabUlCb1hKUXA1UWElMEFn%0AdnJna0pmTUk2a2F5UWZLREE3SFNaRkVDd3FEMWR5SlYxbm5KbmpoNkdDM3pwWUI2d2RYclBmVzM4%0ASWp6M0tCNkdPMnB2UVBhelo5JTBBQVZHdUc2YlhOMkY5OVY5dFZ3YmEzTGNpV1lFJTJCRkJybzVy%0AcnFHd2JLNm1CM051dTc0RHFjRUpJWTlXYzBDakM5WGx0d2lZMnN3SVJ3JTBBcmVYWEVVaFBBOENE%0AWVlMSnZzYzAydHVGS0loUmJEaDc2Q3V6MDYzTTVQUHkzSkl0dEF5UVBNN29LM0N6WWJ6RDRVaE8w%0AUCUyQjVLNDBBJTBBcW52VFh6eEszc2lCa1RnM04lMkJkME9qdUY5M3NKTGh3bzVZdnBjRXhabGtK%0AdDFkbG1oakVOU1RLTXhmc2NFZEdZa3BLMjA1T1B1QUhxJTBBVzRacWVyTzEzT29MNkUzc3VvWG5C%0AVnc2b3F0dmN1OE5sZUxFOUdpVXJCd0J4S1kxTDFsUSUyRjA2bGo5RjFFNHh5SllFY1hzUTRhUGRE%0AJTBBJTJCQTF6NFRhaCUyRjFEUnZEdWFaR1p0QjlGbUtDUndXeVRYNXZSUTM0Qks0dzQ0SWJHanoz%0AeiUyQlFrVmlMQTNUQkNaWkg2S3NaR1NFZ0QyMSUwQWl6ZXg0dyUyRjh6emUlMkZZajJZNjdhYVlO%0ATlhPOEV1UVFmcXZsJTJCcVhCU0FtWXczazFUTzVFMHI0dEhGSEVJWW5DUFBnNGxURkJlT09nN3Al%0AMEFINTZWRlg4a0ZJcE1Wc1dxVlZEQlI5YU4wQXV2dGFsZG9RajZOOGdmQndWSnJCTGJKVnc2SGt1%0AV1NsZkplSGRsMzhyRVdkWkppVHhxJTBBU2FPODYlMkJaclRDdXgwbDhBV2twUWNyUUc5a212R3F2%0AZFRsTTQ5R2QlMkZWbnBEYnpTcVBWZEZMbG9wNEFkUlJmdk95V0R0dDhnJTJCdVZkTiUwQVFOYklL%0AMUNvZ2dsN0ZEdjk3UnZFOWNDYSUyRkJxaFNyRlh1czJ2dTR2ODhKZ3o3bFFseGxGNWN0JTJGWEFj%0AQXFLbjhCUDZ6TVEzNG1uJTJGeTYlMEElMkJBMyUyRjlxRjE0NmhRTEFBUjM2UGsyUlE3QjhQJTJC%0Ab2RxcDhqNzVwNGJmV3NhR0FxZ28lMkIxJTJCelBybjRjSzB4b3NGeHlya2wyMXhoU3klMkZ6JTBB%0Ackk3N2JNNVZxaVpVVTV4blIlMkJXOHlXbHRzYnF3Nkc5dnRkcDd2SjlqRmIlMkJlMjF1MTdRVmZx%0AVU5XV0FWUHlYRmlKMVFrQTVlUDM5d2ElMEFXeUdiV1NINTZyWkFNTkIlMkZRaVprS1RsRDZReGlu%0AcEhWNjdrR3FydiUyQmZYVWk0RzMwM3VKQlJwb0dTQzVhRVhNU1NQMmZ0UU9JVDdYbiUwQWV3OGhT%0ARERZNVFPWXI1UnRBdjJnWlRsbHZoaTdTM28lMkZDTSUyRkJHVXFVV0FMb3RpVFNEU0tGMTRjcUo5%0AckVNU0NhdHY2Nmc4TXVxWkpTJTBBUUo5QWs5MFI5aExkRmRXc2hzNXdnNEpBdmN0M09IbXVEUzBq%0AeGJyaWRtMnpXOEs4WEVSWlZDQkN5aCUyRmE2JTJGZjNxOWdMc1lNYkpIMGklMEFUeEk0ODNGNGcx%0AaG15c1FQeXZtcEdQdmZGUm02JTJGVVNpbGNCODhrZVMlMkJnamEyU1Vkb05MVXRicnEiLCJhIjow%0ALCJrIjozOH0%3D; awsc-authTimer=%7B%22start%22%3A%221559769932891%22%2C%22signinStart%22%3A%221559769933203%22%2C%22freshAuth%22%3A%22false%22%2C%22adStart%22%3A%221559769935843%22%2C%22stop%22%3A%221559769935874%22%7D; session-id=143-7041241-7690366; session-id-time=2082787201l; i18n-prefs=USD; sp-cdn=\\\"L5Z9:AR\\\"; ubid-main=134-8464474-0867216; x-wl-uid=19ZnKfZkkIsK+9bzDQ1bNjUPYod/GBdaawc33pUYaV+61R12GH5n3d+Cxw40naWyN70EzXqj9WL4=; aws-priv=eyJ2IjoxLCJldSI6MCwic3QiOjB9; aws-target-static-id=1557859699635-37184; aws-target-data=%7B%22support%22%3A%221%22%7D; s_fid=0BA08D9AEA6BCF0A-03A071A0CF1F5163; _mkto_trk=id:112-TZM-766&token:_mch-aws.amazon.com-1557859701156-71358; lc-main=en_US; aws-ubid-main=552-3402004-0166124; aws-account-data=%7B%22marketplaceGroup%22%3A%22AWS%22%7D; noflush_Region=us-east-1; session-token=\\\"8Mk+syKKAlgYV2rTAZPylbgqReVosCp8oIXrF6LfeM5NU8bBjsyfpOj0bULyhxOoUPp5NGC9B31cGsohE+G8b3WwOFSK1BVMqBy+P5gQBiOmRey4eDFohj3h9NbClUaHOqHuiPpbQH0+zdTQdWauvau21TYM6lAI3CgEYvb0H2qKzAvSioL6NJGaqXUAPYr9N0oWOGWJjkWPzkDyEuWYwQ==\\\"; s_cc=true; aws-mkto-trk=id%3A112-TZM-766%26token%3A_mch-aws.amazon.com-1557859701156-71358; aws_lang=es; c_m=undefinedwww.google.comSearch%20Engine; aws-reg-aid=843223046275; aws-reg-guid=f09cf60c07712e9cc5215dcd751777822fe309a03bab3ff36d19edbcb14bc6c2; aws-business-metrics-last-visit=1559745529931; aws-userInfo=%7B%22arn%22%3A%22arn%3Aaws%3Aiam%3A%3A843223046275%3Aroot%22%2C%22alias%22%3A%22%22%2C%22username%22%3A%22juanpabloGlobant%22%2C%22keybase%22%3A%22hEJCcDLnjzTK%2Babbc0ZH1xdK1J6ORCM3a06eOyD%2B%2Brg%5Cu003d%22%2C%22issuer%22%3A%22http%3A%2F%2Fsignin.aws.amazon.com%2Fsignin%22%7D; awsc-actm=1559745570; s_sq=%5B%5BB%5D%5D; aws-target-visitor-id=1557859699639-391712.17_36; regStatus=registered; s_vn=1589395700292%26vn%3D24; s_dslv=1559763385024; s_nr=1559763385026-Repeat; JSESSIONID=3997886E3C3DEDF2926BD834D4851FA4; seance=%7B%22accountId%22%3A%22843223046275%22%2C%22iam%22%3Afalse%2C%22services%22%3A%5B%22AWSLambda%22%2C%22AmazonApiGateway%22%2C%22AmazonEC2%22%2C%22cloudwatch%22%2C%22lambda%22%5D%2C%22status%22%3A%22ACTIVE%22%2C%22exp%22%3A0%7D; noflush_awscnm=%7B%22hist%22%3A%5B%22iam%22%2C%22b%22%2C%22home%22%2C%22cw%22%2C%22lam%22%2C%22ag%22%5D%2C%22sc%22%3A%5B%5D%2C%22tm%22%3A%22tm-both%22%2C%22ea%22%3Atrue%7D' -H 'Connection: keep-alive' --data-binary '{\\\"path\\\":\\\"/restapis/pmz9vo2uwe/resources/3fpjk4f6nf/methods/POST\\\",\\\"method\\\":\\\"POST\\\",\\\"contentString\\\":\\\"{\\\\\"pathWithQueryString\\\\\":\\\\\"/\\\\\",\\\\\"headers\\\\\":{},\\\\\"multiValueHeaders\\\\\":{},\\\\\"stageVariables\\\\\":{},\\\\\"withAuthorization\\\\\":false}\\\",\\\"region\\\":\\\"us-east-1\\\",\\\"headers\\\":{\\\"Accept\\\":\\\"application/hal+json\\\",\\\"X-CSRF-TOKEN\\\":\\\"%5B%7B%22token%22%3A%22YoCcLZ0p8Ar%2B6KqKdi0MotfGZuUFQYkwgR5pXRpMQek%3D%22%2C%22version%22%3A%22hash-v1%22%7D%5D\\\",\\\"Content-Type\\\":\\\"application/json\\\"},\\\"params\\\":{},\\\"operation\\\":\\\"angular-legacy\\\"}' --compressed"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "573438f0-f511-47b9-9b6e-b1daae4afab5",
+			"name": " post para https://console.aws.amazon.com/apigateway/api/apigateway Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://console.aws.amazon.com"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "%5B%7B%22token%22%3A%22YoCcLZ0p8Ar%2B6KqKdi0MotfGZuUFQYkwgR5pXRpMQek%3D%22%2C%22version%22%3A%22hash-v1%22%7D%5D"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "es,en;q=0.9,en-US;q=0.8"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/hal+json"
+					},
+					{
+						"key": "Referer",
+						"value": "https://console.aws.amazon.com/apigateway/home?region=us-east-1"
+					},
+					{
+						"key": "Cookie",
+						"value": "aws-creds=eyJ2IjoyLCJlIjoiRmZrY3JKWGNkeUZiY2xnU2IxODBUWFRBWjRiOWFYVkh6MFBZazRrNSUyQkVF%0AalIlMkJHRXFweWpNRmFmVnJUc2tWbmkxMjVaSExYTjVGU2olMEFwVDY0NyUyRkpLeEFpa1R4cldu%0AZGFxZ1JEMHU5SmJ5YiUyQkd4d0Q1bkxuRjUxcnR2aHhNRDNtSGVGUU1JYmo3T25VZ1Z3VkhuSGpj%0AaEJhciUwQU1UY3ZaaUI4Yzc1aWZNbThCbHhkZTNHJTJGZ0Y4Y1AzWHQyT1hRamh6Q200N0c1VDFR%0Ad29GbFdvNHRkeWlNVEpMbUtHdUppUWQ0MTQ0UCUwQXg3MFhIJTJCTUtxdmFBUTUwREgwTEZIdEFO%0AUm5icHhjcXklMkJISmhyaHI4bGhZaElMTldTSlpiV3MxalUwY1FLQlR5UVlqMXMwemxkMDZHJTBB%0AYlp3VW1kMnF1VFg0c1hNc0olMkZnOW5XMjFPVlN3WVZZa3N2enZhQWhyc2pXWDZ4UEk4ajZpYUpy%0AZzQ3UVU3R2NlakduSzV1TTlrdUhpJTBBZ0M5JTJGMlolMkZ3MXFuUWU5TnA2VHhGYm41TEhET0Il%0AMkJCZkM1NmNMOFVBaTVOJTJCdyUyRkNYUXc1YjQ2N0RWMTZyQjRNZGtabUlCb1hKUXA1UWElMEFn%0AdnJna0pmTUk2a2F5UWZLREE3SFNaRkVDd3FEMWR5SlYxbm5KbmpoNkdDM3pwWUI2d2RYclBmVzM4%0ASWp6M0tCNkdPMnB2UVBhelo5JTBBQVZHdUc2YlhOMkY5OVY5dFZ3YmEzTGNpV1lFJTJCRkJybzVy%0AcnFHd2JLNm1CM051dTc0RHFjRUpJWTlXYzBDakM5WGx0d2lZMnN3SVJ3JTBBcmVYWEVVaFBBOENE%0AWVlMSnZzYzAydHVGS0loUmJEaDc2Q3V6MDYzTTVQUHkzSkl0dEF5UVBNN29LM0N6WWJ6RDRVaE8w%0AUCUyQjVLNDBBJTBBcW52VFh6eEszc2lCa1RnM04lMkJkME9qdUY5M3NKTGh3bzVZdnBjRXhabGtK%0AdDFkbG1oakVOU1RLTXhmc2NFZEdZa3BLMjA1T1B1QUhxJTBBVzRacWVyTzEzT29MNkUzc3VvWG5C%0AVnc2b3F0dmN1OE5sZUxFOUdpVXJCd0J4S1kxTDFsUSUyRjA2bGo5RjFFNHh5SllFY1hzUTRhUGRE%0AJTBBJTJCQTF6NFRhaCUyRjFEUnZEdWFaR1p0QjlGbUtDUndXeVRYNXZSUTM0Qks0dzQ0SWJHanoz%0AeiUyQlFrVmlMQTNUQkNaWkg2S3NaR1NFZ0QyMSUwQWl6ZXg0dyUyRjh6emUlMkZZajJZNjdhYVlO%0ATlhPOEV1UVFmcXZsJTJCcVhCU0FtWXczazFUTzVFMHI0dEhGSEVJWW5DUFBnNGxURkJlT09nN3Al%0AMEFINTZWRlg4a0ZJcE1Wc1dxVlZEQlI5YU4wQXV2dGFsZG9RajZOOGdmQndWSnJCTGJKVnc2SGt1%0AV1NsZkplSGRsMzhyRVdkWkppVHhxJTBBU2FPODYlMkJaclRDdXgwbDhBV2twUWNyUUc5a212R3F2%0AZFRsTTQ5R2QlMkZWbnBEYnpTcVBWZEZMbG9wNEFkUlJmdk95V0R0dDhnJTJCdVZkTiUwQVFOYklL%0AMUNvZ2dsN0ZEdjk3UnZFOWNDYSUyRkJxaFNyRlh1czJ2dTR2ODhKZ3o3bFFseGxGNWN0JTJGWEFj%0AQXFLbjhCUDZ6TVEzNG1uJTJGeTYlMEElMkJBMyUyRjlxRjE0NmhRTEFBUjM2UGsyUlE3QjhQJTJC%0Ab2RxcDhqNzVwNGJmV3NhR0FxZ28lMkIxJTJCelBybjRjSzB4b3NGeHlya2wyMXhoU3klMkZ6JTBB%0Ackk3N2JNNVZxaVpVVTV4blIlMkJXOHlXbHRzYnF3Nkc5dnRkcDd2SjlqRmIlMkJlMjF1MTdRVmZx%0AVU5XV0FWUHlYRmlKMVFrQTVlUDM5d2ElMEFXeUdiV1NINTZyWkFNTkIlMkZRaVprS1RsRDZReGlu%0AcEhWNjdrR3FydiUyQmZYVWk0RzMwM3VKQlJwb0dTQzVhRVhNU1NQMmZ0UU9JVDdYbiUwQWV3OGhT%0ARERZNVFPWXI1UnRBdjJnWlRsbHZoaTdTM28lMkZDTSUyRkJHVXFVV0FMb3RpVFNEU0tGMTRjcUo5%0AckVNU0NhdHY2Nmc4TXVxWkpTJTBBUUo5QWs5MFI5aExkRmRXc2hzNXdnNEpBdmN0M09IbXVEUzBq%0AeGJyaWRtMnpXOEs4WEVSWlZDQkN5aCUyRmE2JTJGZjNxOWdMc1lNYkpIMGklMEFUeEk0ODNGNGcx%0AaG15c1FQeXZtcEdQdmZGUm02JTJGVVNpbGNCODhrZVMlMkJnamEyU1Vkb05MVXRicnEiLCJhIjow%0ALCJrIjozOH0%3D; awsc-authTimer=%7B%22start%22%3A%221559769932891%22%2C%22signinStart%22%3A%221559769933203%22%2C%22freshAuth%22%3A%22false%22%2C%22adStart%22%3A%221559769935843%22%2C%22stop%22%3A%221559769935874%22%7D; session-id=143-7041241-7690366; session-id-time=2082787201l; i18n-prefs=USD; sp-cdn=\"L5Z9:AR\"; ubid-main=134-8464474-0867216; x-wl-uid=19ZnKfZkkIsK+9bzDQ1bNjUPYod/GBdaawc33pUYaV+61R12GH5n3d+Cxw40naWyN70EzXqj9WL4=; aws-priv=eyJ2IjoxLCJldSI6MCwic3QiOjB9; aws-target-static-id=1557859699635-37184; aws-target-data=%7B%22support%22%3A%221%22%7D; s_fid=0BA08D9AEA6BCF0A-03A071A0CF1F5163; _mkto_trk=id:112-TZM-766&token:_mch-aws.amazon.com-1557859701156-71358; lc-main=en_US; aws-ubid-main=552-3402004-0166124; aws-account-data=%7B%22marketplaceGroup%22%3A%22AWS%22%7D; noflush_Region=us-east-1; session-token=\"8Mk+syKKAlgYV2rTAZPylbgqReVosCp8oIXrF6LfeM5NU8bBjsyfpOj0bULyhxOoUPp5NGC9B31cGsohE+G8b3WwOFSK1BVMqBy+P5gQBiOmRey4eDFohj3h9NbClUaHOqHuiPpbQH0+zdTQdWauvau21TYM6lAI3CgEYvb0H2qKzAvSioL6NJGaqXUAPYr9N0oWOGWJjkWPzkDyEuWYwQ==\"; s_cc=true; aws-mkto-trk=id%3A112-TZM-766%26token%3A_mch-aws.amazon.com-1557859701156-71358; aws_lang=es; c_m=undefinedwww.google.comSearch%20Engine; aws-reg-aid=843223046275; aws-reg-guid=f09cf60c07712e9cc5215dcd751777822fe309a03bab3ff36d19edbcb14bc6c2; aws-business-metrics-last-visit=1559745529931; aws-userInfo=%7B%22arn%22%3A%22arn%3Aaws%3Aiam%3A%3A843223046275%3Aroot%22%2C%22alias%22%3A%22%22%2C%22username%22%3A%22juanpabloGlobant%22%2C%22keybase%22%3A%22hEJCcDLnjzTK%2Babbc0ZH1xdK1J6ORCM3a06eOyD%2B%2Brg%5Cu003d%22%2C%22issuer%22%3A%22http%3A%2F%2Fsignin.aws.amazon.com%2Fsignin%22%7D; awsc-actm=1559745570; s_sq=%5B%5BB%5D%5D; aws-target-visitor-id=1557859699639-391712.17_36; regStatus=registered; s_vn=1589395700292%26vn%3D24; s_dslv=1559763385024; s_nr=1559763385026-Repeat; JSESSIONID=3997886E3C3DEDF2926BD834D4851FA4; seance=%7B%22accountId%22%3A%22843223046275%22%2C%22iam%22%3Afalse%2C%22services%22%3A%5B%22AWSLambda%22%2C%22AmazonApiGateway%22%2C%22AmazonEC2%22%2C%22cloudwatch%22%2C%22lambda%22%5D%2C%22status%22%3A%22ACTIVE%22%2C%22exp%22%3A0%7D; noflush_awscnm=%7B%22hist%22%3A%5B%22iam%22%2C%22b%22%2C%22home%22%2C%22cw%22%2C%22lam%22%2C%22ag%22%5D%2C%22sc%22%3A%5B%5D%2C%22tm%22%3A%22tm-both%22%2C%22ea%22%3Atrue%7D"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"path\":\"/restapis/pmz9vo2uwe/resources/3fpjk4f6nf/methods/POST\",\"method\":\"POST\",\"contentString\":\"{\\\"pathWithQueryString\\\":\\\"/\\\",\\\"headers\\\":{},\\\"multiValueHeaders\\\":{},\\\"stageVariables\\\":{},\\\"withAuthorization\\\":false}\",\"region\":\"us-east-1\",\"headers\":{\"Accept\":\"application/hal+json\",\"X-CSRF-TOKEN\":\"%5B%7B%22token%22%3A%22YoCcLZ0p8Ar%2B6KqKdi0MotfGZuUFQYkwgR5pXRpMQek%3D%22%2C%22version%22%3A%22hash-v1%22%7D%5D\",\"Content-Type\":\"application/json\"},\"params\":{},\"operation\":\"angular-legacy\"}"
+				},
+				"url": {
+					"raw": "https://console.aws.amazon.com/apigateway/api/apigateway",
+					"protocol": "https",
+					"host": [
+						"console",
+						"aws",
+						"amazon",
+						"com"
+					],
+					"path": [
+						"apigateway",
+						"api",
+						"apigateway"
+					]
+				},
+				"description": "Generated from a curl request: \ncurl 'https://console.aws.amazon.com/apigateway/api/apigateway' -H 'Origin: https://console.aws.amazon.com' -H 'Accept-Encoding: gzip, deflate, br' -H 'X-CSRF-TOKEN: %5B%7B%22token%22%3A%22YoCcLZ0p8Ar%2B6KqKdi0MotfGZuUFQYkwgR5pXRpMQek%3D%22%2C%22version%22%3A%22hash-v1%22%7D%5D' -H 'Accept-Language: es,en;q=0.9,en-US;q=0.8' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36' -H 'Content-Type: application/json' -H 'Accept: application/hal+json' -H 'Referer: https://console.aws.amazon.com/apigateway/home?region=us-east-1' -H 'Cookie: aws-creds=eyJ2IjoyLCJlIjoiRmZrY3JKWGNkeUZiY2xnU2IxODBUWFRBWjRiOWFYVkh6MFBZazRrNSUyQkVF%0AalIlMkJHRXFweWpNRmFmVnJUc2tWbmkxMjVaSExYTjVGU2olMEFwVDY0NyUyRkpLeEFpa1R4cldu%0AZGFxZ1JEMHU5SmJ5YiUyQkd4d0Q1bkxuRjUxcnR2aHhNRDNtSGVGUU1JYmo3T25VZ1Z3VkhuSGpj%0AaEJhciUwQU1UY3ZaaUI4Yzc1aWZNbThCbHhkZTNHJTJGZ0Y4Y1AzWHQyT1hRamh6Q200N0c1VDFR%0Ad29GbFdvNHRkeWlNVEpMbUtHdUppUWQ0MTQ0UCUwQXg3MFhIJTJCTUtxdmFBUTUwREgwTEZIdEFO%0AUm5icHhjcXklMkJISmhyaHI4bGhZaElMTldTSlpiV3MxalUwY1FLQlR5UVlqMXMwemxkMDZHJTBB%0AYlp3VW1kMnF1VFg0c1hNc0olMkZnOW5XMjFPVlN3WVZZa3N2enZhQWhyc2pXWDZ4UEk4ajZpYUpy%0AZzQ3UVU3R2NlakduSzV1TTlrdUhpJTBBZ0M5JTJGMlolMkZ3MXFuUWU5TnA2VHhGYm41TEhET0Il%0AMkJCZkM1NmNMOFVBaTVOJTJCdyUyRkNYUXc1YjQ2N0RWMTZyQjRNZGtabUlCb1hKUXA1UWElMEFn%0AdnJna0pmTUk2a2F5UWZLREE3SFNaRkVDd3FEMWR5SlYxbm5KbmpoNkdDM3pwWUI2d2RYclBmVzM4%0ASWp6M0tCNkdPMnB2UVBhelo5JTBBQVZHdUc2YlhOMkY5OVY5dFZ3YmEzTGNpV1lFJTJCRkJybzVy%0AcnFHd2JLNm1CM051dTc0RHFjRUpJWTlXYzBDakM5WGx0d2lZMnN3SVJ3JTBBcmVYWEVVaFBBOENE%0AWVlMSnZzYzAydHVGS0loUmJEaDc2Q3V6MDYzTTVQUHkzSkl0dEF5UVBNN29LM0N6WWJ6RDRVaE8w%0AUCUyQjVLNDBBJTBBcW52VFh6eEszc2lCa1RnM04lMkJkME9qdUY5M3NKTGh3bzVZdnBjRXhabGtK%0AdDFkbG1oakVOU1RLTXhmc2NFZEdZa3BLMjA1T1B1QUhxJTBBVzRacWVyTzEzT29MNkUzc3VvWG5C%0AVnc2b3F0dmN1OE5sZUxFOUdpVXJCd0J4S1kxTDFsUSUyRjA2bGo5RjFFNHh5SllFY1hzUTRhUGRE%0AJTBBJTJCQTF6NFRhaCUyRjFEUnZEdWFaR1p0QjlGbUtDUndXeVRYNXZSUTM0Qks0dzQ0SWJHanoz%0AeiUyQlFrVmlMQTNUQkNaWkg2S3NaR1NFZ0QyMSUwQWl6ZXg0dyUyRjh6emUlMkZZajJZNjdhYVlO%0ATlhPOEV1UVFmcXZsJTJCcVhCU0FtWXczazFUTzVFMHI0dEhGSEVJWW5DUFBnNGxURkJlT09nN3Al%0AMEFINTZWRlg4a0ZJcE1Wc1dxVlZEQlI5YU4wQXV2dGFsZG9RajZOOGdmQndWSnJCTGJKVnc2SGt1%0AV1NsZkplSGRsMzhyRVdkWkppVHhxJTBBU2FPODYlMkJaclRDdXgwbDhBV2twUWNyUUc5a212R3F2%0AZFRsTTQ5R2QlMkZWbnBEYnpTcVBWZEZMbG9wNEFkUlJmdk95V0R0dDhnJTJCdVZkTiUwQVFOYklL%0AMUNvZ2dsN0ZEdjk3UnZFOWNDYSUyRkJxaFNyRlh1czJ2dTR2ODhKZ3o3bFFseGxGNWN0JTJGWEFj%0AQXFLbjhCUDZ6TVEzNG1uJTJGeTYlMEElMkJBMyUyRjlxRjE0NmhRTEFBUjM2UGsyUlE3QjhQJTJC%0Ab2RxcDhqNzVwNGJmV3NhR0FxZ28lMkIxJTJCelBybjRjSzB4b3NGeHlya2wyMXhoU3klMkZ6JTBB%0Ackk3N2JNNVZxaVpVVTV4blIlMkJXOHlXbHRzYnF3Nkc5dnRkcDd2SjlqRmIlMkJlMjF1MTdRVmZx%0AVU5XV0FWUHlYRmlKMVFrQTVlUDM5d2ElMEFXeUdiV1NINTZyWkFNTkIlMkZRaVprS1RsRDZReGlu%0AcEhWNjdrR3FydiUyQmZYVWk0RzMwM3VKQlJwb0dTQzVhRVhNU1NQMmZ0UU9JVDdYbiUwQWV3OGhT%0ARERZNVFPWXI1UnRBdjJnWlRsbHZoaTdTM28lMkZDTSUyRkJHVXFVV0FMb3RpVFNEU0tGMTRjcUo5%0AckVNU0NhdHY2Nmc4TXVxWkpTJTBBUUo5QWs5MFI5aExkRmRXc2hzNXdnNEpBdmN0M09IbXVEUzBq%0AeGJyaWRtMnpXOEs4WEVSWlZDQkN5aCUyRmE2JTJGZjNxOWdMc1lNYkpIMGklMEFUeEk0ODNGNGcx%0AaG15c1FQeXZtcEdQdmZGUm02JTJGVVNpbGNCODhrZVMlMkJnamEyU1Vkb05MVXRicnEiLCJhIjow%0ALCJrIjozOH0%3D; awsc-authTimer=%7B%22start%22%3A%221559769932891%22%2C%22signinStart%22%3A%221559769933203%22%2C%22freshAuth%22%3A%22false%22%2C%22adStart%22%3A%221559769935843%22%2C%22stop%22%3A%221559769935874%22%7D; session-id=143-7041241-7690366; session-id-time=2082787201l; i18n-prefs=USD; sp-cdn=\\\"L5Z9:AR\\\"; ubid-main=134-8464474-0867216; x-wl-uid=19ZnKfZkkIsK+9bzDQ1bNjUPYod/GBdaawc33pUYaV+61R12GH5n3d+Cxw40naWyN70EzXqj9WL4=; aws-priv=eyJ2IjoxLCJldSI6MCwic3QiOjB9; aws-target-static-id=1557859699635-37184; aws-target-data=%7B%22support%22%3A%221%22%7D; s_fid=0BA08D9AEA6BCF0A-03A071A0CF1F5163; _mkto_trk=id:112-TZM-766&token:_mch-aws.amazon.com-1557859701156-71358; lc-main=en_US; aws-ubid-main=552-3402004-0166124; aws-account-data=%7B%22marketplaceGroup%22%3A%22AWS%22%7D; noflush_Region=us-east-1; session-token=\\\"8Mk+syKKAlgYV2rTAZPylbgqReVosCp8oIXrF6LfeM5NU8bBjsyfpOj0bULyhxOoUPp5NGC9B31cGsohE+G8b3WwOFSK1BVMqBy+P5gQBiOmRey4eDFohj3h9NbClUaHOqHuiPpbQH0+zdTQdWauvau21TYM6lAI3CgEYvb0H2qKzAvSioL6NJGaqXUAPYr9N0oWOGWJjkWPzkDyEuWYwQ==\\\"; s_cc=true; aws-mkto-trk=id%3A112-TZM-766%26token%3A_mch-aws.amazon.com-1557859701156-71358; aws_lang=es; c_m=undefinedwww.google.comSearch%20Engine; aws-reg-aid=843223046275; aws-reg-guid=f09cf60c07712e9cc5215dcd751777822fe309a03bab3ff36d19edbcb14bc6c2; aws-business-metrics-last-visit=1559745529931; aws-userInfo=%7B%22arn%22%3A%22arn%3Aaws%3Aiam%3A%3A843223046275%3Aroot%22%2C%22alias%22%3A%22%22%2C%22username%22%3A%22juanpabloGlobant%22%2C%22keybase%22%3A%22hEJCcDLnjzTK%2Babbc0ZH1xdK1J6ORCM3a06eOyD%2B%2Brg%5Cu003d%22%2C%22issuer%22%3A%22http%3A%2F%2Fsignin.aws.amazon.com%2Fsignin%22%7D; awsc-actm=1559745570; s_sq=%5B%5BB%5D%5D; aws-target-visitor-id=1557859699639-391712.17_36; regStatus=registered; s_vn=1589395700292%26vn%3D24; s_dslv=1559763385024; s_nr=1559763385026-Repeat; JSESSIONID=3997886E3C3DEDF2926BD834D4851FA4; seance=%7B%22accountId%22%3A%22843223046275%22%2C%22iam%22%3Afalse%2C%22services%22%3A%5B%22AWSLambda%22%2C%22AmazonApiGateway%22%2C%22AmazonEC2%22%2C%22cloudwatch%22%2C%22lambda%22%5D%2C%22status%22%3A%22ACTIVE%22%2C%22exp%22%3A0%7D; noflush_awscnm=%7B%22hist%22%3A%5B%22iam%22%2C%22b%22%2C%22home%22%2C%22cw%22%2C%22lam%22%2C%22ag%22%5D%2C%22sc%22%3A%5B%5D%2C%22tm%22%3A%22tm-both%22%2C%22ea%22%3Atrue%7D' -H 'Connection: keep-alive' --data-binary '{\\\"path\\\":\\\"/restapis/pmz9vo2uwe/resources/3fpjk4f6nf/methods/POST\\\",\\\"method\\\":\\\"POST\\\",\\\"contentString\\\":\\\"{\\\\\"pathWithQueryString\\\\\":\\\\\"/\\\\\",\\\\\"headers\\\\\":{},\\\\\"multiValueHeaders\\\\\":{},\\\\\"stageVariables\\\\\":{},\\\\\"withAuthorization\\\\\":false}\\\",\\\"region\\\":\\\"us-east-1\\\",\\\"headers\\\":{\\\"Accept\\\":\\\"application/hal+json\\\",\\\"X-CSRF-TOKEN\\\":\\\"%5B%7B%22token%22%3A%22YoCcLZ0p8Ar%2B6KqKdi0MotfGZuUFQYkwgR5pXRpMQek%3D%22%2C%22version%22%3A%22hash-v1%22%7D%5D\\\",\\\"Content-Type\\\":\\\"application/json\\\"},\\\"params\\\":{},\\\"operation\\\":\\\"angular-legacy\\\"}' --compressed"
+			},
+			"response": []
+		}
+	]
+}

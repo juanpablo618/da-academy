@@ -1,0 +1,47 @@
+Are wide operations better than narrow operations?
+	No, narrow operations are better as they take less time to execute
+
+Checkpointing needs to be activated to work with RDD.
+	No checkpointing is not needed.
+
+
+Which of the following things does the SparkConf object allows sto do?
+	Set the application name
+
+Spark is fully written in what language?
+	Scala
+
+What SPARK module should be use to write real time applications?
+	Streaming
+
+How many cores are needed for a streaming application to run?
+	2 or more
+
+
+Which of the following are interactive consoles on spark?
+	pyspark
+
+
+At the time you work with an RDD which of the following transformation is better to be executed first?
+	filter
+
+
+What is the main difference between RDD and DataFrames
+	DataFrames can be more performant.
+
+
+What will happen if I do open a file that does not exists with an DataFrame?
+	It will fail on the textFile call
+
+
+Not knowing how to program is an impediment to work with SPARK?
+	There are parts of Spark that allow you to work with it even if you are not an expert programmer.
+
+
+What will happen if I execute a collect of 1Tb of data on an RDD in the driver?
+	The driver will fail because it will not be able to handle th result.
+
+
+
+
+	

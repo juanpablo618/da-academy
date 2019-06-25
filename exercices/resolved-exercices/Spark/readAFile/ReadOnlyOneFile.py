@@ -1,0 +1,7 @@
+from pyspark.sql import SQLContext
+sqlContext = SQLContext(sc)
+
+df = sqlContext.read.csv("2015-12-12.csv")
+
+# Displays the content of the DataFrame to stdout
+df.show()

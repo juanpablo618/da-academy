@@ -1,0 +1,35 @@
+4) 
+
+SELECT name , Teacher.firstName, Teacher.lastName, Student.firstName, Student.lastName FROM Student, Course, StudentCourse, Teacher WHERE (StudentCourse.studentID = Student.studentID && StudentCourse.courseID = Course.courseID) ORDER BY Student.lastName
+
+
+
+5)
+Percentage of students that passed/failed a given course.
+
+
+SELECT * FROM  StudentCourse WHERE FIND_IN_SET('note4 = value 8',notes) OR FIND_IN_SET('note4 = value 9',notes) OR FIND_IN_SET('note4 = value 10',notes) ;
+
+select studentID, count(*) * 100.0 / (select count(*) from StudentCourse)
+from StudentCourse
+group by studentID;
+
+
+select studentID, count(*) * 100.0 / (select count(*) from StudentCourse WHERE FIND_IN_SET('note4 = value 8',notes)) from StudentCourse group by studentID
+
+select studentID, count(*) * 100.0 / (select count(*) from StudentCourse WHERE FIND_IN_SET('note4 = value 8',notes) AND StudentCourse.courseID = '3') from StudentCourse group by studentID
+
+
+
+6) For a given teacher, list the timeline for each course that he is assigned to (ordered by date), and the course name. The format should be:
+
+
+SELECT Course.name, Course.scheduleTime, Teacher.firstName, Teacher.lastName FROM Course, TeacherCourse, Teacher WHERE (TeacherCourse.teacherID = '1') order by name
+
+SELECT * FROM TeacherCourse WHERE (TeacherCourse.teacherID = '1')
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+

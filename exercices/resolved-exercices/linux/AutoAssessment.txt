@@ -1,0 +1,353 @@
+1. Linux: What is the difference between a partition and a filesystem?
+	filesystem: logical, hierarchy of directories and files. Is sometimes the entire system of files, rooted at /
+	and as presented to applications sofwares by the operating system kernel.
+
+		File System
+			A set of programs that tells an operating system how to access and interpret the contents of a disk or
+			tape drive, or other storage medium. Common file systems include: FAT and FAT−32
+			(DOS/Windows), HPFS (OS/2), NFS, NTFS (Windows NT/2000), and others. From I−gloss
+			http://www.tldp.org/LDP/Linux−Dictionary/html/index.html
+		file system
+			The method in which an operating system organizes and manages files. Red Hat Linux uses a
+			hierarchical file system in which files are stored in directories and subdirectories. From
+			Redhat−9−Glossary http://www.tldp.org/LDP/Linux−Dictionary/html/index.html
+		file system
+			the physical or logical device that holds a collection of files and directories. This might be a hard disk
+			drive or a partition on a disk drive. From Linux Guide @FirstLinux
+			http://www.tldp.org/LDP/Linux−Dictionary/html/index.html
+
+	http://www.tldp.org/LDP/Linux-Dictionary/Linux-Dictionary.pdf
+
+
+	Partition: is a physical subset of a disk.
+
+
+2. What is the relationship between Linux Kernel and Linux Distros?
+	linux = Is only the kernel.
+	a distribution is just the kernel.
+
+	A distro is an operating system packaged with an absolute bucketload of higher-level applications like DVD authoring tools, web browsers, office suites and so on ad-near-infinitum
+		examples: Kali,Ubuntu,fedora,Mint etc are different distros which work on Linux kernel.
+
+
+3. What are the two levels on which the package managers operate on Linux?
+	
+
+
+4. How would you go about researching a new feature on Linux? How are the different sources of documentation used?
+
+5. What are the different types of processes? How do you manage them?
+
+Process Types
+ Marcar esta página
+A terminal window (one kind of command shell) is a process that runs as long as needed. It allows users to execute programs and access resources in an interactive environment. You can also run programs in the background, which means they become detached from the shell.
+
+Processes can be of different types according to the task being performed. Here are some different process types, along with their descriptions and examples:
+	
+	Interactive Processes: Need to be started by a user, either at a command line or through a graphical interface such as an icon or a menu selection.	Example: bash, firefox, top
+
+	Batch Processes: Automatic processes which are scheduled from and then disconnected from the terminal. These tasks are queued and work on a FIFO (first-in, first-out) basis. Example: updatedb		
+
+	Daemons: Server processes that run continuously. Many are launched during system startup and then wait for a user or system request indicating that their service is required.	Example: httpd, xinetd, sshd
+
+	Threads: Lightweight processes. These are tasks that run under the umbrella of a main process, sharing memory and other resources, but are scheduled and run by the system on an individual basis. An individual thread can end without terminating the whole process and a process can create new threads at any time. Many non-trivial programs are multi-threaded.	Example: firefox, gnome-terminal-server
+
+	Kernel Threads: Kernel tasks that users neither start nor terminate and have little control over. These may perform actions like moving a thread from one CPU to another, or making sure input/output operations to disk are completed. Example: kthreadd, migration, ksoftirqd
+
+6. Explain the concepts of partitions, mount points, NFS and pseudo filesystems
+
+	linux partitions: Partitions help to organize the contents of disks according to the kind and use of the data contained.
+	
+	mount points: example : (/)   This is simply a directory (which may or may no be empty) where the filesystem is to be attached (mounted) . Sometimes you may need to create the directory if it does not already exist.
+
+	nfs and network filesystems: It is often necessary to share data across physical systems which may be either in the same location or anywhere that can be reached by the Internet. A network (also sometimes called distributed) filesystem may have all its data on one machine or have it spread out on more than one network node. A variety of different filesystems can be used locally on the individual machines; a network filesystem can be thought of as a grouping of lower level filesystems of varying types.
+	The most common such filesystem is named simply NFS (the Network Filesystem). It has a very long history and was first developed by Sun Microsystems. Another common implementation is CIFS (also termed SAMBA), which has Microsoft roots. We will restrict our attention in what follows to NFS.
+
+
+7. How does a Network work? What are the different types of addresses? What is the function of the DNS? What happens when you send a file using FTP?
+	
+	A network is used to:
+
+		Allow the connected devices to communicate with each other
+		Enable multiple users to share devices over the network, such as printers and scanners
+		Share and manage information across computers easily.
+
+	There are two different types of IP addresses available: IPv4 (version 4) and IPv6 (version 6). IPv4 is older and by far the more widely used, while IPv6 is newer and is designed to get past limitations inherent in the older standard and furnish many more possible addresses.
+
+	IPv4 uses 32-bits for addresses; there are only 4.3 billion unique addresses available. Furthermore, many addresses are allotted and reserved, but not actually used. IPv4 is considered inadequate for meeting future needs because the number of devices available on the global network has increased enormously in recent years.
+
+	IPv6 uses 128-bits for addresses; this allows for 3.4 X 1038 unique addresses. If you have a larger network of computers and want to add more, you may want to move to IPv6, because it provides more unique addresses. However, it can be complex to migrate to IPv6; the two protocols do not always inter-operate well. Thus, moving equipment and addresses to IPv6 requires significant effort and has not been quite as fast as was originally intended. We will discuss IPv4 more than IPv6 as you are more likely to deal with it.
+
+	One reason IPv4 has not disappeared is there are ways to effectively make many more addresses available by methods such as NAT (Network Address Translation).  NAT enables sharing one IP address among many locally connected computers, each of which has a unique address only seen on the local network. While this is used in organizational settings, it also used in simple home networks. For example, if you have a router hooked up to your Internet Provider (such as a cable system) it gives you one externally visible address, but issues each device in your home an individual local address.
+
+
+	DNS:
+	The main function is to translate domain names into IP addresses, which compters can understand. It also provides a list of mail servers which accept emails for each domain name.
+	Each domain name in DNS will nominate a set of name servers to be authoritative for its DNS records. This is where all other name servers will be pointed when looking for information about the domain name. Name servers are a program or computer server that implements a name-service protocol. 
+
+
+	FTP:
+
+	When you are connected to a network, you may need to transfer files from one machine to another. File Transfer Protocol (FTP) is a well-known and popular method for transferring files between computers using the Internet. This method is built on a client-server model. FTP can be used within a browser or with stand-alone client programs.  
+
+	FTP is one of the oldest methods of network data transfer, dating back to the early 1970s. As such, it is considered inadequate for modern needs, as well as being intrinsically insecure. However, it is still in use and when security is not a concern (such as with so-called anonymous FTP) it can make sense. However, many websites, such as kernel.org, have abandoned its use.
+
+
+8. How do you use routines on bash scripts? Why would you use bash scripting?
+
+
+9. What steps should you take to make Linux as secure as possible? What is process isolation, and how do you achieve it? How can you secure the boot process?
+
+	For me the main thing is  apply full disk encryption. As globant do with  with its machines.
+	Other things is put enable the firewall.
+
+	On other hand is useful to check for unused accounts , in my client We have only one account on the pc called developer, and only have some permissions on some folders. And is important don't use a easy or generic password.
+
+
+10. What does it that Python is: Interpreted, Dynamic typing, Extensive, Object Oriented
+
+related to interpreted:
+	When a Python executes a program, Python reads the .py into memory, and parses it in order to get a bytecode, then goes on to execute. For each module that is imported by the program, Python first checks to see whether there is a precompiled bytecode version, in a .pyo or .pyc, that has a timestamp which corresponds to its .py file. Python uses the bytecode version if any. Otherwise, it parses the module's .py file, saves it into a .pyc file, and uses the bytecode it just created.
+
+	Byte code files are also one way of shipping Python codes. Python will still run a program if all it can find are.pyc files, even if the original .py source files are not there.
+
+	Python Virtual Machine (PVM)
+
+	Once our program has been compiled into byte code, it is shipped off for execution to Python Virtual Machine (PVM). The PVM is not a separate program. It need not be installed by itself. Actually, the PVM is just a big loop that iterates through our byte code instruction, one by one, to carry out their operations. The PVM is the runtime engine of Python. It's always present as part of the Python system. It's the component that truly runs our scripts. Technically it's just the last step of what is called the Python interpreter.
+
+
+related to Dynamic Typing:
+	Python is a dynamically typed language. It doesn’t know about the type of the variable until the code is run. So declaration is of no use. What it does is, It stores that value at some memory location and then binds that variable name to that memory container. And makes the contents of the container accessible through that variable name. So the data type does not matter. As it will get to know the type of the value at run-time.
+
+Python is highly extensible
+	Instead of designing Python with all the functionalities on its core, the programming language was meant to be very extensible.
+
+	This feature has made the language highly popular when programmable interfaces are required to be incorporated into existing applications.
+
+	Van Rossum envisioned a language having a small core with extensive support libraries that can enhance its capabilities.
+
+	He wanted to move away from the frustrations he experienced while using the ABC programming language, which does not espouse the same values.
+
+	There is a wide variety of Python libraries for completing various tasks, including performing scientific calculations, machine learning, unit testing, graphical user interfaces, and managing databases — anything you like to complete easily, you’d probably find a library for it.
+
+	For example, if you want to achieve fast performance in a low-level computing environment, you can migrate time-sensitive operations to extension modules built using the Python programming language such as PyPy and Cython.
+
+	The other programming languages do not boast of rich support libraries as Python does.
+
+all in python is an Object:
+
+	Python is an Object “Based” programming language. Meaning- everything in python is an Object. a = 10 implies 10 is an object of int. So “int” is a class and 10 is its object. Compare this with java where int is a primitive datatype and not really a class
+
+	Your question asks about “Object Oriented Programming”. OOP is a programming paradigm or style where you code you logic in terms of Classes and Objects and the functionality is implemented as interaction between these objects through methods of objects. Yes, Python supports OOP
+
+	Python in fact is a muti-paradigm programming language. You can code your logic using OOP or Procedural or Functional.
+
+	Irrespective of what programming style you choose to implement your logic Python is an Object Based Programming language.
+
+	So if the question were to be “Why is python an Object “Based” Programming language?” then the first paragraph should answer that question.
+
+
+11. Python Data Structures and characteristics? Differences and similarities between dictionary, map, set, lists and tuples
+	
+	lists:
+	The Python list type is called list. It is a type of sequence – we can use it to store multiple values, and access them sequentially, by their position, or index, in the list. We define a list literal by putting a comma-separated list of values inside square brackets ([ and ]):
+		We can extract a subset of a list, which will itself be a list, using a slice
+		Lists are mutable – we can modify elements, add elements to them or remove elements from them
+		Because lists are mutable, we can modify a list variable without assigning the variable a completely new value. 
+
+
+	Tuples
+		Python has another sequence type which is called tuple. Tuples are similar to lists in many ways, but they are immutable. We define a tuple literal by putting a comma-separated list of values inside round brackets (( and )):
+			We can use tuples in much the same way as we use lists, except that we can’t modify them, We can use them to create a sequence of values that we don’t want to modify.
+
+	Sets
+	The Python set type is called set. A set is a collection of unique elements. If we add multiple copies of the same element to a set, the duplicates will be eliminated, and we will be left with one of each element. To define a set literal, we put a comma-separated list of values inside curly brackets ({ and }):
+		It is important to note that unlike lists and tuples sets are not ordered. When we print a set, the order of the elements will be random.
+
+
+	Ranges
+		range is another kind of immutable sequence type. It is very specialised – we use it to create ranges of integers. Ranges are also generators. We will find out more about generators in the next chapter, but for now we just need to know that the numbers in the range are generated one at a time as they are needed, and not all at once. I
+
+	Dictionaries
+		The Python dictionary type is called dict. We can use a dictionary to store key-value pairs. To define a dictionary literal, we put a comma-separated list of key-value pairs between curly brackets. We use a colon to separate each key from its value. We access values in the dictionary in much the same way as list or tuple elements, but we use keys instead of indices
+		The keys of a dictionary don’t have to be strings – they can be any immutable type, including numbers and even tuples. We can mix different types of keys and different types of values in one dictionary. Keys are unique – if we repeat a key, we will overwrite the old value with the new value. When we store a value in a dictionary, the key doesn’t have to exist.
+
+
+also python support:
+	Implicit conversions
+	Explicit conversions
+
+
+12. What are Lambda Expressions? What are Nested statements? How can you create and use each of them? Why would you?
+
+In Python, anonymous function is a function that is defined without a name.
+While normal functions are defined using the def keyword, in Python anonymous functions are defined using the lambda keyword.
+Hence, anonymous functions are also called lambda functions.
+	lambda arguments: expression
+Lambda functions can have any number of arguments but only one expression. The expression is evaluated and returned. Lambda functions can be used wherever function objects are required.
+
+
+13. Explain the concept of Inheritance. How does it work?
+
+	Inheritance enables new objects to take on the properties of existing objects. A class that is used as the basis for inheritance is called a superclass or base class. A class that inherits from a superclass is called a subclass or derived class. 
+																			
+Python Inheritance Syntax
+
+	class BaseClass:
+ 	 	Body of base class
+
+	class DerivedClass(BaseClass):
+  		Body of derived class
+
+
+In python a class can be devired from more than one base classes. This is called multiple inheritance.
+
+
+
+14. Explain the concept of Polymorphism. How does it work?
+																	
+	Polymorphism means the ability to take various forms. In Python, Polymorphism allows us to define methods in the child class with the same name as defined in their parent class.
+
+	As we know, a child class inherits all the methods from the parent class. However, you will encounter situations where the method inherited from the parent class doesn’t quite fit into the child class. In such cases, you will have to re-implement method in the child class. This process is known as Method Overriding.
+
+
+																			
+15. What are errors and exceptions in python? How can you handle them?
+																					
+Error caused by not following the proper structure (syntax) of the language is called syntax error or parsing error.
+
+Errors can also occur at runtime and these are called exceptions. They occur, for example, when a file we try to open does not exist (FileNotFoundError), dividing a number by zero (ZeroDivisionError), module we try to import is not found (ImportError) etc.
+
+Whenever these type of runtime error occur, Python creates an exception object. If not handled properly, it prints a traceback to that error along with some details about why that error occurred.
+
+We can also define our own exception in Python (if required)
+We can handle these built-in and user-defined exceptions in Python using try, except and finally statements.
+
+Exception	                             Cause of Error
+AssertionError	                            Raised when assert statement fails.
+AttributeError	                            Raised when attribute assignment or reference fails.
+EOFError	                                Raised when the input() functions hits end-of-file condition.
+FloatingPointError	                        Raised when a floating point operation fails.
+GeneratorExit	                          	Raise when a generator's close() method is called.
+ImportError									Raised when the imported module is not found.
+IndexError									Raised when index of a sequence is out of range.
+KeyError									Raised when a key is not found in a dictionary.
+KeyboardInterrupt							Raised when the user hits interrupt key (Ctrl+c or delete).
+MemoryError									Raised when an operation runs out of memory.
+NameError									Raised when a variable is not found in local or global scope.
+NotImplementedError							Raised by abstract methods.
+OSError										Raised when system operation causes system related error.
+OverflowError								Raised when result of an arithmetic operation is too large to be represented.
+ReferenceError								Raised when a weak reference proxy is used to access a garbage collected referent.
+RuntimeError								Raised when an error does not fall under any other category.
+StopIteration								Raised by next() function to indicate that there is no further item to be returned by iterator.
+SyntaxError									Raised by parser when syntax error is encountered.
+IndentationError							Raised when there is incorrect indentation.
+TabError									Raised when indentation consists of inconsistent tabs and spaces.
+SystemError									Raised when interpreter detects internal error.
+SystemExit									Raised by sys.exit() function.
+TypeError									Raised when a function or operation is applied to an object of incorrect type.
+UnboundLocalError							Raised when a reference is made to a local variable in a function or method, but no value has been bound to that variable.
+UnicodeError								Raised when a Unicode-related encoding or decoding error occurs.
+UnicodeEncodeError							Raised when a Unicode-related error occurs during encoding.
+UnicodeDecodeError							Raised when a Unicode-related error occurs during decoding.
+UnicodeTranslateError						Raised when a Unicode-related error occurs during translating.
+ValueError									Raised when a function gets argument of correct type but improper value.
+ZeroDivisionError							Raised when second operand of division or modulo operation is zero.
+
+
+
+16. Explain all the built-in functions you can remember
+
+The Python interpreter has a number of functions that are always available for use. These functions are called built-in functions. For example, print() function prints the given object to the standard output device (screen) or to the text stream file.
+
+I only remember print function, because I'm new using python.
+Python print()	Prints the Given Object
+
+
+17. What are decorators in python? Why would you use them, and how?
+
+Decorators are very powerful and useful tool in Python since it allows programmers to modify the behavior of function or class. Decorators allow us to wrap another function in order to extend the behavior of wrapped function, without permanently modifying it.
+
+In Decorators, functions are taken as the argument into another function and then called inside the wrapper function.
+
+
+
+18. What is the difference between generators and iterators? How can you create and consume a generator?
+
+Generators in Python:
+	There is a lot of overhead in building an iterator in Python; we have to implement a class with __iter__() and __next__() method, keep track of internal states, raise StopIteration when there was no values to be returned etc.
+
+	This is both lengthy and counter intuitive. Generator comes into rescue in such situations.
+
+	Python generators are a simple way of creating iterators. All the overhead we mentioned above are automatically handled by generators in Python.
+
+	Simply speaking, a generator is a function that returns an object (iterator) which we can iterate over (one value at a time).
+
+
+Iterators:
+	A Python iterator returns us an iterator object- one value at a time
+
+
+Let’s see the difference between Iterators and Generators in python.
+
+In creating a python generator, we use a function. But in creating an iterator in python, we use the iter() and next() functions.
+
+A generator in python makes use of the ‘yield’ keyword. A python iterator doesn’t.
+
+Python generator saves the states of the local variables every time ‘yield’ pauses the loop in python. An iterator does not make use of local variables, all it needs is iterable to iterate on.
+
+A generator may have any number of ‘yield’ statements.
+
+You can implement your own iterator using a python class; a generator does not need a class in python.
+
+To write a python generator, you can either use a Python function or a comprehension. But for an iterator, you must use the iter() and next() functions.
+
+Generator in python let us write fast and compact code. This is an advantage over Python iterators. They are also simpler to code than do custom iterator.
+
+
+not every python iterator is a generator.
+
+
+19. What are python coding conventions? How would you go about creating a python project from scratch? How would you structure it?
+
+	Python style is governed largely by a set of documents called Python Enhancement Proposals, abbreviated PEP. Not all PEPs are actually adopted, of course - that's why they're called "Proposals" - but some are. You can browse the master PEP index on the official Python website. This index is formally referred to as PEP 0.
+
+	Right now, we're mainly concerned with PEP 8, first authored by the Python language creator Guido van Rossum back in 2001. It is the document which officially outlines the coding style all Python developers should generally follow. Keep it under your pillow! Learn it, follow it, encourage others to do the same.
+
+	Style Guide for python code:
+	https://www.python.org/dev/peps/pep-0008/
+
+
+	to create a python project from scratch:
+
+	https://www.jetbrains.com/help/pycharm/creating-empty-project.html
+
+
+	Any Python (.py) file is a module, and a bunch of modules in a directory is a package.
+
+
+Filesystem structure of a Python project:
+
+Project/
+|-- bin/
+|   |-- project
+|
+|-- project/
+|   |-- test/
+|   |   |-- __init__.py
+|   |   |-- test_main.py
+|   |   
+|   |-- __init__.py
+|   |-- main.py
+|
+|-- setup.py
+|-- README
+
+
+
+
+20. What are the different ways of debugging your python project? Why and how would you use each of them?
+
+	PDB library as a tool for debugging
+		https://realpython.com/python-debugging-pdb/

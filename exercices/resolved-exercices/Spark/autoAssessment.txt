@@ -1,0 +1,261 @@
+1. What is a DAG? 
+	DAG a finite direct graph with no directed cycles
+manera de representar las operaciones sobre los rdd.
+
+Spark soporta el flujo de datos acíclico. Cada tarea de Spark crea un DAG de etapas de trabajo para que se ejecuten en un determinado cluster.
+
+
+DAG refers to Directed Acyclic Graph. Here the word "directed" means that lit is a finite directed graph with no directed cycles.
+There are finite numbers of vertices and edges, where each edge is directed from one vertex to another. it contains sequence of vertices such that 
+every edge is directed from earlier to later in the sequence. 
+
+
+
+2. What is an RDD? 
+	resilient distributed dataset.
+	Apache Spark mejora con respecto a los demás sistemas en cuanto a la computación en memoria. RDD permite a los programadores realizar operaciones sobre grandes cantidades de datos en clusters de una manera rápida y tolerante a fallos. Surge debido a que las herramientas existentes tienen problemas que hacen que se manejen los datos ineficientemente a la hora de ejecutar algoritmos iterativos y procesos de minería de datos. En ambos casos, mantener los datos en memoria puede mejorar el rendimiento considerablemente.
+	
+
+An operation is a method, which can be applied on RDD to accomplish certain task. There are two types of RDD operations:
+Action and Transformation.
+
+Transformation : are kind of operations which transforms the RDD data from one form to another. And when you apply this operation on any RDD, you will
+get a new RDD with transformed data (RDD in Spark are immutable). Operations like map , filter flatMap are transformations.
+
+Actions: Transformations create RDDs from each other, but when we want to work with the actual dataset, at that point is performed.
+When any action is triggered, new Rdd is not formed(unlike transformation) Thus, actions are rdd operations that will give non-RDD
+values. The output of actions are stored to drivers or to the external storage system.
+
+3. Which are the benefits of Spark over MapReduce? 
+Apache Spark mejora con respecto a los demás sistemas en cuanto a la computación en memoria. RDD permite a los programadores realizar operaciones sobre grandes cantidades de datos en clusters de una manera rápida y tolerante a fallos. Surge debido a que las herramientas existentes tienen problemas que hacen que se manejen los datos ineficientemente a la hora de ejecutar algoritmos iterativos y procesos de minería de datos. En ambos casos, mantener los datos en memoria puede mejorar el rendimiento considerablemente.
+
+
+
+4. Do you need to install Spark on all nodes of YARN cluster? 
+
+   Since spark runs on top of Yarn, it utilizes yarn for the execution of its commands over the cluster’s nodes.
+
+5. What is the different of using yarn-cluster mode vs using local ? 
+
+	A Spark application consists of a driver and one or many executors. The driver program is the main program (where you instantiate SparkContext), which coordinates the executors to run the Spark application. The executors run tasks assigned by the driver.
+
+	A YARN application has the following roles: yarn client, yarn application master and list of containers running on the node managers.
+
+	When Spark application runs on YARN, it has its own implementation of yarn client and yarn application master.
+
+	With those background, the major difference is where the driver program runs.
+
+	Yarn Standalone Mode: your driver program is running as a thread of the yarn application master, which itself runs on one of the node managers in the cluster. The Yarn client just pulls status from the application master. This mode is same as a mapreduce job, where the MR application master coordinates the containers to run the map/reduce tasks.
+	Yarn client mode: your driver program is running on the yarn client where you type the command to submit the spark application (may not be a machine in the yarn cluster). In this mode, although the drive program is running on the client machine, the tasks are executed on the executors in the node managers of the YARN cluster.
+	Reference: http://spark.incubator.apache.org/docs/latest/cluster-overview.html
+
+	So in spark you have two different components. There is the driver and the workers. In yarn-cluster mode the driver is running remotely on a data node and the workers are running on separate data nodes. In yarn-client mode the driver is on the machine that started the job and the workers are on the data nodes. In local mode the driver and workers are on the machine that started the job.
+
+	When you run .collect() the data from the worker nodes get pulled into the driver. It's basically where the final bit of processing happens.
+
+	For my self i have found yarn-cluster mode to be better when i'm at home on the vpn, but yarn-client mode is better when i'm running code from within the data center.
+
+	Yarn-client mode also means you tie up one less worker node for the driver.
+
+
+6. What is the different of using yarn-cluster mode vs yarn-client mode ? 
+
+
+
+yarn-client mode:
+driver program runs in client machine or local machine where the application has been launched.
+
+Resource allocation is done by YARN resource manager based on data locality on data nodes and driver program from local machine will control the executors on spark cluster (Node managers).
+
+Please refer this cloudera article for more info.
+
+The difference between standalone mode and yarn deployment mode,
+
+Resource optimization won't be efficient in standalone mode.
+In standalone mode, driver program launch an executor in every node of a cluster irrespective of data locality.
+standalone is good for use case, where only your spark application is being executed and the cluster do not need to allocate resources for other jobs in efficient manner.
+
+
+
+7. How do we create an RDD in Apache Spark ? 
+	with python:
+
+	my_RDD = spark.textFile("hdfs://...")
+
+8. What is the difference between RDDs, Dataframes and Datasets ? 
+
+A data frame is a table, or two-dimensional array-like structure, in which each column contains measurements on one variable, and each row contains one case.
+
+So, a DataFrame has additional metadata due to its tabular format, which allows Spark to run certain optimizations on the finalized query.
+
+An RDD, on the other hand, is merely a Resilient Distributed Dataset that is more of a blackbox of data that cannot be optimized as the operations that can be performed against it, are not as constrained.
+
+However, you can go from a DataFrame to an RDD via its rdd method, and you can go from an RDD to a DataFrame (if the RDD is in a tabular format) via the toDF method
+
+In general it is recommended to use a DataFrame where possible due to the built in query optimization.
+
+On the history of Spark APIs:
+rdd was created on 2011 :
+	Distribute collection of Jvm objects.
+	Functional Operators(Map, filter, etc)
+
+DataFrame was created on 2013:
+	Distribute collection of Row objects.
+	Expression-based operations and UDFs.
+	Logical plans and optimizer.
+	Fas/efficient internal representations.
+
+Dataset was created on 2015:
+	Internally rows, externally JVM objects.
+	Almost the "Best of both worlds": type safe + fast.
+	But slower than DF Not as good for interactive analysis, especially Python.
+
+
+reference: http://www.bigdataanalyst.in/rdds-vs-dataframe-vs-dataset/
+
+
+9. What types of operations do we use in the RDDs ? 
+
+	Transformaciones: tras aplicar una transformación, obtenemos un nuevo y modificado RDD basado en el original.
+
+	Acciones: una acción consiste simplemente en aplicar una operación sobre un RDD y obtener un valor como resultado, que dependerá del tipo de operación.
+
+10. What is a partition?
+
+	A partition in spark is an atomic chunk of data (logical division of data) stored on a node in the cluster. Partitions are basic units of parallelism in Apache Spark. RDDs in Apache Spark are collection of partitions.
+
+simple example to create a list of 10 integers with 3 partitions:
+	integer_RDD = sc.parallelize (range (10), 3)
+
+
+Characteristics of Partitions in Apache Spark
+Every machine in a spark cluster contains one or more partitions.
+The number of partitions in spark are configurable and having too few or too many partitions is not good.
+Partitions in Spark do not span multiple machines.
+
+Types of Partitioning in Apache Spark
+
+	Hash Partitioning in Spark
+	Range Partitioning in Spark
+
+
+11. What is the Spark Driver? Which is the difference with the Spark Executor? 
+
+Is a JVM process that hosts SparkContext for a Spark application. It is the master node in a Spark application.
+
+A driver is where the task scheduler lives and spawns tasks across workers.
+A driver coordinates workers and overall execution of tasks.
+
+
+12. What are broadcast variables? And accumulators? 
+
+Broadcast is a read-only global variable, which all nodes of a cluster can read. Think of them more like as a lookup variables.
+
+On the other hand think of accumulators as a global counter variable where each node of the cluster can write values in to. These are the variables that you want to keep updating as a part of your operation like for example while reading log lines, one would like to maintain a real time count of number of certain log type records identified.
+
+
+13. What is a DStream? 
+
+first of all We need to speak about:
+ Spark Streaming is fault tolerant, high throughput system. It processes the live stream of data. Spark Streaming takes input from various reliable inputs sources like Flume, HDFS, and Kafka etc. and then sends the processed data to filesystems, database or live dashboards. The input data stream is divided into the batches of data and then generates the final stream of the result in batches.
+
+Spark DStream (Discretized Stream) is the basic abstraction of Spark Streaming. DStream is a continuous stream of data. It receives input from various sources like Kafka, Flume, Kinesis, or TCP sockets. It can also be a data stream generated by transforming the input stream. At its core, DStream is a continuous stream of RDD (Spark abstraction). Every RDD in DStream contains data from the certain interval.
+
+14. What is the significance of Sliding Window Operations? 
+
+	Spark Streaming also provides windowed computations, which allow you to apply transformations over a sliding window of data. The following figure illustrates this sliding window.
+
+	Spark Streaming
+
+	As shown in the figure, every time the window slides over a source DStream, the source RDDs that fall within the window are combined and operated upon to produce the RDDs of the windowed DStream. In this specific case, the operation is applied over the last 3 time units of data, and slides by 2 time units. This shows that any window operation needs to specify two parameters.
+
+	window length - The duration of the window (3 in the figure).
+	sliding interval - The interval at which the window operation is performed (2 in the figure).
+	These two parameters must be multiples of the batch interval of the source DStream (1 in the figure).
+
+	Let’s illustrate the window operations with an example. Say, you want to extend the earlier example by generating word counts over the last 30 seconds of data, every 10 seconds. To do this, we have to apply the reduceByKey operation on the pairs DStream of (word, 1) pairs over the last 30 seconds of data. This is done using the operation reduceByKeyAndWindow.
+
+
+15. Why would you use caching in Apache Spark? 
+
+for me the most ilustratives points are:
+
+Caching is very useful for applications that re-use an RDD multiple times. Iterative machine learning applications include such RDDs that are re-used in each iteration.
+
+Caching all of the generated RDDs is not a good strategy as useful cached blocks may be evicted from the cache well before being re-used. For such cases, additional computation time is required to re-evaluate the RDD blocks evicted from the cache.
+
+Given a large list of RDDs that are being used multiple times, deciding which ones to cache may be challenging. When memory is scarce, it is recommended to use MEMORY_AND_DISK caching strategy such that evicted blocks from cache are saved to disk. Reading the blocks from disk is generally faster than re-evaluation. If extra processing cost can be afforded, MEMORY_AND_DISK_SER can further reduce the memory footprint of the cached RDDs.
+
+If certain RDDs have very large evaluation cost, it is recommended to replicate them to another node. This will boost significantly performance in the case of a node failure, since re-evaluation can be skipped.
+
+reference:
+ https://forums.databricks.com/questions/271/should-i-always-cache-my-rdds.html
+Learning Spark: Lightning-Fast Big Data Analysis
+
+
+16. What do you understand by eager evaluation? And lazy? Which is used by Apache Spark? 
+
+	Apache Spark uses lazy evaluation as a performance optimization technique.
+
+	In Lazy evaluation a transformation is not applied immediately to a RDD. Spark records the transformations that have to be applied to a RDD.
+
+	Once an Action is called, Spark executes all the transformations.
+
+	Since Spark does not perform immediate execution based on transformation, it is called lazy evaluation.
+
+
+what I understand by lazy evaluation:
+Means that the spark execution will not start until an action is triggered. In spark, lazy evaluation comes into picture when spark transformations occur.
+
+Transformations are lazy in nature. when some operation in RDD is called, it does not execute immediately. Spark maintains the record of all operations being called
+through directed of all operations being called through directed acylic graph. Spark RDD can be thought as the data, that we built up through transformation. 
+Since transformations are lazy in nature, so we can execute operation any time by calling an action on data. Thus, in lazy evaluation data is not loaded until
+it is necessary.
+
+
+-------------------------------------------------
+if you executed every transformation eagerly, what does that mean? Well, it means you will have to materialize that many intermediate datasets in memory. This is evidently not efficient -- for one, it will increase your GC costs. (Because you're really not interested in those intermediate results as such. Those are just convnient abstractions for you while writing the program.) So, what you do instead is -- you tell Spark what is the eventual answer you're interested and it figures out best way to get there.
+
+
+7. Which part of the following code will be executed on the master? Which will run on each worker node?
+
+val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM")
+
+def getEventCountOnWeekdaysPerMonth(data: RDD[(LocalDateTime, Long)]): Array[(String, Long)] = {
+
+ val result = data
+   .filter(e => e._1.getDayOfWeek.getValue < DayOfWeek.SATURDAY.getValue)
+   .map(mapDateTime2Date)
+   .reduceByKey(_ + _)
+   .collect()
+
+ result
+   .map(e => (e._1.format(formatter), e._2))
+}
+
+private def mapDateTime2Date(v: (LocalDateTime, Long)): (LocalDate, Long) = {
+ (v._1.toLocalDate.withDayOfMonth(1), v._2)
+}
+
+
+explanation:
+	The Driver process will run on the Master node of your cluster and the Executor processes run on the Worker nodes. 
+	You can increase or decrease the number of Executor processes dynamically depending upon your usage but the Driver process will exist throughout the lifetime of your application.
+
+
+
+some interesting things: 
+
+There are two types of "deploy modes" in spark: Client Mode and Cluster Mode. if the driver component of spark job runs on the machine from which job is submitted, in that then the deploy mode is basically 
+"cluster mode" Here spark job will launch "driver" component inside the cluster.
+
+
+Spark need not be installed when running a job under YARN or Mesos because Spark can execute on top of YARN or Mesos clusters without affecting any change to the cluster.
+
+
+Spark ui is available on port 4040 of the driver mode.
+hhtp://localhost:4040
+
+
+
+

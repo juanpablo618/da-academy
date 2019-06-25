@@ -1,0 +1,184 @@
+1. Please indicate the phases for Data Analysis Process?
+
+	question
+		 select the right questions that should be measurable, clear and concise.
+	Wrangle
+		data acquisition
+		data cleaning
+	Explore
+		spend some time getting familiar with your data and finding patterns.
+
+	Draw Conclusions
+		or make make some predictions
+	Communicate
+		express the results.
+
+
+2. What are the main components of a Hadoop Application?
+	
+for my are: 
+
+	HDFS
+		HDFS- Hadoop distributed file system (HDFS) is the primary storage system of Hadoop. HDFS store very large files running on a cluster of commodity hardware. It works on principle of storage of less number of large files rather than the huge number of small files. HDFS stores data reliably even in the case of hardware failure. It provides high throughput access to application by 			accessing in parallel.
+
+	MapReduce
+		
+		MapReduce is the data processing layer of Hadoop. It writes application that process large structured and unstructured data stored in HDFS. It process huge amount of data in parallel. It does 		this by dividing the job (submitted job) into a set of independent tasks (sub-job). In Hadoop, MapReduce works by breaking the processing into phases: Map and Reduce. The Map is the first 			phase of processing, where we specify all the complex logic code. Reduce is the second phase of processing. Here we specify light-weight processing like aggregation/summation.
+
+	YARN
+		YARN is the processing framework in Hadoop. It provides Resource management, and allows multiple data processing engines, for example real-time streaming, data science and batch processing.
+
+
+3. What are the 2 parts that divide the Wrangling phase?
+
+	1.Data acquisition.
+	2.Data cleaning.
+
+
+4. Data locality feature in Hadoop means ?
+
+Data locality refers to the ability to move the computation close to where the actual data resides on the node, instead of moving large data to computation. This minimizes network congestion and increases the overall throughput of the system.
+To optimize for data locality, Hadoop provides a few ways.
+
+
+5. The phase that allows us to make predictions with the data is?
+
+Drawing conclusions phase.
+
+
+6. Which are the three modes in which Hadoop can be run?
+
+	Local Mode or Standalone Mode
+		Standalone mode is the default mode in which Hadoop run. Standalone mode is mainly used for debugging where you don’t really use HDFS.
+		You can use input and output both as a local file system in standalone mode.
+
+		You also don’t need to do any custom configuration in the files- mapred-site.xml, core-site.xml, hdfs-site.xml.
+
+		Standalone mode is usually the fastest Hadoop modes as it uses the local file system for all the input and output. Here is the summarized view of the standalone mode-
+
+		• Used for debugging purpose
+		• HDFS is not being used
+		• Uses local file system for input and output
+		• No need to change any configuration files
+		• Default Hadoop Modes
+
+		2. Pseudo-distributed Mode
+		The pseudo-distribute mode is also known as a single-node cluster where both NameNode and DataNode will reside on the same machine.
+
+		In pseudo-distributed mode, all the Hadoop daemons will be running on a single node. Such configuration is mainly used while testing when we don’t need to think about the resources and other users sharing the resource.
+
+		In this architecture, a separate JVM is spawned for every Hadoop components as they could communicate across network sockets, effectively producing a fully functioning and optimized mini-cluster on a single host.
+
+		Here is the summarized view of pseudo distributed Mode-
+
+		• Single Node Hadoop deployment running on Hadoop is considered as pseudo distributed mode
+		• All the master & slave daemons will be running on the same node
+		• Mainly used for testing purpose
+		• Replication Factor will be ONE for blocks
+		• Changes in configuration files will be required for all the three files- mapred-site.xml, core-site.xml, hdfs-site.xml
+
+		3. Fully-Distributed Mode (Multi-Node Cluster)
+		This is the production mode of Hadoop where multiple nodes will be running. Here data will be distributed across several nodes and processing will be done on each node.
+
+		Master and Slave services will be running on the separate nodes in fully-distributed Hadoop Mode.
+
+		• Production phase of Hadoop
+		• Separate nodes for master and slave daemons
+		• Data are used and distributed across multiple nodes
+
+		In the Hadoop development, each Hadoop Modes have its own benefits and drawbacks. Definitely fully distributed mode is the one for which Hadoop is mainly known for but again there is no point 		in engaging the resource while in testing or debugging phase. So standalone and pseudo-distributed Hadoop modes are also having their own significance.
+
+
+
+7. What happens to job tracker when Namenode is down?
+When Namenode is down, your cluster is OFF, this is because Namenode is the single point of failure in HDFS.
+
+	
+
+8. What is the basic difference between traditional RDBMS and Hadoop?
+
+Traditional RDBMS is used for transactional systems to report and archive the data, whereas Hadoop is an approach to store huge amount of data in the distributed file system and process it. RDBMS will be useful when you want to seek one record from Big data, whereas, Hadoop will be useful when you want Big data in one shot and perform analysis on that later
+
+
+
+9. How would you transform unstructured data into structured data?
+
+Step 1 : As analyzing the entire text manually is an impossible task, we take a random/stratified sample to build a dictionary.
+
+Step 2 : We clean the data to make sure we capture the real essence of the text available. 
+
+Step 3 : Once you have the clean text, extract the most frequently occurring words. 
+
+10. Replication causes data redundancy, then why is it pursued in HDFS?
+HDFS works with commodity hardware (systems with average configurations) that has high chances of getting crashed any time. Thus, to make the entire system highly fault-tolerant, HDFS replicates and stores data in different places. Any data on HDFS gets stored at least 3 different locations. So, even if one of them is corrupted and the other is unavailable for some time for any reason, then data can be accessed from the third one. Hence, there is no chance of losing the data. This replication factor helps us to attain the feature of Hadoop called Fault Tolerant.
+
+
+11. What is a Namenode?
+Namenode is the master node on which job tracker runs and consists of the metadata. It maintains and manages the blocks which are present on the datanodes. It is a high-availability machine and single point of failure in HDFS.
+
+
+12. What is a Datanode?
+Datanodes are the slaves which are deployed on each machine and provide the actual storage. These are responsible for serving read and write requests for the clients.
+
+13. What are Problems with small files and HDFS?
+
+HDFS is not good at handling large number of small files. Because every file, directory and block in HDFS is represented as an object in the namenode’s memory, each of which occupies approx 150 bytes So 10 million files, each using a block, would use about 3 gigabytes of memory. when we go for a billion files the memory requirement in namenode cannot be met.
+
+
+14. Can Hadoop handle streaming data?
+Yes, through Technologies like Apache Kafka, Apache Flume, and Apache Spark it is possible to do large-scale streaming.
+
+15. In Hadoop, HDFS federation means?
+
+What is Hadoop Federation?
+Hadoop Distributed FileSystem-HDFS is the world’s most reliable storage system. HDFS is a FileSystem of Hadoop designed for storing very large files.
+HDFS architecture follows master /slave topology. In which master is NameNode and slaves is DataNode. Namenode stores meta-data i.e. number of blocks, their location, replicas. This meta-data is available in memory in the master for faster retrieval of data. NameNode maintains and manages the slave nodes, and assigns tasks to them.
+HDFS Federation enhances an existing HDFS architecture. In prior HDFS architecture for entire cluster allows only single namespace. In that configuration, Single NameNode manages namespace. If NameNode fails, the cluster as a whole would be out of services. The cluster will be unavailable until the NameNode restarts or brought on a separate machine.
+Hadoop Federation overcomes this limitation by adding support for many NameNode/Namespaces to HDFS.
+Read: Disk Balancer in HDFS
+	
+Current HDFS Architecture
+Hadoop HDFS has two main layers:
+
+Namespace– This layer manages files, directories, and blocks. This layer supports basic file system operation such as creation, deletion of files.
+Block Storage– It has two parts-
+
+a. Block management
+It supports block related operation such as creation, deletion of the blocks. It manages data nodes in the cluster and takes care of replication management.
+
+b. Physical storage
+This stores the blocks on the local file system and provides access to read or write operation. Follow this link to learn HDFS data read and write operation.
+This current HDFS works fine for smaller setups. But, For large organizations where we need to take care of the huge amount of data has some limitation. Hadoop federation handles those limitations.
+Read: HDFS Architecture in detail
+
+
+16. What are the scheduler options available in YARN?
+
+
+FIFO scheduler (default in apache distribution)
+
+Capacity Scheduler (hortonworks Default)
+
+Fair Share scheduler (Cloudera Default)
+
+
+17. What is a block in HDFS?
+http://hadooptutorials.co.in/tutorials/hadoop/hadoop-fundamentals.html
+
+A Hadoop block is a file on the underlying filesystem. Since the underlying filesystem stores files as blocks, one Hadoop block may consist of many blocks in the underlying file system. Blocks are large. They default to 64 megabytes each and most systems run with block sizes of 128 megabytes or larger.
+
+
+
+18. Explain how do ‘map’ and ‘reduce’ works.
+Namenode takes the input and divide it into parts and assign them to data nodes. These datanodes process the tasks assigned to them and make a key-value pair and returns the intermediate output to the Reducer. The reducer collects this key value pairs of all the datanodes and combines them and generates the final output.
+
+
+
+19. What are the common input formats in Hadoop?
+https://www.quora.com/What-are-the-most-common-Input-Formats-in-Hadoop
+
+
+
+20. What is the use of jps command in Hadoop?
+
+https://www.quora.com/What-is-JPS-in-Hadoop

@@ -1,0 +1,877 @@
+Auto assessment:
+1. What is a DBMS and what are its responsibilities? What are the DBMS components?
+
+	DataBase Management Systems:
+			Is a computer-software application that interacts with end-users, other applications, and the database itself to capture and analyze data. 
+			Example: MySql.
+			The responsibilities are: 
+			update and retrieval.
+			Security Service.
+			Replication.
+			Catalog feature.
+			Data integrity.
+			Data recovery.
+			Concurrent updates.
+			Data independence.	
+
+			Components: 
+				ram memory.
+				The processes.
+				the physical storage.
+
+				
+
+
+
+
+2. What are the architectural levels? How are they related to each other?
+	The three Level Architecture
+	
+	The Three Level Architecture has the aim of enabling users to access the same data but with a
+	personalised view of it. The distancing of the internal level from the external level means that
+	users do not need to know how the data is physically stored in the database. This level
+	separation also allows the Database Administrator (DBA) to change the database storage
+	structures without affecting the users' views.
+	
+	External Level (User Views):​ 
+	A user's view of the database describes a part of the database
+	that is relevant to a particular user. It excludes irrelevant data as well as data which the user is
+	not authorised to access.
+	
+	Conceptual Level:​ 
+	The conceptual level is a way of describing what data is stored within the
+	whole database and how the data is inter-related. The conceptual level does not specify how
+	the data is physically stored.
+	Some important facts about this level are:
+	DBA works at this level.
+	Describes the structure of all users.
+	Only DBA can define this level.
+	Global view of database.
+	Independent of hardware and software.
+	
+	Internal Level:​ 
+	The internal level involves how the database is physically represented on the
+	computer system. It describes how the data is actually stored in the database and on the
+	computer hardware.
+	
+
+3. What are the characteristics of a OLAP system? What is the difference with OLTP?
+
+	Operations
+		OLAP tools enable users to analyze multidimensional data interactively from multiple
+		perspectives. OLAP consists of three basic analytical operations: consolidation (roll-up),
+		drill-down, and slicing and dicing.[6] Consolidation involves the aggregation of data that can be
+		accumulated and computed in one or more dimensions.
+		Use Cases
+		Typical applications of OLAP include business reporting for sales, marketing, management
+		reporting, business process management (BPM), budgeting and forecasting, financial reporting.
+
+For me the most important thing is the purpose of data, and is to help with planning, problem solving, and decision support.
+
+
+4. What is ACID? Explain each concept of the acronym
+
+	ACID
+	Concept
+	Transactions refers to all concurrent data change requests handled by the database. Also it can
+	be seen as a unit of work performed within a DBMS against a database. Each transaction is
+	independent of another transaction. A transaction might consist of one or more
+	data-manipulation statements and queries.
+	ACID comes from the transaction model provided by a classic RDBMS. It states that a database
+	transaction must be ​ a ​ tomic, ​ consistent, ​ isolated and ​ durable.
+	
+	Atomicity​ : 
+	transactions must provide an “all or nothing” principle, which means if one part of the
+	transaction fails, then entire transaction fails, and the database is left unchanged. The
+	transaction is indivisible, either all the statements in the transaction are applied to the database
+	or none are.
+	
+	Consistency​ : 
+	any data written to the database must be valid according to all defined rules
+	including constraints. It property ensures that any transaction will bring the database from one
+	valid state to another.This does not guarantee correctness of the transaction in all ways the application programmer
+	might have wanted (that is the responsibility of application-level code), but merely that any
+	programming errors cannot result in the violation of any defined rules.
+	
+	In a few words, All validation rules must be checked to ensure consistency.
+
+
+	Isolation​ : 
+	while multiple transactions can be executed by one or more users at the same time,
+	one transaction should not see the effects of other in-progress.
+	
+	Durability​ : 
+	once a transaction has been committed, it will remain so, its changes are expected
+	to persist even if there is a failure of operating system or hardware.
+
+These four properties describe the major guarantees of the transaction paradigm, which has influenced many aspects of development in database systems.
+
+
+
+5. Explain what is a data model, and what are the different structures, constraints and operations.
+
+	If We speak related to hardware a ssd disk could be.
+	If We speak related to logical way of storing data we could say that a file system  or could be a table on a database.
+
+	Basically is an abstract model that organizes elements of ​ data and standardizes how they relate to one another and to properties of the real world entities.
+
+	Three components:
+
+	1. Structures
+		a. Rows and columns
+			- Everything is a table
+			- Every row in a table has the same columns
+			- Relationships are implicit: no pointers
+		b. Nodes and edges
+		c. Key-value pairs
+		d. A sequence of bytes
+
+
+	2. Constrains
+		a. All rows must have the same number of columns
+		b. All values in one column must have the same type
+		c. All value in one specific column can not be null
+
+
+	3. Operations
+		a. Find the value of key x
+		b. Find the rows where column “lastname” is “Jordan”
+		c. Set the next N bytes
+
+
+6. What is normalization, and what each level requires? Why would you normalize a table? How do you do it?
+
+Database Normalization is a technique of organizing the data in the database. Normalization is a systematic approach of decomposing tables to eliminate data redundancy(repetition) and undesirable characteristics like Insertion, Update and Deletion Anamolies. It is a multi-step process that puts data into tabular form, removing duplicated data from the relation tables.
+
+Normalization is used for mainly two purposes,
+
+Eliminating reduntant(useless) data.
+Ensuring data dependencies make sense i.e data is logically stored.
+
+	First Normal Form (1NF)
+	For a table to be in the First Normal Form, it should follow the following 4 rules:
+
+		It should only have single(atomic) valued attributes/columns.
+		Values stored in a column should be of the same domain
+		All the columns in a table should have unique names.
+		And the order in which data is stored, does not matter.
+
+
+Second Normal Form (2NF)
+	For a table to be in the Second Normal Form,
+
+		It should be in the First Normal form.
+		And, it should not have Partial Dependency.
+
+	Third Normal Form (3NF)
+	A table is said to be in the Third Normal Form when,
+
+	It is in the Second Normal form.
+	And, it doesn't have Transitive Dependency.
+
+
+Boyce and Codd Normal Form (BCNF)
+
+	Boyce and Codd Normal Form is a higher version of the Third Normal form. This form deals with certain type of anomaly that is not handled by 3NF. A 3NF table which does not have multiple overlapping candidate keys is said to be in BCNF. For a table to be in BCNF, following conditions must be satisfied:
+
+	R must be in 3rd Normal Form
+	and, for each functional dependency ( X → Y ), X should be a super Key.
+
+Fourth Normal Form (4NF)
+	A table is said to be in the Fourth Normal Form when,
+
+		It is in the Boyce-Codd Normal Form.
+		And, it doesn't have Multi-Valued Dependency.
+
+
+
+7. What is the difference between relational and non relational databases? Why would you chose each?
+
+Features	    Relational (SQL)	Non-Relational (NoSQL)	
+Data Type	    Hard to store rich data type	Able to store literally any type of data	
+Scaling	        Not trivial to scale, and not cheap	Scaling is automatic and transparent	
+Cost	        Expensive to build and maintain	Around 10% cost to Relational DB	
+Representation	Represents data in tables and rows	Represents data as collections of JSON documents	
+Query	        Structured Query Language (SQL): makes SQL injection attack possible	Object Querying: intuitive, passing a document to explain what you're querying for	
+Multi-originated	JOIN operation: perform query across multiple tables	Multi-dimensional data type: support array and even other documents	
+Atomic Style	Support Atomic Transaction: able to contain multiple operations with a transaction and roll back the whole thing if it were a single operation	     Does not support Atomic Transaction, but single operations are atomic	
+Schema	        Require to define tables and columns before storing. Each row has same columns	No schema, drops in documents. Two documents in a collection can have different fields	
+Perfomance	    Poor performance when using ORM	Perform much better	
+Application	    Better when: Data structure fits nicely into table and rows. Or Require SQL or transactions	Better when: Data seems complex in relational database system. Or De-normalizing database schema or coding around performance. Or Can not pre-define schema or want to store records in same collection that have different fields
+
+
+
+The best way to determine which database is right for your business is to analyze what you need its functions to be. SQL is a good choice for any organization that will benefit from a predefined structure and set schemas, particularly if they require multi-row transactions. It is also a good option if all data must be consistent without leaving room for error, such as with accounting systems.
+
+NoSQL is a good choice for those companies experiencing rapid growth with no clear schema definitions. NoSQL offers much more flexibility than a relational database and is a solid option for companies who must analyze large quantities of data or whose data structures they manage are variable.
+
+
+8. What are the different types of databases?
+
+	1. Centralised Database
+		The information(data) is stored at a centralized location and the users from different locations can access this data. This type of database contains application procedures that help the users to access the data even from a remote location.
+
+		Various kinds of authentication procedures are applied for the verification and validation of end users, likewise, a registration number is provided by the application procedures which keeps a track and record of data usage. The local area office handles this thing.
+
+	2.Distributed Database
+		Just opposite of the centralized database concept, the distributed database has contributions from the common database as well as the information captured by local computers also. The data is not at one place and is distributed at various sites of an organization. These sites are connected to each other with the help of communication links which helps them to access the distributed data easily.
+
+		You can imagine a distributed database as a one in which various portions of a database are stored in multiple different locations(physical) along with the application procedures which are replicated and distributed among various points in a network.
+
+		There are two kinds of distributed database, viz. homogenous and heterogeneous. The databases which have same underlying hardware and run over same operating systems and application procedures are known as homogeneous DDB, for eg. All physical locations in a DDB. Whereas, the operating systems, underlying hardware as well as application procedures can be different at various sites of a DDB which is known as heterogeneous DDB.
+
+	3.Personal Database
+		Data is collected and stored on personal computers which is small and easily manageable. The data is generally used by the same department of an organization and is accessed by a small group of people.
+
+
+	4.End User Database
+		The end user is usually not concerned about the transaction or operations done at various levels and is only aware of the product which may be a software or an application. Therefore, this is a shared database which is specifically designed for the end user, just like different levels’ managers. Summary of whole information is collected in this database.
+
+
+	5.Commercial Database
+		These are the paid versions of the huge databases designed uniquely for the users who want to access the information for help. These databases are subject specific, and one cannot afford to maintain such a huge information. Access to such databases is provided through commercial links.
+
+	6.NoSQL Database
+		These are used for large sets of distributed data. There are some big data performance issues which are effectively handled by relational databases, such kind of issues are easily managed by NoSQL databases. There are very efficient in analyzing large size unstructured data that may be stored at multiple virtual servers of the cloud.
+
+	7.Operational Database
+		Information related to operations of an enterprise is stored inside this database. Functional lines like marketing, employee relations, customer service etc. require such kind of databases.
+
+	8.Relational Databases 
+		These databases are categorized by a set of tables where data gets fit into a pre-defined category. The table consists of rows and columns where the column has an entry for data for a specific category and rows contains instance for that data defined according to the category. The Structured Query Language (SQL) is the standard user and application program interface for a relational database.
+
+		There are various simple operations that can be applied over the table which makes these databases easier to extend, join two databases with a common relation and modify all existing applications.
+
+	9.Cloud Databases
+		Now a day, data has been specifically getting stored over clouds also known as a virtual environment, either in a hybrid cloud, public or private cloud. A cloud database is a database that has been optimized or built for such a virtualized environment. There are various benefits of a cloud database, some of which are the ability to pay for storage capacity and bandwidth on a per-user basis, and they provide scalability on demand, along with high availability.
+
+		A cloud database also gives enterprises the opportunity to support business applications in a software-as-a-service deployment.
+
+	10.Object-Oriented Databases
+		An object-oriented database is a collection of object-oriented programming and relational database. There are various items which are created using object-oriented programming languages like C++, Java which can be stored in relational databases, but object-oriented databases are well-suited for those items.
+
+		An object-oriented database is organized around objects rather than actions, and data rather than logic. For example, a multimedia record in a relational database can be a definable data object, as opposed to an alphanumeric value.
+
+	11.Graph Databases
+		The graph is a collection of nodes and edges where each node is used to represent an entity and each edge describes the relationship between entities. A graph-oriented database, or graph database, is a type of NoSQL database that uses graph theory to store, map and query relationships.
+
+		Graph databases are basically used for analyzing interconnections. For example, companies might use a graph database to mine data about customers from social media.
+
+
+
+9. What does the CAP Theorem state? What are the tradeoffs one needs to do when selecting a database?
+
+	The CAP theorem states that in distributed networked systems, architects have to choose two of
+		these three guarantees — you can’t promise your users all three. That leaves you with the three
+		possibilities shown:
+		● Systems using traditional relational technologies normally aren’t partition tolerant, so
+		they can guarantee consistency and availability. In short, if one part of these traditional
+		relational technologies systems is offline, the whole system is offline.
+		● Systems where partition tolerance and availability are of primary importance can’t
+		guarantee consistency, because updates (that destroyer of consistency) can be made
+		on either side of the partition.
+		● Systems where partition tolerance and consistency are of primary importance can’t
+		guarantee availability because the systems return errors until the partitioned state is
+		resolved.
+
+
+basically: CAP Theorem is a concept that a distributed database system can only have 2 of the 3: Consistency, Availability and Partition Tolerance.
+CAP Theorem is very important in the Big Data world, especially when we need to make trade off’s between the three, based on our unique use case. 
+
+
+High consistency:
+	This condition states that all nodes see the same data at the same time
+	performing a read operation will return the value of the most recent write operation causing all nodes to return the same data
+
+High Availability
+	This condition states that every request gets a response on success/failure. 
+
+Partition Tolerance
+	This condition states that the system continues to run, despite the number of messages being delayed by the network between nodes.
+
+
+10. What are the Consistency levels?
+
+
+
+The guarantee that any transactions started in the future necessarily see the effects
+of other transactions committed in the past●
+
+The guarantee that ​ database constraints​ are not violated, particularly once a
+transaction commits
+The guarantee that operations in transactions are performed accurately, correctly,
+and with validity, with respect to application semantics
+
+11. Explain Sharding, Clustering and Partitions
+
+Sharding:
+	Sharding is a method for distributing data across multiple machines. Means to partition the data
+	in such a way that data typically requested and updated together resides on the same node and
+	that load and storage volume is roughly even distributed among the servers. To allow such a
+	sharding scenario there has to be a mapping between data partitions (shards) and storage
+	nodes that are responsible for these shards. This mapping can be static or dynamic, determined
+	by a client application, by some dedicated “mapping-service/component” or by some network
+	infrastructure between the client application and the storage nodes
+
+
+Tolerating Partitions
+	When two parts of the same database cluster cannot communicate. We talk about network
+	partitions. In this case, individual servers are still receiving requests, but they can’t communicate
+	with each other. This is the “split brain” phenomenon.
+	You have two choices when a network partition happens:
+	·
+	Continue, at some level, to service read and write operations.
+	·
+	“Vote off” one part of the partition and decide to fix the data later when both parts can
+	communicate. This usually involves the cluster voting a read replica as the new master for each
+	missing master partition node.
+
+
+
+12. What does failover mean? What are some failover techniques?
+
+Failover
+	Failover is a backup operational mode in which the functions of a system component are
+	assumed by secondary system components when the primary component becomes unavailable
+	through either failure or scheduled down time. Used to make systems more fault-tolerant,
+	failover is typically an integral part of mission-critical systems that must be constantly available.
+	The procedure involves automatically offloading tasks to a standby system component so that
+	the procedure is as seamless as possible to the end user.
+
+
+Storage Layout
+Determine how the disk is accessed for read/write operations and therefore directly implicate
+performance.
+
+1)
+ Row-Based Storage Layout means that a table of a relational model gets serialized as
+its lines are appended and flushed to disk. The advantages of this storage layout are
+that at first whole datasets can be read and written in a single IO operation and that
+secondly one has a good locality of access of different columns. On the downside,
+operating on columns is expensive as a considerable amount data has to be read.
+
+2) 
+Columnar Storage Layout serializes tables by appending their columns and flushing
+them to disk. Therefore operations on columns are fast and cheap while operations onrows are costly and can lead to seeks in a lot or all of the columns. A typical application
+field for this type of storage layout is analytics where an efficient examination of columns
+for statistical purposes is important.
+
+3) 
+Columnar Storage Layout with Locality Groups ​ is similar to column-based storage
+but adds the feature of defining so called locality groups that are groups of columns
+expected to be accessed together by clients. The columns of such a group may
+therefore be stored together and physically separated from other columns and column
+groups.
+
+4) LSM-trees: ​ 
+Log Structured Merge Trees in contrast to the storage layouts explained
+before do not describe how to serialize logical datastructures (like tables, documents and
+so) but how to efficiently use memory and disk storage in order to satisfy read and write
+requests in an efficient, performant and still safely manner. The idea is to hold chunks of
+data in memory in so called Memtables, maintaining on-disk commit-logs for these
+in-memory data structures and flushing the memtables to disk from time to time into so
+called SSTables. A SSTable stands for Sorted Strings Table, which is a file of key/value
+string pairs, sorted by keys. These are immutable and get compacted over time by
+copying the compacted SSTable to another area of the disk while preserving the original
+SSTable and removing the latter after the compactation process has happened. The
+compactation is necessary as data stored in these SSTable may have changed or been
+deleted by clients. These data modifications are first reflected in a Memtable that later
+gets flushed to disk as a whole into a SSTable which may be compacted together with
+other SSTables already on disk. Read-requests go to the Memtable as well as the
+SSTables containing the requested data and return a merged view of it. Write requests
+go to the Memtable as well as an on-disk commit-log synchronously. The advantages of
+log structured merge trees are that memory can be utilized to satisfy read requests
+quickly and disk I/O gets faster as SSTables can be read sequentially because their data
+is not randomly distributed over the disk. LSM-trees also tolerate machine crashes as
+write operations not only go to memory but also synchronously to a commit-log by which
+a machine can recover from a crash.
+
+
+13. How do Key-Value stores work? What are the benefits? What are the weaknesses? What are some of the common features?
+
+	A key-value store, or key-value database is a simple database that uses an associative array,
+	as the fundamental data model where each key is associated with one and only one value in a
+	collection. It can also be thought as a map or dictionary. This relationship is referred to as a
+	key-value pair.
+	In each key-value pair the key is represented by an arbitrary string such as a filename, URI or
+	hash. The value can be any kind of data like an image, user preference file or document. The
+	value is stored as a blob requiring no upfront data modeling or schema definition, the application
+	has complete control over what is stored in the value. ​ Values are identified and accessed via a
+	key, and stored values can be numbers, strings, counters, JSON, XML, HTML, binaries, images,
+	short videos, and more.
+	The storage of the value as a blob removes the need to index the data to improve performance.
+	However, you cannot filter or control what’s returned from a request based on the value
+	because the value is opaque.
+	In general, key-value stores have no query language. They provide a way to store, retrieve and
+	update data using simple ​ get, put and ​ delete commands; the path to retrieve data is a direct
+	request to the object in memory or on disk. The simplicity of this model makes a key-value store
+	fast, easy to use, scalable, portable and flexible.
+
+
+common features:
+	High Throughput
+
+	Key-value stores lack secondary indexes, and many of them eschew synchronized updates to
+	their data’s replicas in order to maximize throughput.
+	Managing Availability
+
+	Key-Value stores typically provide a wide range of consistency and durability models. You can
+	choose between availability and partition tolerance and between consistency and partition
+	tolerance.
+	Some key-value stores abandon BASE for fully ACID transactional consistency support.
+	Trading Consistency
+	Key-value stores typically trade consistency in the data, which is the ability to always read the
+	latest copy of a value immediately after an update, in order to improve write times.
+	Voldemort and Riak are eventually consistent key-value stores. They use a method call read
+	repair. The read repair method involves the followings steps:
+	1) At the time of reading a record or pair, determine which of several available values for a
+	key is the latest and most valid one.
+	2) If the most recent value can’t be decided, then the database client is presented with all
+	value options and is left to decide for itself.
+	ACID Support
+	Aerospike and Redis are notable exceptions to eventual consistency. Both use shared-nothing
+	clusters, which means each key has the following:
+	
+	A Master Node: Only the masters provide answers for a single key, which ensures that
+	you have the latest copy.
+	Multiple slave replica nodes: These contains copies of all data on a master node.
+	Aerospike provides full ACID transactional consistency by allowing modifications to be
+	flushed immediately to disk before the transaction is flagged as complete to the
+	database client. Redis flushes data to disk every few seconds, leaving a small window of
+	potential data loss if a server fails, but it can be configured to flush all data to disk as it
+	arrives.
+	Fast Read Capabilities
+	Key-value stores’ fast read capabilities stem from their use of well-defined keys. These keys are
+	typically hashed, which gives a key-value store a very predictable way of determining which
+	partition and thus server data resides on. A particular server manages one or more partitions.
+	A good key enables you to uniquely identify the single record that answers a query without
+	having to look any values within that record. If you don’t design your key well, you may end up
+	with one server having a disproportionately heavier load than the others, leading to poor
+	performance and a nightmare scenario of rebalancing.
+
+	Data Partitioning
+
+	Partition design is important because some key-value stores, do not allow the number of
+	partitions to be modified once a cluster is created. Their distribution across servers, though, can
+	be modified. So start with a large number of partitions that you can spread out in the future. One
+	example of partitioning is Voldemort’s consistent hashing approach, in which if you have the
+	same partitions spread across three servers initially and then across four servers later, then the
+	number of partitions will stay the same, but their allocation is different across servers. The same
+	is true of their replicas.
+
+	Partition Tolerance
+
+	Some key-value stores follow the “Vote off” approach. As Riak, which allows you to determine
+	how many times data is replicated (three copies, by default) and how many servers must bequeried in order for a read to succeed. This means that, if the primary master of a key is on the
+	wrong side of a network partition, read operations can still succeed if the other two servers are
+	available.
+
+	Accessing data on partitions
+
+	Key-value stores are highly distributed with no single point of failure. This means there’s no
+	need for a master coordinating node to keep track of servers within a cluster. Cluster
+	management is done automatically by a chat protocol between nodes in the server.
+	In some cases, the client driver keeps track of which servers hold which range of keys. So the
+	client driver always knows which server to talk to.
+	In order to avoid discovery latency, most key-value stores’ client drivers maintain a metadata list
+	of the current nodes in a cluster and which partition key ranges each node manages. In this
+	way, the client driver can contact the correct server, which makes operations faster.
+	If a new node is added to a cluster and the metadata is out of date, the cluster informs the client
+	driver, which then downloads the latest cluster metadata before resending the request to the
+	correct node.
+
+	Strong schema support
+
+	Some databases do provide strong internal data typing and even schema support through Avro
+	schema which allows define a schema and rules for the value. Others simply provide convenient
+	helper functions in their client drivers for serializing common application data structures to a
+	key-value store such as maps, lists and sorted sets.
+
+	Secondary Indexes
+	
+	Other key-value stores provide secondary indexes on any arbitrary property of a value that has
+	JSON content. Riak, for example, provides secondary indexes based on document partitioning
+	in which a known property within a JSON document is indexed with a type. This allows for
+	range queries, less than or greater than, in addition to simple equal and not equal comparisons.
+	
+	Data Replication
+	
+	Storing multiple copies of the same data in other servers, or even racks of servers, helps to
+	ensure availability of data if one server fails. This is done in two ways:
+	- Master-slave: all reads and writes happen to the master. Slaves take over and receive
+	requests only if the master fails. This is typically used on ACID-compliant key-value
+	stores. To enable maximum consistency, the primary store is written to and all replicas
+	are updated before the transaction completes, through two-phase commit.
+	- Master-master: read and writes can happen on all nodes managing a key. There’s no
+	concept of a “primary” partition owner. Master-master replicas are typically eventually
+	consistent, with the cluster performing an automatic operation to determine the latest
+	value for a key and removing older, stale values.
+	Data Versioning
+
+	Conflicts between object replicas stored on different nodes are an expected byproduct of node
+	failure, concurrent client updates, physical data loss and corruption, and other events that
+	distributed systems are built to handle. These conflicts occur when objects are either
+	● missing, as when one node holds a replica of the object and another node does not, or
+	● divergent, as when the values of an existing object differ across nodes.
+	In order to enable automatic conflict resolution, you need a mechanism to indicate the latest
+	version of data. Eventually consistent key-value stores achieve conflict resolution in different
+	ways.
+	Riak uses a vector-clock mechanism to predict which copy is the most recent one. Other
+	key-value stores use simple timestamps to indicate staleness. When conflicts cannot be
+	resolved automatically, both copies of data are sent to the client.
+	An alternative mechanism is to use time stamps and trust them to indicate the latest data. In
+	such a situation, it’s common sense for the application to check that the timestamps read the
+	latest value before updating the value. They are checking for the ​ check and set mechanism​ ,
+	which basically means ‘​ If the latest version is still version 2, then save my version 3 ​ ’. This
+	mechanism is sometimes referred to as ​ read match update (RMU) or ​ read match write (RMW).
+	This mechanism is the default mechanism employed by Oracle NoSQL, Redis, Riak, and
+	Voldemort.
+
+	Caching Data in Memory
+
+	Because data is easily accessed when it’s stored in random access memory (RAM), there are
+	some key-value stores that cache data in RAM and this can significantly speed up your access
+	to data, albeit at the price of higher server costs.
+	Voldemort has a built-in in-memory cache, which decreases the load on the storage engine and
+	increases query performance. And Redis, is a memory key-value store commonly used with
+	other databases to provide in-memory caching layer.
+	
+	Use Cases
+
+	Scale up Supporting Data
+
+	There’s mission-critical data, and there’s supporting data. It’s okay if your mission-critical data
+	appears a little slowly because you want to be sure it’s safe and properly managed. But you
+	don’t want the supporting data of your application to hinder overall transactions and user
+	experiences. Although the supporting data may be slower in value, its need to scale up is great,
+	typically providing delivery of query responses in less than ten milliseconds. Much of this
+	supporting data helps users access a system, tailor a service to their needs, or find other
+	available services or products.
+
+	Delivering Web Advertisements
+
+	Although advertisements are critical to companies marketing their services on the web, they
+	aren’t essential to many users’ web-browsing experiences. However, the loading time of webpages is important to them, and as soon as a slowly delivered ad starts adding to a page’s load
+	time, users start moving to alternative, faster, websites.
+	Serving advertisements fast is, therefore, a key concern. Which advertisement is shown to
+	which user depends on a very large number of factors such as the user’s tracked activity online,
+	language and location. You can think of this combination of factors as being a key, and it’s this
+	composite key that points to the most compelling advertisement. Everything that is needed to
+	serve the advertisement is kept as the value within key-value pair. So, all you need to do is set
+	up the key effectively, for instance, just concatenating a set of factors together to form a key and
+	ask for the value of that key. This prevents having to do any complex queries at ad serving time.
+	
+	Handling User Sessions
+
+	You might end up with a slow service or website and the main problem could be that you are
+	handling the user’s identities or sessions poorly. Every request requires opening a new session
+	from the application server to the database instead of than caching this information between
+	requests.
+	A user session may track how a user walks through an application, adding data on each page.
+	The data can then be saved at the end of this journey in a single hit to the database. Typically,
+	this data is short-lived, perhaps just a few minutes.
+	Key-value stores are, therefore, ideal for storing and retrieving session data at high speeds. The
+	ability to tombstone (marked to be deleted) data once a timestamp is exceeded is also useful.
+	
+	Supporting Personalization
+
+	This is another secondary type of data, similar to the user-session requirement, although this is
+	where the front end application is configured by users for their specific needs. So the users are
+	receiving different personalized views of the same data. These view preferences need to be
+	saved somewhere. You probably don’t want to overload your transactional database with this
+	personalized data, specific for the front-end application. So using a key-value store with a
+	composite key containing user id and the service name allows you to store the personalization
+	settings as a value, which makes lookups very quick and prevents the performance of your
+	primary systems from being negatively affected.
+
+	High-Speed Data Caching
+
+	Suppose you have an online service or system for a bank, in which the customers can access to
+	check the balance of their accounts. So the pay day has come and the customers start
+	accessing to the online service, over and over again during the day, to see their balances and
+	checking if they have finally received their salaries. Consider that this small repeating query
+	increases your workload, stresses the system and slow down its performance or in a worst case
+	shut down the entire service.
+
+	In this scenario the online service might take advantage of a high-speed in-memory caching
+	feature of a key-value store to cache the customer’s recent bank balance and transactions
+	processed, taking load off the online service.
+
+
+
+14. How do Documental stores work? What are the benefits? What are the weaknesses? What are some of the common features?
+
+	When talking about document databases or document stores, the word document refers to a
+	hierarchical structure of data that can contain substructures. This is a more general term than
+	being, for example, like Microsoft Word documents or web pages, although they are certainly
+	two types of documents that can be managed in a document-oriented NoSQL database.
+	Documents can consist of only binary data or plain text. They can be semistructured when
+	self-describing data formats like JavaScript Object Notation (JSON) or Extensible Markup
+	Language (XML) are used.
+	Document NoSQL databases are flexible and schema agnostic, which means you can load any
+	type of document without the database needing to know the document’s structure up front. This
+	provide a happy medium between the rigid schema of the relational database and the
+	completely schema-less key-value stores. Programmers remain free to change the data model
+	as requirements shift within an application, but data consumers are still able to interrogate the
+	data to determine its meaning.
+
+
+	There are so many Document stores out there, some open source and enterprise, such as
+	CouchBase, MongoDB, Arango DB, ​ OrientDB​ , Microsoft Document DB, MarkLogic Server and
+	so on. Many of them are also available in the cloud services. All of them share have some
+	features in common.
+
+	Handing article documents: Tree-based Data Model
+	Many documents as XML or JSON documents or even documents with some kind of hierarchy
+	can be thought as Tree structures, also known as Tree-based Data Model. The tree structures
+	vary greatly. A semi-structured format like XHTML (the format used by web pages) has, as its
+	name implies, some structure, but you can model the individual paragraphs, heading, and
+	sections in a variety of ways.A common practice in document databases is to index a property, or an element, no matter
+	where it occurs within a document. For example, you could index all h1 (main headings) and h2
+	(subheadings) elements regardless of where they occur. Some Document stores allow this style
+	of indexing.
+	Document databases are great at providing consistent query over these variable structures.
+	
+	JSON or XML format
+
+	Since JSON documents are the common language of web applications and commonly used for
+	interchanging data between web services. There is a high number of document stores that
+	supports JSON documents natively such as CouchBase and MongoDB, but there are some
+	document stores that supports XML format or even plain text format along other formats, which
+	is very useful.
+
+	Discovering document structure: Universal Index
+	
+	Document databases tend to store documents in a compressed on-disk format. When you
+	submit JSON or XML documents to a document store, it uses different structures to better
+	manage the data on disk. MongoDB stores documents in its own BSON binary representation,
+	which is useful because JSON has a lot of text in property names. You can save space by
+	compressing or managing these property names as simple numeric identifiers, rather than as
+	long strings.
+	Saving space is very important for XML because it has more repetitive data. Some databases
+	take a similar approach with XML documents, they store a compressed representation and use
+	their own binary tree structure. All elements and attributes are treated as a term. Each term is
+	assigned a unique ID. The terms ids are used within builtin search indexes or an universal
+	index. This speeds up querying for documents where an element has a particular value, without
+	you having to add specific indexes or instructing the database about the document structure in
+	advance.
+
+	Supporting unstructured documents
+	
+	Fully unstructured information is actually rare. It’s more typical to use a container format like
+	JSON or XML and to store large quantities of plain text in particular properties and elements.
+	There are situations, when you receive a lot of text or binary data like a collection of files which
+	is a combination of structured files (CSV), semi-structured files (HTML web pages) and
+	unstructured files (JPEG images, movies, MP3s, word documents, PDFs, and plain texts).
+	Some databases come with built-in support for extracting this metadata and plain text from
+	binary files. This is great for indexing the plain text for search or to provide for more-structured
+	management of the files’ metadata.
+	Many document databases support the concept of a URI path as a primary key, or a unique
+	document ID. Some document databases allow you to list the documents stored under a
+	particular, partial URI. In this way, you can represent a file system in a document database.
+	
+	Document Databases as Key-Value Stores
+	
+	Document databases make great key-value stores. You can use a document URI path to
+	represent a composite key. Values can be binary information stored as a document, in many
+	cases, values are JSON or XML structures.
+	Document databases also provide a deeper level of data management functionality. This comes
+	at the cost of processing time. Although if you want to do advanced processing or indexing of
+	values in a JSON or XML document, then a document database may be a better option.
+	Document databases provide in-memory read caches, with some like MongoDB, providing
+	read-only replicas to allow greater parallel reads of the same data. If you have data that’s read
+	often, then a document database may provide speedy access to documents that’s equivalent to
+	key-value stores’ access speed.
+	You can perform data queries and aggregation processes over elements/attributes or properties
+	of the value. Microsoft Document DB provides range queries which means you can do
+	“elements equals X”, “element is less than X” or “between X and Y inclusive”.
+	Microsft Document DB provides user-defined functions (UDFs). They take the set of documents
+	matching a query and perform aggregation calculations on them. They are very fast since they
+	operate on the indexes rather than opening each document.
+	
+	Partial Updates
+	
+	Some Document Databases support partial updates. This involves read, modify and updates
+	operations which are implemented within a transaction and the document is locked until the
+	operations end. A partial update is one where you are updating just one of two values in a
+	document, rather than replacing the whole thing.
+
+	Joins aren’t supported: Alternate structures in real time
+	
+	NoSQL databases don’t use joins to other documents like relational databases do, although
+	some (OrientDB) do allow building of a merged view at the time a document is read.
+	Instead, an approach called denormalization is used. Denormalization duplicates some
+	information at ingestion time in order to provide access to high-speed reads and queries.
+	Duplication of data is done so that the database doesn’t have to process joins at query time.
+	You may want to quickly produce alternative or merged views as new data arrives in the
+	database.
+	This way of modelling the data is also known as embedded data model that allows applications
+	to store related pieces of information in a single structure or document. In general, embedding
+	provides better performance for read operations, as well as the ability to request and retrieve
+	related data in a single database operation. Embedded data models make it possible to update
+	related data in a single atomic write operation.
+
+	Sharding: Key-based Sharding, Automatic Sharding, Automatic Rebalancing
+	
+	MongoDB and CouchBase database drivers use the Key-based sharding approach to sharding.
+	They assign a range of key values to each server in a cluster. Based on the key of the record
+	and the ranges assigned to each server, a client connector can determine exactly which server
+	to communicate with in order to fetch a particular document.MongoDB allows their replicas to be queried, rather than exist purely as a backup for a primary
+	shard. This allows for greater read parallelization and increasing overall cluster query
+	performance.
+	Some Document Databases comes with automatic sharding or automatic rebalancing. With
+	automatic sharding, the database randomly assigns a new document to a server, which means
+	the database’s developer doesn’t have to carefully select a key in order to ensure good write
+	throughput. With automatic rebalancing, it simply moves individual documents to a less busy
+	server in order to keep a balance in the cluster. In CouchBase has to be initiated manually.
+	
+	Durability: Write immediately, Journal log.
+	
+	Some Document Databases achieve durability either by:
+	1) Always writing the document to disk as it arrives before returning a successful response.
+	This impacts the performance of write operations.
+	2) Writing to memory but writing a journal of the change to disk. A journal log entry is a
+	small description of the change. It provides good performance while ensuring durability.
+	In this way, both ACID-compliant, fully consistent systems and non-ACID, eventually consistent
+	systems are capable of being durable.
+	Couchbase, for example, only writes to RAM during a write operation. An asynchronous process
+	later on writes the data to disk. It provides an option to ensure that data is forced to disk within
+	the bounds of a write operation. In newer versions, it still writes data to RAM, but a new
+	approach is used to stream these changes from RAM to other replicas. This can happen before
+	the originating server saves the data to disk.
+	Most databases use a journal log as a good tradeoff between the performance of write
+	operations and durability. MongoDB uses journal files to ensure that data is durable. Microsoft
+	Document DB, instead, applies the full change during a transaction, so a journal file isn’t
+	needed.
+	
+	Consistency: Eventual Consistency, ACID consistency
+	
+	With eventual consistency, a write operation is successful on the server that receives it but all
+	replicas of that data aren’t updated at the same time. They are updated later based on system
+	replication settings. CouchBase as others, provide only eventual consistency, whereas others
+	like MongoDB and Microsoft Document DB allow tuning of consistency on a per operation basis,
+	depending on the settings of the originating client request.
+	ACID consistency is the gold standard of consistency guarantees. An ACID-compliant database
+	ensures that: 1) all data is safe in event of failure, 2) database updates always keep the
+	database in a valid state, 3) one set of operations doesn’t interfere with another set of
+	operations, 4) once the save completes, reading data from any replica will always give the new
+	“current” result. Some ACID databases go further and allow several changes to be executedwithin the same transaction. These changes are applied in a single set, ensuring consistency for
+	all documents affected. Microsoft’s Document DB provides ACID transactions on the
+	server-side, when executing a Javascript stored procedure.
+	
+	Use Cases
+	Content-centric Workflow
+	A Document Store can fit in situations in which you need to manage the lifecycle of a content.
+	This content goes through a process from one hand to another, from its creation, to
+	modification, dissemination, destruction and different business actions generally need to happen
+	in the middle. While this workflow is happening, it’s required to have the document lifecycle
+	status. For instance, an account opening document or the process of publishing content.
+	Managing Unstructured Data Feeds
+	Document Stores can fit in situations in which you need to convert unstructured data into
+	structured data. In this case, you’re in front of a entity extraction and enrichment case, where
+	you need to extract text and/or metadata from variable structures in binary formats and maybe
+	add more information to original content. Then, you might wrap the extracted values with tag,
+	JSON property or an XML element. So, this is useful if you want to perform element lookups to
+	get all documents which match and for allowing the searching of a specific data.
+	
+	Managing Changing Data Structures
+	Storing and retrieving variable information is a key benefit of a Document store since some of
+	them support indexing and searching features natively and other might be integrated to a search
+	engine easily, such as Solr, ElasticSearch and so on.
+	Consider that each organization has systems as so many independent areas as they have,
+	each with its own data. Also, some applications consolidate data from a number of systems
+	within an organization, as well as third party or public data. This provides for a rich array of
+	information with which to mine for useful business answers. Organizations don’t have control
+	over external data-feed formats, and they can be changed at any time without warning. Or even
+	worse, many data structures in use today change depending on the application that creates
+	them, rather than the system that stores them.
+	With a document store at your side, allows you to handle this properly, as you can search and
+	explore the data you’ve ingested and then decide to perform different queries over it. You don’t
+	have to manually configure the structure before loading content in order to search it
+	immediately.
+	
+	Consolidating Data
+	Sometimes an answer isn’t available in a single document. Perhaps you need to join multiple
+	streams of information together in order to paint a picture. Maybe instead different systems hold
+	their own data, which needs to be brought together to answer a question.
+	Since very few document stores provide support for joins at query time, means you have to do
+	this work yourself. First of all, you’ll need to store the data that you receive from differentsources, in different collections by topic. Second, integrate this data by joining the different
+	piece of information, from multiple documents to a single document. Once you bring all the
+	information together, you need to provide it in a user-friendly way to people who utilize your
+	application by amalgamating a view at different levels of granularity.
+	This is a very common use case with document-oriented databases. Instead of doing joins at
+	query time as you can do with a relational database, you precompute the joins and store the
+	results as documents, perhaps in a different collection. Although it does take up more space,
+	creating these denormalizations reduces query and processing time because only one
+	document is read, and the query doesn’t have to process and join together many records in
+	order to provide the single answer the user is looking for.
+
+
+
+
+
+15. How do Columnar stores work? What are the benefits? What are the weaknesses? What are some of the common features?
+
+	A columnar database, also known as a column-oriented database, is a database management
+	system (DBMS) that stores data in columns rather than in rows as relational DBMSs. The goal
+	of a columnar database is to efficiently write and read data to and from hard disk storage and
+	speed up the time it takes to return a query.
+	Column-oriented storage for database tables is an important factor in analytic query
+	performance because it drastically ​ reduces the overall disk I/O​ requirements and reduces the
+	amount of data you need to load from disk
+
+	Benefits:
+	By storing data in columns rather than rows, the database can more precisely access the data it
+	needs to answer a query rather than scanning and discarding unwanted data in rows. Query
+	performance is often increased as a result, particularly in very large data sets.
+	Column-oriented databases are designed to scale “out” using distributed clusters of low-cost
+	hardware to increase throughput, making them ideal for data warehousing and Big Data
+	processing.
+
+16. How do Graph stores work? What are the benefits? What are the weaknesses? What are some of the common features?
+
+	Databases are about storing information, entities, be it represented by JSON, tables or binary
+	values. But sometimes it’s the relationship between entities, rather than the entities themselves,
+	that are of primary interest. This is where graph database systems shine.
+	A graph database is an online, operational database management system with Create, Read,
+	Update, and Delete (CRUD) methods that expose a graph data model. Graph databases are
+	generally built for use with transactional (OLTP) systems. Accordingly, they are normally
+	optimized for transactional performance, and engineered with transactional integrity and
+	operational availability in mind. Two properties of graph databases are useful to understand
+	when investigating graph database technologies:
+	
+	1. The underlying storage​ : Some graph databases use native graph storage, which is
+	optimized and designed for storing and managing graphs. Not all graph database
+	technologies use native graph storage, however. Some serialize the graph data into a
+	relational database, object-oriented database, or other types of NOSQL stores.
+	
+	2. ​ The processing engine: ​ Some definitions of graph databases require that they be
+	capable of index-free adjacency, meaning that connected nodes physically “point” to
+	each other in the database. Here we take a slightly broader view. Any database that
+	from the user’s perspective behaves like a graph database (i.e., exposes a graph data
+	model through CRUD operations), qualifies as a graph database. There are, however,
+	significant performance advantages of index-free adjacency, and therefore use the term
+	native graph processing in reference to graph databases that leverage index-free
+	adjacency
+
+	Graph databases—in particular native ones—don’t depend heavily on indexes because the
+	graph itself provides a natural adjacency index. In a native graph database, the relationships
+	attached to a node naturally provide a direct connection to other related nodes of interest.
+	Graph queries use this locality to traverse through the graph by chasing pointers. These
+	operations can be carried out with extreme efficiency, traversing millions of nodes per second,
+	in contrast to joining data through a global index, which is many orders of magnitude slower.
+	Besides adopting a specific approach to storage and processing, a graph database will also
+	adopt a specific data model. There are several different graph data models in common usage,
+	including property graphs, hypergraphs, and triples. We discuss each of these models below.
+
+	Property Graphs
+	A property graph has the following characteristics:
+	● It contains nodes and relationships.
+	● Nodes contain properties (key-value pairs).
+	● Nodes can be labeled with one or more labels.
+	● Relationships are named and directed, and always have a start and end node.
+	● Relationships can also contain properties.
+
+
+17. What are the common architectural components and functions of the different data store types?
+

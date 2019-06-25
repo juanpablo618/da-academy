@@ -1,0 +1,136 @@
+basic commands to hadoop
+
+cat /home/developer/Downloads/movie_metadata.csv | /home/developer/work/da-academy/exercices/resolved-exercices/hadoop/basicMapper.py | sort -k1,1 | /home/developer/work/da-academy/exercices/resolved-exercices/hadoop/basicReducer.py
+
+
+echo "foo foo quux labs foo bar quux" | /home/developer/work/da-academy/exercices/resolved-exercices/hadoop/basicMapper.py | sort -k1,1 | /home/developer/work/da-academy/exercices/resolved-exercices/hadoop/basicReducer.py 
+
+result: 
+
+bar	1
+foo	3
+labs	1
+quux	2
+
+
+on http://demo.gethue.com
+
+a = load '/user/demo/movieJuan.csv' as line;
+dump a
+
+D1 = LOAD '/user/demo/movieJuan.csv' USING PigStorage(',') AS (title_year:int, actor_2_facebook_likes:int, movie_facebook_likes:int);
+E6 = FILTER D1 BY title_year <= 2009 ;
+DUMP E6;
+
+
+a = load '/user/demo/movieJuan.csv' AS (title_year:int, actor_2_facebook_likes:int, movie_facebook_likes:int);
+E6 = FILTER a BY title_year == 2012 ;
+DUMP E6;
+
+
+student = LOAD '/user/demo/student_data.txt' 
+   USING PigStorage(',')
+   as ( id:int, firstname:chararray, lastname:chararray, phone:chararray, 
+   city:chararray );
+
+
+student = LOAD '/user/demo/student_data.txt' 
+   USING PigStorage(',')
+   as ( id:int, firstname:chararray, lastname:chararray, phone:chararray, 
+   city:chararray );
+   
+Dump student
+
+
+Output(s):
+	Successfully stored 6 records (287 bytes) in: "hdfs://ip-172-31-19-94.us-west-2.compute.internal:8020/tmp/temp2024177185/tmp-678628138"
+	
+MyCSVData = LOAD '/user/demo/movieJuan.csv' using PigStorage(',') AS (color:chararray, director_name:chararray, num_critic_for_reviews:chararray, duration:chararray, director_facebook_likes:chararray, actor_3_facebook_likes:chararray, actor_2_name:chararray, actor_1_facebook_likes:chararray, gross:chararray, genres:chararray, actor_1_name:chararray, movie_title:chararray, num_voted_users:chararray, cast_total_facebook_likes:chararray, actor_3_name:chararray, facenumber_in_poster:chararray, plot_keywords:chararray, movie_imdb_link:chararray, num_user_for_reviews:chararray, language:chararray, country:chararray, content_rating:chararray, budget:chararray, title_year:chararray, actor_2_facebook_likes:chararray, imdb_score:chararray, aspect_ratio:chararray, movie_facebook_likes:chararray);
+dump MyCSVData;
+
+Output(s):
+
+All the data !!     :)
+
+MyCSVData = LOAD '/user/demo/movieJuan.csv' using PigStorage(',') AS (color:chararray, director_name:chararray, num_critic_for_reviews:chararray, duration:chararray, director_facebook_likes:chararray, actor_3_facebook_likes:chararray, actor_2_name:chararray, actor_1_facebook_likes:chararray, gross:chararray, genres:chararray, actor_1_name:chararray, movie_title:chararray, num_voted_users:chararray, cast_total_facebook_likes:chararray, actor_3_name:chararray, facenumber_in_poster:chararray, plot_keywords:chararray, movie_imdb_link:chararray, num_user_for_reviews:chararray, language:chararray, country:chararray, content_rating:chararray, budget:chararray, title_year:chararray, actor_2_facebook_likes:chararray, imdb_score:chararray, aspect_ratio:chararray, movie_facebook_likes:chararray);
+E6 = FILTER MyCSVData BY color == 'Black and White';
+dump E6;
+
+
+si funciona :
+
+MyCSVData = LOAD '/user/demo/movieJuan.csv' using PigStorage(',') AS (color:chararray, director_name:chararray, num_critic_for_reviews:chararray, duration:chararray, director_facebook_likes:chararray, actor_3_facebook_likes:chararray, actor_2_name:chararray, actor_1_facebook_likes:chararray, gross:chararray, genres:chararray, actor_1_name:chararray, movie_title:chararray, num_voted_users:chararray, cast_total_facebook_likes:chararray, actor_3_name:chararray, facenumber_in_poster:chararray, plot_keywords:chararray, movie_imdb_link:chararray, num_user_for_reviews:chararray, language:chararray, country:chararray, content_rating:chararray, budget:chararray, title_year:chararray, actor_2_facebook_likes:chararray, imdb_score:chararray, aspect_ratio:chararray, movie_facebook_likes:chararray);
+E6 = FILTER MyCSVData BY color == 'Color' and director_name == 'James Cameron' and actor_2_name == 'Joel David Moore';
+
+dump E6;
+
+MyCSVData = LOAD '/user/demo/movieJuan.csv' using PigStorage(',') AS (color:chararray, director_name:chararray, num_critic_for_reviews:chararray, duration:chararray, director_facebook_likes:chararray, actor_3_facebook_likes:chararray, actor_2_name:chararray, actor_1_facebook_likes:chararray, gross:chararray, genres:chararray, actor_1_name:chararray, movie_title:chararray, num_voted_users:chararray, cast_total_facebook_likes:chararray, actor_3_name:chararray, facenumber_in_poster:chararray, plot_keywords:chararray, movie_imdb_link:chararray, num_user_for_reviews:chararray, language:chararray, country:chararray, content_rating:chararray, budget:chararray, title_year:chararray, actor_2_facebook_likes:chararray, imdb_score:chararray, aspect_ratio:chararray, movie_facebook_likes:chararray);
+E6 = FILTER MyCSVData BY color == 'Color' and director_name == 'James Cameron' and actor_2_name == 'Joel David Moore';
+
+dump E6;
+
+
+Output(s):
+72	Successfully stored 1 records (360 bytes) in: "hdfs://ip-172-31-19-94.us-west-2.compute.internal:8020/tmp/temp-1219444878/tmp660341117"
+
+
+	Counters:
+75	Total records written : 1
+76	Total bytes written : 360
+
+
+
+
+¿How many "colour" films and how many "black and white" films are there in the
+list?
+
+MyCSVData = LOAD '/user/demo/movieJuan.csv' using PigStorage(',') AS (color:chararray, director_name:chararray, num_critic_for_reviews:chararray, duration:chararray, director_facebook_likes:chararray, actor_3_facebook_likes:chararray, actor_2_name:chararray, actor_1_facebook_likes:chararray, gross:chararray, genres:chararray, actor_1_name:chararray, movie_title:chararray, num_voted_users:chararray, cast_total_facebook_likes:chararray, actor_3_name:chararray, facenumber_in_poster:chararray, plot_keywords:chararray, movie_imdb_link:chararray, num_user_for_reviews:chararray, language:chararray, country:chararray, content_rating:chararray, budget:chararray, title_year:chararray, actor_2_facebook_likes:chararray, imdb_score:chararray, aspect_ratio:chararray, movie_facebook_likes:chararray);
+E6 = FILTER MyCSVData BY color == 'Color';
+MyCSVData = group E6 all;
+student_count = foreach MyCSVData  Generate COUNT(E6);
+Dump student_count;
+
+MyCSVData = LOAD '/user/demo/movieJuan.csv' using PigStorage(',') AS (color:chararray, director_name:chararray, num_critic_for_reviews:chararray, duration:chararray, director_facebook_likes:chararray, actor_3_facebook_likes:chararray, actor_2_name:chararray, actor_1_facebook_likes:chararray, gross:chararray, genres:chararray, actor_1_name:chararray, movie_title:chararray, num_voted_users:chararray, cast_total_facebook_likes:chararray, actor_3_name:chararray, facenumber_in_poster:chararray, plot_keywords:chararray, movie_imdb_link:chararray, num_user_for_reviews:chararray, language:chararray, country:chararray, content_rating:chararray, budget:chararray, title_year:chararray, actor_2_facebook_likes:chararray, imdb_score:chararray, aspect_ratio:chararray, movie_facebook_likes:chararray);
+E6 = FILTER MyCSVData BY color == 'black and white';
+MyCSVData = group E6 all;
+student_count = foreach MyCSVData  Generate COUNT(E6);
+Dump student_count;
+
+
+• ¿How many films did each director produce?
+
+• ¿Which are the 10 least criticized films?
+
+• ¿Which are the 20 longest films?
+
+• ¿Which are the 5 films which raised the most money?
+
+• ¿Which are the 5 fils which raised the least money?
+
+• ¿Which are the 3 movies which spent the most to be produced?
+
+• ¿Which are the 3 movies which spent the least to be produced?
+
+• ¿In which year were more films released?
+
+• ¿In which year were less films released?
+• Create a ranking of actors including the following:
+• amount of movies where the actor performed
+• his/her influence in social networks
+• his/her best movie
+• ordered by number of performances
+• Create a tag cloud using movies tags or keywords. To do this, is enough with
+creating and showing a word ranking and its weight (number of appareances of the
+word), with descending order.
+• ¿Which movie gender raised the most for each year?
+• ¿Which movie gender raised the least for each year?
+• Show the actors ranking ordered by performances and popularity
+• ¿Which movie genre do people like the most?
+• ¿Which are the 5 directors with the best reputation?
+
+
+
+
+
+
+

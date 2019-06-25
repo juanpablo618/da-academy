@@ -1,0 +1,65 @@
+AWS S3 bucket: 
+	almacenamiento de objetos
+		
+servicio de almacenamiento cloud gestionado.
+todo lo que yo suba va a ser considerado un objeto.
+este almacenamiento de objetos es ilimitado, y proporciona acceso inmediato desde cualquier lugar, tambien posee controles de seguridad robustos.
+
+
+tipo de almacenamiento = en discos fisicos dentro de maquinas virtuales.
+
+Netflix usa S3 para todos sus videos.
+dropbox también.
+
+
+s3 es la columna vertebral de aws.
+
+
+cuando subimos un documento generamos un endpoint
+solo almacenamos netamente objetos.
+
+un bucket es un repositorio, y dentro está lleno de objetos, y cuando esta dentro el objeto es un objeto clave - valor.
+un bucket esta en una región.
+
+dentro el objeto se replica 3 veces, para darle durabilidad a cada objeto.
+
+tenemos diferentes tipos de almacenamiento:
+
+	standart (el más caro de todos)
+	infrequent access (onjetos de acceso infrecuente, guardar info tipo backup, cuesta un poco menos por almacenar la información pero un poco más por recuperar la información)
+	one zone infrequent access (abarata mucho mas los costos)
+	reduced redundancy (muy economico, no hay prácticamente duplicación, si se corrempe es casi perder el objeto, almacenar logs, copias de imagenes por ejemplo)
+
+
+
+acceso desde cualquier lugar:
+formas de acceso
+
+a través de la consola de administración
+
+a través de la linea de comandos.
+
+a través de aws sdk's de python, de java , de js.
+
+Casos de uso:
+
+Almacenamiento de recursos de aplicaciones.
+Alojamiento de sitios web estáticos.
+respaldos y recuperación ante desastres.
+Áreas de preparación para Big Data.
+
+
+
+se podría hostear un sitio estático en s3. No es capaz de ejecutar codigo S3.
+Respaldos y recuperación ante desastres es el mayor uso.
+
+
+
+
+
+
+
+
+
+
+

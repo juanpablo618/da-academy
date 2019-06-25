@@ -1,0 +1,173 @@
+after download de mongodb-linux program:
+
+I run it on the bin folder with the command 
+mongo
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+to show databases:
+
+show dbs
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+to see what db we are using 
+
+db
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+to create a user:
+use customers
+db.createUser(
+   {
+     user: "juan",
+     pwd: "juan",
+     roles: [ "readWrite", "dbAdmin" ]
+   }
+)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+db.customers.insert([{first_name:"steve", last_name:"smith"},{first_name:"juan", last_name:"doe"}]);
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+db.customers.find();
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+db.customers.find().pretty();
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+db.customers.update({first_name:"steve"},{first_name:"pepe", last_name:"ortiz", gender:"male"});
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+all the value before the $set, keeps equals
+
+db.customers.update({first_name:"steve"},{$set:{gender:"male"}});
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+db.customers.find().count()
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ mongoimport --jsonArray --db restaurants --collection docs --file /home/developer/work/da-academy/exercices/restaurants.json
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+use restaurants
+
+show collections
+db.docs.find()
+
+
+ db.docs.find().count()
+7544
+
+Execute the following queries:
+● Write a MongoDB query to display all the documents in the collection restaurants
+
+I don't understand:
+this is the way:
+	 
+	 db.docs.find();
+
+or db.docs.find().toArray()
+
+
+
+
+
+● Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine
+for all the documents in the collection restaurant.
+
+
+	db.docs.find({},{"restaurant_id" : 1,"name":1,"borough":1,"cuisine" :1});
+
+
+● Write a MongoDB query to display the fields restaurant_id, name, borough and zip code,
+but exclude the field _id for all the documents in the collection restaurant.
+
+	db.docs.find({},{"restaurant_id" : 1,"name":1,"borough":1,"address.zipcode" :1,"_id":0});
+
+● Write a MongoDB query to display all the restaurant which is in the borough Bronx
+
+	db.docs.find({"borough": "Bronx"});
+
+
+● Write a MongoDB query to display the first 5 restaurant which is in the borough Bronx.
+
+	db.docs.find({"borough": "Bronx"}).limit(5).pretty();
+
+
+● Write a MongoDB query to find the restaurants who achieved a score more than 90.
+
+	 db.docs.find({grades : { $elemMatch:{"score":{$gt : 90}}}});
+
+
+● Write a MongoDB query to find the restaurants that achieved a score, more than 80 but
+less than 100
+
+	db.docs.find({grades : { $elemMatch:{"score":{$gt : 80 , $lt :100}}}});
+
+
+● Write a MongoDB query to find the restaurants that do not prepare any cuisine of
+'American' and their grade score more than 70 and latitude less than -65.754168
+
+	 db.docs.find(
+               {$and:
+                    [
+                       {"cuisine" : {$ne :"American "}},
+                       {"grades.score" : {$gt : 70}},
+                       {"address.coord" : {$lt : -65.754168}}
+                    ]
+                }
+                    );
+
+
+
+● Write a MongoDB query to find the restaurants which do not prepare any cuisine of
+'American' and achieved a score more than 70 and located in the longitude less than
+-65.754168.
+
+
+	db.docs.find(
+                           {
+                             "cuisine" : {$ne : "American "},
+                             "grades.score" :{$gt: 70},
+                             "address.coord" : {$lt : -65.754168}
+                            }
+                     );
+
+● Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those
+restaurants which contain 'Wil' as first three letters for its name.
+
+
+db.docs.find(
+			{	name: /^Wil/},
+				{
+					"restaurant_id" : 1,
+					"name":1,"borough":1,
+					"cuisine" :1
+				}
+			);
+
+● Write a MongoDB query to find the restaurant name, borough, longitude and latitude and
+cuisine for those restaurants which contain 'Mad' as first three letters of its name.
+
+
+db.docs.find(
+                   { name : 
+                     { $regex : /^Mad/i, } 
+                   },
+                       {
+                         "name":1,
+                         "borough":1,
+                         "address.coord":1,
+                         "cuisine" :1
+                        }
+                   );
+

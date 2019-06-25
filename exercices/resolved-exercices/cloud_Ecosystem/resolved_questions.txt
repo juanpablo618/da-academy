@@ -1,0 +1,452 @@
+1. What does cloud mean and what does it involve? Based on your answer, do you usually
+interact with the cloud? How often?
+
+es un modelo de informática en la nube que almacena datos en internet a través de un proveedor de informática en la nube que administra y opera el almacenamiento en la nube como un servicio.
+Se ofrece bajo demanda con capacidad y costo oportunos, y elimina la necesidad de tener que comprar y administrar su propia infraestructura de almacenamiento de datos. Esto otorga:
+Agilidad.
+Escala global
+Durabilidad
+Acceso a los datos en cualquier momento y lugar.
+
+
+2. What are the advantages of cloud? Which problems does it solve/avoid?
+
+	1) No es necesario comprar hardware, se puede agregar o eliminar capacidad bajo demanda, también se pueden modificar las características de desempeño y retención con rapidez y pagar solamente por el almacenamiento que utilice. 
+
+	2) Tiempo de implementación , se puede proporcionar con rapidez la cantidad de almacenamiento necesaria en el momento necesario. 
+
+	3) Centralizar el almacenamiento en la nube aporta un gran beneficio para nuevos casos de uso. Al utilizar políticas de administración del ciclo de vida del almacenamiento en la nube, puede realizar potentes tareas de administración de la información, incluida la separación por niveles automatizada o el bloqueo de datos para cumplir con los requisitos de conformidad.
+
+
+
+3. Is it always a good idea to develop/maintain/migrate your products to the cloud? If not, when
+is it a good option and when it is not? (Consider costs, expertise, project dimensions, etc)
+	
+
+https://cloudacademy.com/blog/cloud-migration-benefits-risks/
+
+
+4. Which are some of the cloud different providers? Do they offer different products?
+
+https://www.zdnet.com/article/top-cloud-providers-2019-aws-microsoft-azure-google-cloud-ibm-makes-hybrid-move-salesforce-dominates-saas/
+
+5. What does the concept of serverless mean?
+
+	Serverless computing is a method of providing backend services on an as-used basis. A Serverless provider allows users to write and deploy code without the hassle of worrying about the underlying infrastructure. A company that gets backend services from a serverless vendor is charged based on their computation and do not have to reserve and pay for a fixed amount of bandwidth or number of servers, as the service is auto-scaling. Note that although called serverless, physical servers are still used but developers do not need to be aware of them.
+
+In the early days of the web, anyone who wanted to build a web application had to own the physical hardware required to run a server, which is a cumbersome and expensive undertaking.
+
+
+	The term ‘serverless’ is somewhat misleading, as there are still servers providing these backend services, but all of the server space and infrastructure concerns are handled by the vendor. Serverless means that the developers can do their work without having to worry about servers at all.
+
+
+What are the advantages of serverless computing?
+Lower costs - Serverless computing is generally very cost-effective, as traditional cloud providers of backend services (server allocation) often result in the user paying for unused space or idle CPU time.
+
+Simplified scalability - Developers using serverless architecture don’t have to worry about policies to scale up their code. The serverless vendor handles all of the scaling on demand.
+
+Simplified backend code - With FaaS, developers can create simple functions that independently perform a single purpose, like making an API call.
+
+Quicker turnaround - Serverless architecture can significantly cut time to market. Instead of needing a complicated deploy process to roll out bug fixes and new features, developers can add and modify code on a piecemeal basis.
+
+
+
+6. IaaS, PaaS, SaaS, FaaS.. what does each of these mean? Could you name an
+implementation for each both in GCP and AWS?
+
+Infrastructure as a service (IaaS) is a form of cloud computing that provides virtualized computing resources over the internet.
+	
+Google Compute Engine es el servicio de procesamiento no administrado de GCP. Se lo puede considerar infraestructura como un servicio (IaaS), porque el sistema proporciona una infraestructura de procesamiento completa, pero se deben elegir los componentes de la plataforma que se quieren usar y además configurarlos. Con Compute Engine, configurar, administrar y supervisar los sistemas es tu responsabilidad. Google se asegurará de que los recursos estén disponibles, que sean confiables y que estén listos para usar, pero aprovisionarlos y administrarlos depende de ti. La ventaja es que tienes un control total sobre los sistemas, además de flexibilidad sin límites.
+
+
+Software as a service (SaaS) is a software distribution model in which a third-party provider hosts applications and makes them available to customers over the Internet.
+
+Platform as a service (PaaS) is a cloud computing model in which a third-party provider delivers hardware and software tools -- usually those needed for application development -- to users over the internet. A PaaS provider hosts the hardware and software on its own infrastructure. 
+
+Function as a service (FaaS) is a cloud computing model that enables users to develop applications and deploy functionalities without maintaining a server, increasing process efficiency. The concept behind FaaS is serverless computing and architecture, meaning the developer does not have to take server operations into consideration, as they are hosted externally. This is typically utilized when creating microservices such as web applications, data processors, chatbots and IT automation.
+
+FaaS provides developers with the ability to run a single function, piece of logic or part of an application. Code is written into the developer end that triggers remote servers to execute the intended action. Unlike other cloud computing models that run on at least one server at all times, FaaS only runs when a function is conducted and then shuts down.
+
+The first FaaS model was released by hook.io in 2014, followed by AWS Lambda, Google Cloud Functions, Microsoft Azure Functions, IBM/Apache's OpenWhisk and Oracle Cloud Fn.
+
+
+7. What does Pay as you go mean? Investigate costs for lambdas and S3. Is there any
+difference with EC2 instances?
+
+	Is a payment method for cloud computing that charges based on usage. The practice is similar to that of utility bills, using only resources that are needed.
+	One major benefit of the pay-as-you-go method is that there are no wasted resources, since users only pay for services procured, rather than provisioning for a certain amount of resources that may or may not be used. With traditional enterprise design, users architect data storage to handle the maximum workload. But with the public cloud, the pay-as-you-go method allows you to be charged only for what you store.
+
+Pay-as-you-go platforms, such as Amazon EC2, provide services by allowing users to design compute resources and charges by what is used. Users select the CPU, memory, storage, operating system, security, networking capacity and access controls, and any additional software needed to run their environment.
+
+There are three main categories of cloud computing services, and each one can use a different form of the pay-as-you-go model.
+
+
+Lambda cuenta una solicitud cada vez que comienza a ejecutarse como respuesta a una notificación de evento o a una llamada de invocación, incluidas las invocaciones de prueba de la consola. Se le aplicarán cargos por el número total de solicitudes de todas las funciones.  
+
+La duración se calcula a partir del momento en que el código comienza a ejecutarse hasta que regresa o se finaliza de alguna otra manera y se redondea a los 100 ms más cercanos. El precio depende de la cantidad de memoria asignada a la función. En el modelo de recursos de AWS Lambda, debe elegir la cantidad de memoria que desea para la función y, posteriormente, se asignará el volumen proporcional de potencia de CPU y de otros recursos. Un incremento del volumen de memoria activa un aumento equivalente en la capacidad de CPU disponible para la función
+
+La capa gratuita de Lambda incluye un millón de solicitudes gratuitas al mes y 400 000 GB-segundos de tiempo de cómputo al mes. 
+
+
+Almacenamiento estándar en S3
+Primeros 50 TB/mes	0,023 USD por GB
+Siguientes 450 TB/mes	0,022 USD por GB
+Más de 500 TB/mes	0,021 USD por GB
+Almacenamiento de S3 Estándar – Acceso poco frecuente
+Todo el almacenamiento/mes	0,0125 USD por GB
+
+
+8. How would you design a simple Web App in the cloud? (include products to use, flow
+diagrams, costs, etc, in AWS or in GCP). Consider just static files.
+
+	https://docs.aws.amazon.com/es_es/AmazonS3/latest/dev/WebsiteHosting.html
+	https://cloud.google.com/storage/docs/hosting-static-website
+	https://buildazure.com/2016/11/30/static-website-hosting-in-azure-storage/
+
+
+prices for Amazon EFS:
+La clase de almacenamiento Estándar se ha diseñado para cargas de trabajo del sistema de archivos activo. Además, solo paga por el volumen de almacenamiento de sistemas de archivos que utiliza al mes.
+
+
+Almacenamiento estándar (GB-mes)	0,30 USD
+Almacenamiento de acceso poco frecuente (GB-Mes)	0,045 USD
+Solicitudes de acceso poco frecuente (por GB transferido)	0,01 USD
+Rendimiento aprovisionado (MB/s-mes)	6,00 USD
+
+
+goggle cloud:
+
+Ejemplos de precios
+Ejemplo de cargos prorrateados por el almacenamiento
+En este ejemplo se explica cómo prorratea Cloud Storage los costes por almacenar tus datos.
+
+Supongamos que almacenas un objeto de 15 GB en un segmento de la clase Multi‑Regional Storage durante 12 horas. En Cloud Storage, se considera como medio día (0,5 días) de almacenamiento, es decir, una sesentena parte (1/60) del mes (contando con que el mes tenga 30 días). El cargo por este almacenamiento se calcularía de este modo:
+
+$0.026(per GB per month) * 15(GB) * 1/60(months) = $0.0065
+
+
+0‑1 TB	$0.12	$0.12
+1‑10 TB	$0.11	$0.11
+Más de 10 TB	$0.08
+
+
+The biggest benefit to hosting a static websites in Azure Blob Storage is the cost. Blob Storage is the cheapest option to store files in Microsoft Azure. There are two metrics that you pay for with Blob Storage: Storage and Bandwidth. Using the Azure Pricing Calculator you can easily calculate the cost associated with your static sites.
+If you had up to 1 GB of static files stored for your static websites, with a total monthly bandwidth usage of 10 GB / month, the total monthly hosting cost with Azure Blob Storage would be about $0.46 USD / month.
+
+
+
+9. How can we test a cloud infrastructure? Are there different type of tests that we can develop?
+Which tools would you use? Consider chaos testing.
+
+	for me Testing cloud based applications include three major scenarios :
+
+	1) Area of application is migrating into the cloud,
+
+	2) Application has been completely migrated onto the cloud
+
+	3) Application is completely built on the cloud itself
+
+
+	The testing methodology has to evolve in all these scenarios and would need to take into account the virtualized infrastructure, network, application business logic, data and end-user experience. Testing cloud based applications requires business workflow testing, exceptions mechanisms, simulating failure scenarios and disaster recovery scenarios.
+
+	The focus of testing cloud based applications needs to include validating the accuracy of cloud attributes like multi-tenancy, elasticity, security, availability, interoperability and metering in multi-instance loaded environment.
+
+	Testing “Cloud” applications should be tested as though you would test any existing web application with a few added test cases to test the additional “Cloud” features depending on your application e.g.
+
+	Dynamic scaling – You would want to test that the application can dynamically scale up and down, with no loss of data and end user connectivity.
+
+	Automated provisioning – For apps that provision new services automatically when a new user signs up, you would want to test this process, as well as the reverse when a user leaves the service.
+
+	Device Synchronisation – If the service is like Dropbox, or iCloud, then there may be device to device synchronisation issues that need to be tested, particularly recovery situations when a sync is disrupted and incomplete and needs to be restarted.
+
+	Cloud computing has made available two very useful technologies to the masses
+
+	1.Distributed computing
+
+	2.Virtualization
+
+	This creates new opportunities for testers to test quickly and efficiently. The challenges would be test around the edges of these services. Some of things to look are:
+
+	1.Elastic clouds (automatic provisioning of computing power and memory)
+
+	2.Disaster recovery
+
+	3.Reliability
+
+	4.Synchronization (across devices and services)
+
+	5.Security
+
+	There is no direct or ideal approach for cloud testing. To ensure complete testing, various factors like the cloud architecture design, non-functional and compliance requirements, etc. should to be taken care.
+
+
+	Chaos engineering is the process of testing a distributed computing system to ensure that the system can withstand unexpected disruptions in function. It is so named because it relies on concepts from chaos theory, which focuses on random and unpredictable behavior. The goal of chaos engineering is to continuously conduct controlled experiments that introduce random and unpredictable behavior in order to discover weaknesses in a system. 
+
+In computing, a distributed system is any grouping of computers that are linked over a network and share resources. Distributed systems can break when unexpected conditions or situations (such as an unintentional change from an intentional update) occur.  Large distributed systems have complex and unpredictable dependencies between components, which can it difficult to troubleshoot an error. This is where chaos engineering comes into play. Chaos engineering identifies "what if" scenarios that aim to trigger failures, so that the system owners can evaluate the performance and integrity of the software.
+
+	Chaos engineering is a relatively new approach to software testing and software quality assurance (QA). Netflix was a notable pioneer of chaos engineering, among the first to formalize how to use it in production systems. Netflix designed and open sourced automation platforms for chaos tests, including Chaos Monkey, Chaos Gorilla and similarly named tools, collectively dubbed the Simian Army. For example, Chaos Monkey randomly disables production instances to ensure a system failure, but designed not to have any customer effects. Chaos Gorilla does the same job on a larger geographical scale. The Netflix Simian Army continues to grow with more chaos-inducing programs made to test their services.
+
+
+
+10. How can we secure our infrastructure? Investigate role creation and assignment. Security
+groups. Policies. Authentication and Authorization. Routing (Ingress and Egress)
+
+amazon maneja por certificados el acceso por ssh y microsoft azure por usuario y contraseña se considera más inseguro.
+
+
+https://cloud.google.com/security/infrastructure/design/
+
+
+	Identidades (usuarios, grupos y roles)
+
+En esta sección se describen las identidades de IAM que crea para proporcionar autenticación a personas y procesos en la cuenta de AWS. Esta sección también describe los grupos de IAM que son conjuntos de usuarios de IAM que puede gestionar como una unidad. Las identidades representan al usuario y se pueden autenticar y, a continuación, autorizar para realizar acciones en AWS. Cada una puede asociarse con una o varias políticas para determinar qué acciones puede realizar un usuario, un rol o un miembro de un grupo, con qué recursos de AWS y en qué condiciones.
+El usuario raíz de la cuenta de AWS
+
+Cuando se crea por primera vez una cuenta de Amazon Web Services (AWS), se comienza con una única identidad de inicio de sesión que tiene acceso completo a todos los servicios y recursos de AWS de la cuenta. Esta identidad recibe el nombre de usuario raíz de la cuenta de AWS y se obtiene acceso a ella iniciando sesión con la dirección de correo electrónico y la contraseña que utilizó para crear la cuenta.
+
+importante
+
+Le recomendamos que no utilice el usuario raíz en sus tareas cotidianas, ni siquiera en las tareas administrativas. En lugar de ello, es mejor ceñirse a la práctica recomendada de utilizar exclusivamente la usuario raíz para crear el primer usuario de IAM. A continuación, guarde las credenciales del usuario raíz en un lugar seguro y utilícelas únicamente para algunas tareas de administración de cuentas y servicios. Para ver las tareas que requieren que inicie sesión como usuario raíz, consulte Tareas de AWS que requieren un usuario raíz de la cuenta de AWS.
+Usuarios de IAM
+
+Un usuario de IAM es una entidad que se crea en AWS. El usuario de IAM representa a la persona o servicio que utiliza el usuario de IAM para interactuar con AWS. El uso principal de los usuarios de IAM consiste en proporcionar a las personas la posibilidad de iniciar sesiones en la Consola de administración de AWS para realizar tareas interactivas y para realizar solicitudes programáticas a los servicios de AWS mediante la API o la CLI. Un usuario en AWS se compone de un nombre y una contraseña para iniciar sesión en la Consola de administración de AWS y un máximo de dos claves de acceso que se pueden utilizar con la API o la CLI. Al crear un usuario de IAM, le concede los permisos convirtiéndole en miembro de un grupo que tiene asociadas políticas de permisos adecuados (recomendado) o directamente adjuntándole políticas a dicho usuario. También puede clonar los permisos de un usuario de IAM existente, lo que automáticamente hace que el nuevo usuario sea miembro de los mismos grupos y le asocia las mismas políticas.
+Grupos de IAM
+
+Un grupo de IAM es un conjunto de usuarios de IAM. Los grupos le permiten especificar permisos para un grupo de usuarios, lo que puede facilitar la administración de dichos permisos para dichos usuarios. Por ejemplo, podría tener un grupo denominado Admins y proporcionar a dicho grupo los tipos de permisos que los administradores suelen necesitar. Un usuario de dicho grupo dispone automáticamente de los permisos que tiene asignados el grupo. Si un usuario nuevo se une a su organización y necesita privilegios de administrador, puede asignarle los permisos adecuados agregando al usuario a dicho grupo. Asimismo, si una persona cambia de trabajo dentro de su organización, en lugar de editar los permisos de dicho usuario, puede eliminarlo de los grupos antiguos y agregarlo a los nuevos grupos correspondientes. Tenga en cuenta que un grupo no es realmente una identidad, ya que no puede identificarse como Principal en una política de confianza o basada en recursos. Es simplemente una forma de asociar políticas a varios usuarios al mismo tiempo.
+Roles de IAM
+
+Un rol de IAM es muy similar a un usuario, ya que se trata de una identidad con políticas de permisos que determinan lo que la identidad puede hacer y lo que no en AWS. Sin embargo, un rol no tiene ninguna credencial (contraseña o claves de acceso). Por ello, en lugar de asociarse exclusivamente a una persona, la intención es que cualquier usuario pueda asumir el rol que necesite. Un usuario de IAM puede asumir un rol para disponer temporalmente de diferentes permisos para una tarea específica. Un rol se puede asignar a un usuario federad que inicia sesión utilizando un proveedor de identidad externo en lugar de IAM. AWS utiliza los detalles aprobados por el proveedor de identidad para determinar qué rol se asigna al usuario federado.
+Credenciales temporales
+
+Las credenciales temporales se utilizan principalmente con los roles de IAM, pero también tiene otros usos. Puede solicitar credenciales temporales que tienen un conjunto de permisos más restringido que el usuario de IAM estándar. Esto evita que lleve a cabo de forma inintencionada tareas no permitidas por las credenciales más restrictivas. Una ventaja de las credenciales temporales es que vencen después de un periodo de tiempo determinado. Usted controla la duración de la validez de las credenciales.
+Cuándo crear un usuario de IAM (en lugar de un rol)
+
+Dado que un usuario de IAM es tan solo una identidad con permisos específicos en la cuenta, es posible que no sea necesario crear un usuario de IAM cada vez que necesite credenciales. En muchos casos, puede aprovechar los roles de IAM y sus credenciales de seguridad temporales en lugar de utilizar las credenciales a largo plazo asociadas con un usuario de IAM.
+
+    Ha creado una cuenta de AWS y es la única persona que trabaja en su cuenta.
+
+    Es posible trabajar con AWS utilizando las credenciales de usuario raíz de su cuenta de AWS, pero no se lo recomendamos. En cambio, le recomendamos encarecidamente crear un usuario de IAM para usted y utilizar las credenciales para ese usuario cuando trabaje con AWS. Para obtener más información, consulte IAM Prácticas recomendadas.
+
+    Otras personas del grupo tienen que trabajar en su cuenta de AWS y su grupo no utiliza ningún otro mecanismo de identidad.
+
+    Cree usuarios de IAM para las personas que necesitan acceso a sus recursos de AWS, asigne los permisos adecuados a cada usuario y proporcione a cada usuario sus propias credenciales. Recomendamos encarecidamente que no comparta credenciales entre varios usuarios.
+
+    Desea utilizar la interfaz de línea de comandos (CLI) para trabajar con AWS.
+
+    La CLI necesita las credenciales que puede utilizar para realizar llamadas a AWS. Cree un usuario de IAM y otórguele los permisos de usuario para ejecutar los comandos de la CLI que necesita. A continuación, configure la CLI en su equipo para utilizar las credenciales de la clave de acceso asociadas a ese usuario de IAM.
+
+Cuándo crear un rol de IAM (en lugar de un usuario)
+
+Cree un rol de IAM cuando se encuentre en las siguientes situaciones:
+
+Va a crear una aplicación que se ejecuta en una instancia Amazon Elastic Compute Cloud (Amazon EC2) y dicha aplicación realiza solicitudes a AWS.
+
+    No cree ningún usuario de IAM ni transfiera las credenciales del usuario a la aplicación o incruste las credenciales en la aplicación. En cambio, cree un rol de IAM para adjuntarlo a la instancia EC2 para proporcionar credenciales de seguridad temporales a las aplicaciones que se ejecutan en la instancia. Las credenciales tienen los permisos especificados en las políticas asociadas al rol. Para obtener más información, consulte Uso de un rol de IAM para conceder permisos a aplicaciones que se ejecutan en instancias Amazon EC2.
+Va a crear una aplicación que se ejecuta en un teléfono móvil y que realiza solicitudes a AWS.
+
+    No cree ningún usuario de IAM ni distribuya la clave de acceso del usuario con la aplicación. En cambio, utilice un proveedor de identidad, como Login with Amazon, Amazon Cognito, Facebook o Google, para autenticar a los usuarios y asignar los usuarios a un rol de IAM. La aplicación puede utilizar el rol para obtener credenciales de seguridad temporales que tengan los permisos especificados por las políticas asociadas al rol. Para obtener más información, consulte los siguientes temas:
+
+        Información general de Amazon Cognito en la SDK de AWS Mobile para Android Developer Guide
+
+        Información general de Amazon Cognito en la AWS Mobile SDK for iOS Developer Guide
+
+        Acerca de identidades web federadas
+
+Los usuarios de su compañía se autentican en la red de la compañía y quieren poder utilizar AWS sin necesidad de iniciar sesión de nuevo —es decir, que desea permitir a los usuarios federarse en AWS.
+
+    No cree usuarios de IAM. Configure una relación de federación entre el sistema de identidades de la compañía y AWS. Puede hacerlo de dos formas:
+
+        Si el sistema de identidad de su compañía es compatible con SAML 2.0, puede establecer una relación de confianza entre su sistema de identidad y AWS. Para obtener más información, consulte Acerca de la federación basada en SAML 2.0.
+
+        Cree y utilice un servidor proxy personalizado que convierta las identidades de los usuarios de la compañía en roles de IAM que proporcionen credenciales de seguridad temporales de AWS. Para obtener más información, consulte Creación de una dirección URL que permita a los usuarios federados obtener acceso a la Consola de administración de AWS (agente de federación personalizada).
+
+
+11. How can we monitor our infrastructure in the cloud? Consider logs and dashboards. What
+does KPI stand for?
+
+	For me a beautiful definition is :
+
+	“The KPIs that are used to measure the success of a cloud initiative should similarly be the ones used to measure impact on the overall success of the company itself,” adds Matt Podowitz (@mpodowitz), senior director at Pine Hill Group.
+
+	Key Performance Indicator ratios that target Cloud Computing adoption, comparing specific metrics of traditional IT with Cloud Computing solutions. These have been classified as cost, time, quality, and profitability indicators relating to Cloud Computing characteristics.
+
+
+	
+	Cost KPIs:
+		Operational costs: This is basically your monthly cloud computing bill. Use this metric to compare actual vs. predicted cloud usage. Since cloud billing is often broken down by user or business group, determine which departments spend the most on cloud services. An upward trend in monthly cloud costs might suggest an increasing number of applications, more complex applications or scaling more resources.
+
+	Infrastructure costs: This metric is typically the cost of remaining local data center resources and services compared to public or private cloud usage. Present this KPI as a fixed monthly cost, and compare it to the cloud's operational costs. Then, use this comparison to gauge another dimension of cloud adoption or user satisfaction.
+
+	Chargeback billing: Private cloud deployments might deduct local IT expenses from departmental budgets. While this is largely a matter of bookkeeping, viewing private cloud usage as a budget line item raises awareness of overall use and helps you rein in any excess or unnecessary use. An increase in chargeback usage can signal greater private cloud adoption.
+
+	Cost of services: SaaS offerings, such as Salesforce or Office 365, make it easy to establish costs for cloud-based services. Compare those recurring expenses against the fixed or average cost of similar in-house services. Ideally, the cost of cloud services should be competitive with -- or lower than -- traditional local deployments.
+
+
+
+Customer/user KPIs
+	If users are not satisfied with a cloud service, they might not use it, or they might seek alternative options. To prevent this, public, private and hybrid cloud deployments can include customer-focused KPIs, such as:
+
+	Time to provision: Speed is a major cloud benefit, and self-service enables non-IT users to engage resources on demand. Provisioning metrics help you assess how quickly cloud infrastructure responds. Longer provisioning times decrease user satisfaction and create issues when users require frequent and rapid workload scaling.
+	Workloads deployed: Organizations can indirectly gauge user satisfaction based on how heavily a cloud service is used. Satisfied users tend to move more workloads to the cloud.
+
+	Services in use: You can also measure cloud engagement based on the breadth of services in use. A business might start off only using a few different services, but the scope of those services likely increases over time. Broader usage is an indirect measure of user satisfaction with the cloud provider.
+	Customer satisfaction: Combine workload performance metrics with several other cloud KPIs, such as time to provision, number of workloads and MTTF, to gauge if, overall, users get expected results. You can couple these metrics with other tools, such as user satisfaction surveys or focus groups, to know whether the cloud experience is satisfactory.
+
+
+
+Service KPIs
+	Whether public, private or hybrid cloud, businesses often start with KPIs that reflect the integrity, quality and availability of those cloud services. Such service-oriented KPIs usually track the cloud availability and problem-resolution criteria.
+
+	Service KPI examples include:
+
+	Availability: Track the percentage of time that cloud services run normally, and verify that availability meets the provider's SLA. Remember, an availability of 99.9% still means that an organization cannot use the cloud to do business an average of 42 minutes per month.
+
+	Reliability: Reliability typically involves metrics such as mean time to failure (MTTF) and mean time to repair (MTTR). Falling MTTF or increasing MTTR could indicate cloud provider service problems.
+
+	New or resolved incidents: Cloud providers typically use a ticketing system to track problems, changes and help requests. Watch the number of new or resolved incidents per billing cycle, and see how incidents track over time. Increases in new incidents -- or decreases in resolved incidents -- could suggest problems with the provider.
+	Average time to resolve incidents: Service quality is frequently measured in resolution response time. Average response times from your cloud provider should remain short and well within the SLA. Increasing response times reduces the perceived quality of service.
+
+
+Infrastructure KPIs
+	Infrastructure cloud KPIs, mostly used for private cloud, include granular operational details of the servers, storage, network and other data center elements that underpin that cloud environment.
+
+	These include:
+
+	Server hardware: This KPI reports on the availability and utilization of servers, storage and networks. For example, hardware KPIs might report the number of physical or virtual CPUs, memory and utilization for each physical server. The might also track the total, available and utilized storage capacity.
+Virtual environment: Virtualization KPIs track the number of VMs and containers in the overall environment and on each physical server, as well as the memory remaining on each server.
+
+	Network infrastructure: This KPI monitors network performance attributes, such as throughput, latency and bandwidth, at strategic points in the physical network. This can reveal possible network bottlenecks that hurt private cloud workload performance.
+
+
+
+	
+	videos related:
+	https://www.youtube.com/watch?v=Si6ehIr6kjw
+
+
+
+12. Which products are there available for batch processing? And for analytics?
+
+	AWS Batch
+	Cloud Dataflow 
+	microsoft azure Batch
+
+	analytics:
+		SAP
+		 Data Lakes and Analytics on AWS
+
+
+
+13. Load balancing and service discovery. Read about these concepts and how they can be
+easily implemented in the cloud.
+
+	
+Load balancing in Cloud Computing
+
+Cloud load balancing is defined as the method of splitting workloads and computing properties in a cloud computing. It enables enterprise to manage workload demands or application demands by distributing resources among numerous computers, networks or servers. Cloud load balancing includes holding the circulation of workload traffic and demands that exist over the Internet.
+
+As the traffic on the internet growing rapidly, which is about 100% annually of the present traffic. Hence, the workload on the server growing so fast which leads to the overloading of servers mainly for popular web server. There are two elementary solutions to overcome the problem of overloading on the servers-
+
+    First is a single-server solution in which the server is upgraded to a higher performance server. However, the new server may also be overloaded soon, demanding another upgrade. Moreover, the upgrading process is arduous and expensive.
+    Second is a multiple-server solution in which a scalable service system on a cluster of servers is built. That’s why it is more cost effective as well as more scalable to build a server cluster system for network services.
+
+Load balancing is beneficial with almost any type of service, like HTTP, SMTP, DNS, FTP, and POP/IMAP. It also rises reliability through redundancy. The balancing service is provided by a dedicated hardware device or program. Cloud-based servers farms can attain more precise scalability and availability using server load balancing.
+
+Load balancing solutions can be categorized into two types –
+
+    Software-based load balancers: Software-based load balancers run on standard hardware (desktop, PCs) and standard operating systems.
+    Hardware-based load balancer: Hardware-based load balancers are dedicated boxes which include Application Specific Integrated Circuits (ASICs) adapted for a particular use. ASICs allows high speed promoting of network traffic and are frequently used for transport-level load balancing because hardware-based load balancing is faster in comparison to software solution.
+
+Major Examples of Load Balancers –
+
+    Direct Routing Requesting Dispatching Technique: This approach of request dispatching is like to the one implemented in IBM’s Net Dispatcher. A real server and load balancer share the virtual IP address. In this, load balancer takes an interface constructed with the virtual IP address that accepts request packets and it directly routes the packet to the selected servers.
+    Dispatcher-Based Load Balancing Cluster: A dispatcher does smart load balancing by utilizing server availability, workload, capability and other user-defined criteria to regulate where to send a TCP/IP request. The dispatcher module of a load balancer can split HTTP requests among various nodes in a cluster. The dispatcher splits the load among many servers in a cluster so the services of various nodes seem like a virtual service on an only IP address; consumers interrelate as if it were a solo server, without having an information about the back-end infrastructure.
+    Linux Virtual Load Balancer: It is an opensource enhanced load balancing solution used to build extremely scalable and extremely available network services such as HTTP, POP3, FTP, SMTP, media and caching and Voice Over Internet Protocol (VoIP). It is simple and powerful product made for load balancing and fail-over. The load balancer itself is the primary entry point of server cluster systems and can execute Internet Protocol Virtual Server (IPVS), which implements transport-layer load balancing in the Linux kernel also known as Layer-4 switching.
+
+////////
+
+load balancing:
+	Load balancing is a technique used to distribute workloads uniformly across servers or other compute resources to optimize network efficiency, reliability and capacity. Load balancing is performed by an appliance -- either physical or virtual -- that identifies in real time which server in a pool can best meet a given client request, while ensuring heavy network traffic doesn't unduly overwhelm a single server.
+
+In addition to maximizing network capacity and performance, load balancing provides failover. If one server fails, a load balancer immediately redirects its workloads to a backup server, thus mitigating the impact on end users.
+
+Load balancing is usually categorized as supporting either Layer 4 or Layer 7. Layer 4 load balancers distribute traffic based on transport data, such as IP addresses and Transmission Control Protocol (TCP) port numbers. Layer 7 load-balancing devices make routing decisions based on application-level characteristics that include HTTP header information and the actual contents of the message, such as URLs and cookies. Layer 7 load balancers are more common, but Layer 4 load balancers remain popular, particularly in edge deployments.
+How load balancing works
+
+Load balancers handle incoming requests from users for information and other services. They sit between the servers that handle those requests and the internet. Once a request is received, the load balancer first determines which server in a pool is available and online and then routes the request to that server. During times of heavy loads, a load balancer can dynamically add servers in response to spikes in traffic. Conversely, they can drop servers if demand is low.
+
+A load balancer can be a physical appliance, a software instance or a combination of both. Traditionally, vendors have loaded proprietary software onto dedicated hardware and sold them to users as stand-alone appliances -- usually in pairs, to provide failover if one goes down. Growing networks require purchasing additional and/or bigger appliances.
+
+In contrast, software load balancing runs on virtual machines (VMs) or white box servers, most likely as a function of an application delivery controller (ADC). ADCs typically offer additional features, like caching, compression, traffic shaping, etc. Popular in cloud environments, virtual load balancing can offer a high degree of flexibility -- for example, enabling users to automatically scale up or down to mirror traffic spikes or decreased network activity.
+	
+	Load-balancing methods
+
+Load-balancing algorithms determine which servers receive specific incoming client requests. Standard methods are as follows:
+
+    The hash-based approach calculates a given client's preferred server based on designated keys, such as HTTP headers or IP address information. This method supports session persistence, or stickiness, which benefits applications that rely on user-specific stored state information, such as checkout carts on e-commerce sites.
+    The least-connections method favors servers with the fewest ongoing transactions, i.e., the "least busy."
+    The least-time algorithm considers both server response times and active connections -- sending new requests to the fastest servers with the fewest open requests.
+    The round robin method -- historically, the load-balancing default -- simply cycles through a list of available servers in sequential order.
+
+Formulas can vary significantly in sophistication and complexity. Weighted load-balancing algorithms, for example, also take into account server hierarchies -- with preferred, high-capacity servers receiving more traffic than those assigned lower weights.
+
+/////////
+
+	Service discovery is the automatic detection of devices and offered services over a network. Discovery, which minimizes configuration efforts for administrators, is commonly found in microservice architectures and containerization platforms. Microservices, especially those that are cloud-based, will use service discovery because it can be difficult to detect network locations. For example, service instances are dynamically assigned network locations. Tools which include service discovery features include HashiCorp's Counsul deployment and configuration tool, the Zabbix monitoring software and the Kubernetes containerization platform.
+
+Service discovery functions by using a common network protocol, which allows agents to use each other’s services. Protocols used include Dynamic Host Configuration Protocol (DHCP), DNS Service Discovery (DNS-SD) and Service Location Protocol (SLP).
+
+The database which contains service instances and network locations is called the service registry. The service registry is made up of server clusters containing databases of available service instances, which should be continually kept up to date.
+
+Service discovery will use two different discovery options pertaining to either the data center initiating discovery, or the service actively identifying itself to the data center. These options are known as client-side or server-side. In client-side discovery, the client service is responsible for determining network locations of service instances. The client accomplishes this by querying a service registry. This service discovery option benefits from being straightforward.
+
+Server‑side discovery allows each client to locate a service using a load balancer. In turn, the load balancer will query the service registry and route requests to a service instance. Kubernetes takes advantage of this process. This option benefits from simplifying the requests of the clients.
+
+Service instances or devices are also registered in one of two ways, the self‑registration pattern or the third-party registration pattern. These patterns allow other devices to find the service. In the self‑registration pattern, a service will register itself with a service registry. The third-party registration pattern uses a service registrar, a separate tool which can ID the service, to register the service. The registrar will record changes to an environment of instances, so if a new device or service is detected, the registrar can then add the service or device to the service registry.
+
+
+14. Real-time queues. Investigate what each of the providers offer related to this, limitations,
+costs, etc.
+
+	Amazon Simple Queue Service (Amazon SQS) is a distributed message queuing service introduced by Amazon.com in late 2004. It supports programmatic sending of messages via web service applications as a way to communicate over the Internet.
+
+https://www.youtube.com/watch?v=4Z74luiE2bg
+
+https://www.youtube.com/watch?v=n9pMxdUbBGs
+
+
+
+
+15. How can we make deployments to the cloud? Investigate tools such as CloudFormation and
+Terraform and name the advantages of declarative languages and immutable infrastructures.
+Consider different environments (sandbox, dev, qa, prod, etc)
+
+	CloudFormation
+This is the native AWS tool for orchestration of all AWS resources. It allows you to describe the resources you want to provision in simple code, which means that you do not need to be a full-fledged programmer to understand how to create your deployment—it is simple enough for even administrators to grasp.
+
+CloudFormation gives you the option of writing your templates from scratch, but it also has a graphical user interface (or GUI) that allows you to simply drag, drop, and design the resources you want to deploy, as shown below.
+
+	CloudFormation only manages AWS resources. This means that if you have to integrate with a third-party service or tool that is not provided by AWS, you will need to incorporate another tool.
+Any new service or offering that is released by AWS will by default come with the relevant resources that you need to deploy it with CloudFormation, and will usually be there from day one.
+You manage different stages of your deployment with CloudFormation. For example: you deploy version one of your application, and when version two is ready, you can update the resources that you have deployed by updating the stack with new parameters or options.
+You cannot plan dry-runs or run what-if scenarios on your infrastructure with CloudFormation.
+Cloudformation is integrated into the rest of AWS (as are all AWS services). With the seamless integration of the rest of the AWS services such as alerts, logs, and notifications, you do not have to do any of your own “wiring” to make things work together.
+
+
+Terraform
+	There are a number of tools that allow you to provision cloud infrastructure (AWS in this case), and Terraform is one of these tools. Terraform has a wide variety of resources that can be provisioned using the AWS API’s. Terraform is an open-source tool created by HashiCorp. HashiCorp has created a number of infrastructure tools over the years, all of which are focused on ease of use, and they can interact with a number of platforms.
+
+	Of course, there are also some drawbacks and benefits to using a tool such as Terraform:
+
+	Terraform is a cross-platform tool, which means that it does not only interact with AWS—it can also interact with a multitude of other platforms, such as GCE, VMware, OpenStack, and Azure.
+	Terraform can interact with a number of other services that are totally unrelated to a cloud provider like AWS. For example, Github, PagerDuty, and Consul can be integral parts of your solution, regardless of which cloud you are using.
+	It can take a significant amount of time for a new AWS resource or service to be released to the public, so until that resource is available, you can’t use Terraform to provision it. After all, it takes time to write the code, and as an open source product, it depends on the availability and time of the people that contribute to the product.
+	Terraform uses a high-level configuration language that is very easy to understand, but it should not be mistaken for a full scripting language because that is not what it was designed to do.
+
+
+
+
+
+
+
+
