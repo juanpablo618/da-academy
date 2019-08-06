@@ -1,0 +1,29 @@
+As this is a maven-based project,
+there is actually no need to install and setup Apache Spark on your machine.
+When we run this project, a runtime instance of Apache Spark will be started
+and once the program has done executing, it will be shutdown.
+
+To see a complete Dependency Tree for a project:
+
+mvn dependency:tree
+
+
+Apache Spark is written in Scala itself.
+
+
+
+to run:
+
+1 clean folder:
+rm -rf CountData/
+
+
+
+2
+not run with terminal from ide, use the basic terminal
+
+mvn exec:java -Dexec.mainClass=com.juanCuello.sparkdemo.WordCounter -Dexec.args="input.txt" -e
+
+mvn exec:java -Dexec.mainClass=com.juanCuello.sparkdemo.WordCounter -Dexec.args="audit-field-validation.AR-IT02939.log" -e
+    -e = to see some errors
+

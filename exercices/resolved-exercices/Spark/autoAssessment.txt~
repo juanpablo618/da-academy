@@ -4,10 +4,38 @@ manera de representar las operaciones sobre los rdd.
 
 Spark soporta el flujo de datos acíclico. Cada tarea de Spark crea un DAG de etapas de trabajo para que se ejecuten en un determinado cluster.
 
+
+DAG refers to Directed Acyclic Graph. Here the word "directed" means that lit is a finite directed graph with no directed cycles.
+There are finite numbers of vertices and edges, where each edge is directed from one vertex to another. it contains sequence of vertices such that 
+every edge is directed from earlier to later in the sequence. 
+
+
+
 2. What is an RDD? 
 	resilient distributed dataset.
 	Apache Spark mejora con respecto a los demás sistemas en cuanto a la computación en memoria. RDD permite a los programadores realizar operaciones sobre grandes cantidades de datos en clusters de una manera rápida y tolerante a fallos. Surge debido a que las herramientas existentes tienen problemas que hacen que se manejen los datos ineficientemente a la hora de ejecutar algoritmos iterativos y procesos de minería de datos. En ambos casos, mantener los datos en memoria puede mejorar el rendimiento considerablemente.
 	
+
+RDD:
+An RDD stands for Resilient Distributed Datasets. It is Read-only partition collection of records. RDD is the fundamental data structured of Spark. It Allows a programmer to perform in-memory computations on large clusters in a fault-tolerant manner.
+
+resilient: i.e fault-tolerant with the help of RDD lineage graph(DAG) and so able to recompute missing or damaged partitions due to node failures.
+
+Distributed: Since data resides on multiple nodes.
+
+Dataset: represents records of the data you work with. The user can load the data set externally which can be either json file, csv file, text file or database via JDBC with no specific data structure.
+
+
+
+An operation is a method, which can be applied on RDD to accomplish certain task. There are two types of RDD operations:
+Action and Transformation.
+
+Transformation : are kind of operations which transforms the RDD data from one form to another. And when you apply this operation on any RDD, you will
+get a new RDD with transformed data (RDD in Spark are immutable). Operations like map , filter flatMap are transformations.
+
+Actions: Transformations create RDDs from each other, but when we want to work with the actual dataset, at that point is performed.
+When any action is triggered, new Rdd is not formed(unlike transformation) Thus, actions are rdd operations that will give non-RDD
+values. The output of actions are stored to drivers or to the external storage system.
 
 3. Which are the benefits of Spark over MapReduce? 
 Apache Spark mejora con respecto a los demás sistemas en cuanto a la computación en memoria. RDD permite a los programadores realizar operaciones sobre grandes cantidades de datos en clusters de una manera rápida y tolerante a fallos. Surge debido a que las herramientas existentes tienen problemas que hacen que se manejen los datos ineficientemente a la hora de ejecutar algoritmos iterativos y procesos de minería de datos. En ambos casos, mantener los datos en memoria puede mejorar el rendimiento considerablemente.
@@ -187,6 +215,15 @@ Learning Spark: Lightning-Fast Big Data Analysis
 	Since Spark does not perform immediate execution based on transformation, it is called lazy evaluation.
 
 
+what I understand by lazy evaluation:
+Means that the spark execution will not start until an action is triggered. In spark, lazy evaluation comes into picture when spark transformations occur.
+
+Transformations are lazy in nature. when some operation in RDD is called, it does not execute immediately. Spark maintains the record of all operations being called
+through directed of all operations being called through directed acylic graph. Spark RDD can be thought as the data, that we built up through transformation. 
+Since transformations are lazy in nature, so we can execute operation any time by calling an action on data. Thus, in lazy evaluation data is not loaded until
+it is necessary.
+
+
 -------------------------------------------------
 if you executed every transformation eagerly, what does that mean? Well, it means you will have to materialize that many intermediate datasets in memory. This is evidently not efficient -- for one, it will increase your GC costs. (Because you're really not interested in those intermediate results as such. Those are just convnient abstractions for you while writing the program.) So, what you do instead is -- you tell Spark what is the eventual answer you're interested and it figures out best way to get there.
 
@@ -215,6 +252,21 @@ private def mapDateTime2Date(v: (LocalDateTime, Long)): (LocalDate, Long) = {
 explanation:
 	The Driver process will run on the Master node of your cluster and the Executor processes run on the Worker nodes. 
 	You can increase or decrease the number of Executor processes dynamically depending upon your usage but the Driver process will exist throughout the lifetime of your application.
+
+
+
+some interesting things: 
+
+There are two types of "deploy modes" in spark: Client Mode and Cluster Mode. if the driver component of spark job runs on the machine from which job is submitted, in that then the deploy mode is basically 
+"cluster mode" Here spark job will launch "driver" component inside the cluster.
+
+
+Spark need not be installed when running a job under YARN or Mesos because Spark can execute on top of YARN or Mesos clusters without affecting any change to the cluster.
+
+
+Spark ui is available on port 4040 of the driver mode.
+hhtp://localhost:4040
+
 
 
 

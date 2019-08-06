@@ -131,6 +131,11 @@ word), with descending order.
 
 
 
+MyCSVData = LOAD '/user/demo/movieJuan.csv' using PigStorage(',') AS (color:chararray, director_name:chararray, num_critic_for_reviews:chararray, duration:chararray, director_facebook_likes:chararray, actor_3_facebook_likes:chararray, actor_2_name:chararray, actor_1_facebook_likes:chararray, gross:chararray, genres:chararray, actor_1_name:chararray, movie_title:chararray, num_voted_users:chararray, cast_total_facebook_likes:chararray, actor_3_name:chararray, facenumber_in_poster:chararray, plot_keywords:chararray, movie_imdb_link:chararray, num_user_for_reviews:chararray, language:chararray, country:chararray, content_rating:chararray, budget:chararray, title_year:chararray, actor_2_facebook_likes:chararray, imdb_score:chararray, aspect_ratio:chararray, movie_facebook_likes:chararray);
+E6 = FILTER MyCSVData BY color == 'Color';
+cantidad = GROUP E6 BY color;
+dump cantidad;
+
 
 
 

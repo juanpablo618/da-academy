@@ -292,8 +292,6 @@ Partition Tolerance
 
 10. What are the Consistency levels?
 
-
-
 The guarantee that any transactions started in the future necessarily see the effects
 of other transactions committed in the past●
 
@@ -805,10 +803,6 @@ common features:
 	creating these denormalizations reduces query and processing time because only one
 	document is read, and the query doesn’t have to process and join together many records in
 	order to provide the single answer the user is looking for.
-
-
-
-
 
 15. How do Columnar stores work? What are the benefits? What are the weaknesses? What are some of the common features?
 

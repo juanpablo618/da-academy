@@ -12,7 +12,6 @@ foo	3
 labs	1
 quux	2
 
-
 on http://demo.gethue.com
 
 a = load '/user/demo/movieJuan.csv' as line;
@@ -26,7 +25,6 @@ DUMP E6;
 a = load '/user/demo/movieJuan.csv' AS (title_year:int, actor_2_facebook_likes:int, movie_facebook_likes:int);
 E6 = FILTER a BY title_year == 2012 ;
 DUMP E6;
-
 
 student = LOAD '/user/demo/student_data.txt' 
    USING PigStorage(',')
@@ -114,21 +112,26 @@ Dump student_count;
 • ¿In which year were more films released?
 
 • ¿In which year were less films released?
+
 • Create a ranking of actors including the following:
+
 • amount of movies where the actor performed
+
 • his/her influence in social networks
+
 • his/her best movie
+
 • ordered by number of performances
+
 • Create a tag cloud using movies tags or keywords. To do this, is enough with
 creating and showing a word ranking and its weight (number of appareances of the
 word), with descending order.
+
 • ¿Which movie gender raised the most for each year?
 • ¿Which movie gender raised the least for each year?
 • Show the actors ranking ordered by performances and popularity
 • ¿Which movie genre do people like the most?
 • ¿Which are the 5 directors with the best reputation?
-
-
 
 
 MyCSVData = LOAD '/user/demo/movieJuan.csv' using PigStorage(',') AS (color:chararray, director_name:chararray, num_critic_for_reviews:chararray, duration:chararray, director_facebook_likes:chararray, actor_3_facebook_likes:chararray, actor_2_name:chararray, actor_1_facebook_likes:chararray, gross:chararray, genres:chararray, actor_1_name:chararray, movie_title:chararray, num_voted_users:chararray, cast_total_facebook_likes:chararray, actor_3_name:chararray, facenumber_in_poster:chararray, plot_keywords:chararray, movie_imdb_link:chararray, num_user_for_reviews:chararray, language:chararray, country:chararray, content_rating:chararray, budget:chararray, title_year:chararray, actor_2_facebook_likes:chararray, imdb_score:chararray, aspect_ratio:chararray, movie_facebook_likes:chararray);

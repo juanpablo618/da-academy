@@ -134,7 +134,8 @@ Yes, through Technologies like Apache Kafka, Apache Flume, and Apache Spark it i
 
 What is Hadoop Federation?
 Hadoop Distributed FileSystem-HDFS is the world’s most reliable storage system. HDFS is a FileSystem of Hadoop designed for storing very large files.
-HDFS architecture follows master /slave topology. In which master is NameNode and slaves is DataNode. Namenode stores meta-data i.e. number of blocks, their location, replicas. This meta-data is available in memory in the master for faster retrieval of data. NameNode maintains and manages the slave nodes, and assigns tasks to them.
+HDFS architecture follows master /slave topology. 
+In which master is NameNode and slaves is DataNode. Namenode stores meta-data i.e. number of blocks, their location, replicas. This meta-data is available in memory in the master for faster retrieval of data. NameNode maintains and manages the slave nodes, and assigns tasks to them.
 HDFS Federation enhances an existing HDFS architecture. In prior HDFS architecture for entire cluster allows only single namespace. In that configuration, Single NameNode manages namespace. If NameNode fails, the cluster as a whole would be out of services. The cluster will be unavailable until the NameNode restarts or brought on a separate machine.
 Hadoop Federation overcomes this limitation by adding support for many NameNode/Namespaces to HDFS.
 Read: Disk Balancer in HDFS
@@ -157,11 +158,11 @@ Read: HDFS Architecture in detail
 16. What are the scheduler options available in YARN?
 
 
-FIFO scheduler (default in apache distribution)
+	FIFO scheduler (default in apache distribution)
 
-Capacity Scheduler (hortonworks Default)
+	Capacity Scheduler (hortonworks Default)
 
-Fair Share scheduler (Cloudera Default)
+	Fair Share scheduler (Cloudera Default)
 
 
 17. What is a block in HDFS?
@@ -170,17 +171,30 @@ http://hadooptutorials.co.in/tutorials/hadoop/hadoop-fundamentals.html
 A Hadoop block is a file on the underlying filesystem. Since the underlying filesystem stores files as blocks, one Hadoop block may consist of many blocks in the underlying file system. Blocks are large. They default to 64 megabytes each and most systems run with block sizes of 128 megabytes or larger.
 
 
-
 18. Explain how do ‘map’ and ‘reduce’ works.
 Namenode takes the input and divide it into parts and assign them to data nodes. These datanodes process the tasks assigned to them and make a key-value pair and returns the intermediate output to the Reducer. The reducer collects this key value pairs of all the datanodes and combines them and generates the final output.
-
 
 
 19. What are the common input formats in Hadoop?
 https://www.quora.com/What-are-the-most-common-Input-Formats-in-Hadoop
 
 
-
 20. What is the use of jps command in Hadoop?
 
 https://www.quora.com/What-is-JPS-in-Hadoop
+
+	Is a command is used to check all the Hadoop daemons like NameNode, DataNode, ResourceManager, NodeManager etc. which are running on the machine.
+
+If you are able to see the Hadoop daemons running after executing the jps command, we can safely assume that the Hadoop cluster is running.
+
+Some of the basic Hadoop daemons are as follows:
+
+Name node
+
+Data node
+
+Resource manager
+
+Node manager
+
+

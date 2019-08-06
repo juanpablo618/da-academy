@@ -16,6 +16,28 @@ every edge is directed from earlier to later in the sequence.
 	Apache Spark mejora con respecto a los demás sistemas en cuanto a la computación en memoria. RDD permite a los programadores realizar operaciones sobre grandes cantidades de datos en clusters de una manera rápida y tolerante a fallos. Surge debido a que las herramientas existentes tienen problemas que hacen que se manejen los datos ineficientemente a la hora de ejecutar algoritmos iterativos y procesos de minería de datos. En ambos casos, mantener los datos en memoria puede mejorar el rendimiento considerablemente.
 	
 
+RDD:
+An RDD stands for Resilient Distributed Datasets. It is Read-only partition collection of records. RDD is the fundamental data structured of Spark. It Allows a programmer to perform in-memory computations on large clusters in a fault-tolerant manner.
+
+resilient: i.e fault-tolerant with the help of RDD lineage graph(DAG) and so able to recompute missing or damaged partitions due to node failures.
+
+Distributed: Since data resides on multiple nodes.
+
+Dataset: represents records of the data you work with. The user can load the data set externally which can be either json file, csv file, text file or database via JDBC with no specific data structure.
+
+
+Spark RDD can also be cached and manually partitioned. 
+
+
+WHAT DO WE NEED RDD IN SPARK?
+
+the key motivations behind the concept of RDD are:
+
+Iterative algorithms.
+Interactive data mining tools.
+DMS (Distributed shared memory) is a very general abstraction, but this generality makes it harder to implement in an efficient and fault tolerant manner on commodity clusters.
+
+
 An operation is a method, which can be applied on RDD to accomplish certain task. There are two types of RDD operations:
 Action and Transformation.
 

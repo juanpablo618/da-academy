@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="843b64bd-edeb-44b1-a546-7d180de37506" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/juanCuello/Domain/Record.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/juanCuello/sparkdemo/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_carrotsearch_hppc_0_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_scala_2_12_2_6_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_github_luben_zstd_jni_1_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_twitter_chill_2_12_0_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_univocity_univocity_parsers_2_7_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_vlkan_flatbuffers_1_2_0_3f79e055.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__io_airlift_aircompressor_0_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_arrow_arrow_format_0_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_arrow_arrow_memory_0_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_arrow_arrow_vector_0_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_orc_orc_core_nohive_1_5_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_orc_orc_mapreduce_nohive_1_5_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_orc_orc_shims_1_5_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_parquet_parquet_column_1_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_parquet_parquet_common_1_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_parquet_parquet_encoding_1_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_parquet_parquet_format_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_parquet_parquet_hadoop_1_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_parquet_parquet_jackson_1_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_spark_spark_catalyst_2_12_2_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_spark_spark_core_2_12_2_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_spark_spark_kvstore_2_12_2_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_spark_spark_launcher_2_12_2_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_spark_spark_network_common_2_12_2_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_spark_spark_network_shuffle_2_12_2_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_spark_spark_sketch_2_12_2_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_spark_spark_sql_2_12_2_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_spark_spark_tags_2_12_2_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_spark_spark_unsafe_2_12_2_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_xbean_xbean_asm6_shaded_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_codehaus_janino_commons_compiler_3_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_codehaus_janino_janino_3_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_json4s_json4s_ast_2_12_3_5_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_json4s_json4s_core_2_12_3_5_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_json4s_json4s_jackson_2_12_3_5_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_json4s_json4s_scalap_2_12_3_5_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_lz4_lz4_java_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_scala_lang_modules_scala_parser_combinators_2_12_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_scala_lang_modules_scala_xml_2_12_1_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_tukaani_xz_1_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_6_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_6_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_6_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_6_7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_6_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_6_7_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_thoughtworks_paranamer_paranamer_2_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__com_thoughtworks_paranamer_paranamer_2_8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__commons_codec_commons_codec_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_avro_avro_1_7_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_avro_avro_1_8_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_commons_commons_compress_1_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_commons_commons_compress_1_8_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_scala_lang_scala_reflect_2_11_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_scala_lang_scala_reflect_2_12_8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/libraries/Maven__org_tukaani_xz_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/streaming-twitter-custom-receiver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/streaming-twitter-custom-receiver.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/target/classes/org/sparkexample/TwitterReceiver$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/target/classes/org/sparkexample/TwitterReceiver$StreamListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/target/classes/org/sparkexample/TwitterReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/target/surefire-reports/TEST-TwitterStreamTaskTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/target/surefire-reports/TwitterStreamTaskTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../streaming-twitter-custom-receiver/target/test-classes/TwitterStreamTaskTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../big_data_introduction/basicCommandsToHadoop.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../big_data_introduction/basicCommandsToHadoop.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../big_data_introduction/basicMapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../big_data_introduction/basicMapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../linux/AutoAssessmentWeek1Storage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../linux/AutoAssessmentWeek1Storage.txt" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Readme">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/juanCuello/sparkdemo/WordCounter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/juanCuello/sparkdemo/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/parquet/parquet-column/1.10.1/parquet-column-1.10.1.jar!/org/apache/parquet/it/unimi/dsi/fastutil/Function.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/juanCuello/Domain/Record.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>excellent</find>
+      <find>journaldev</find>
+      <find>juan</find>
+      <find>JD</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/journaldev/sparkdemo/input.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/journaldev/sparkdemo/WordCounter.java" />
+        <option value="$PROJECT_DIR$/input.txt" />
+        <option value="$PROJECT_DIR$/src/test/java/com/juanCuello/sparkdemo/WordCounterTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/juanCuello/sparkdemo/WordCounter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/juanCuello/sparkdemo/TextSearch.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/juanCuello/sparkdemo/JavaTC.java" />
+        <option value="$PROJECT_DIR$/Readme" />
+        <option value="$PROJECT_DIR$/src/main/java/com/juanCuello/Domain/Record.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/juanCuello/sparkdemo/Main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="java-word-count" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1919" />
+    <option name="y" value="24" />
+    <option name="width" value="1602" />
+    <option name="height" value="853" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Spark-WordCount-BASIC" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-word-count" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="Spark-WordCount-BASIC" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-word-count" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Spark-WordCount-BASIC" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-word-count" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Spark-WordCount-BASIC" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-word-count" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Spark-WordCount-BASIC" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-word-count" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Spark-WordCount-BASIC" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-word-count" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="juanCuello" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Spark-WordCount-BASIC" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-word-count" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="juanCuello" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Domain" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Spark-WordCount-BASIC" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-word-count" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="juanCuello" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sparkdemo" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563695948876" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../streaming-twitter-custom-receiver" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.juanCuello.sparkdemo" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.juanCuello.sparkdemo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.WordCounter">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaTC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.juanCuello.sparkdemo.JavaTC" />
+      <module name="java-word-count" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.juanCuello.sparkdemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordCounter" type="Application" factoryName="Application" singleton="true" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="10" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.juanCuello.sparkdemo.WordCounter" />
+      <module name="java-word-count" />
+      <option name="PROGRAM_PARAMETERS" value="input.txt" />
+      <option name="ENABLE_SWING_INSPECTOR" value="true" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.juanCuello.sparkdemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WordCounter" />
+        <item itemvalue="Application.JavaTC" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="843b64bd-edeb-44b1-a546-7d180de37506" name="Default" comment="" />
+      <created>1523086443573</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1523086443573</updated>
+      <workItem from="1523086445653" duration="3131000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3131000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1919" y="24" width="1602" height="853" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49878934" visible="true" weight="0.26769626" />
+      <window_info id="Structure" order="1" sideWeight="0.50121063" side_tool="true" weight="0.15642458" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3647059" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="SonarLint" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32857144" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32954547" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.32960895" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/journaldev/sparkdemo.java" />
+    <entry file="file://$PROJECT_DIR$/CountData/part-00000" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/1.4.0/spark-core_2.11-1.4.0.jar!/org/apache/spark/SparkConf.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/1.4.0/spark-core_2.11-1.4.0.jar!/org/apache/spark/api/java/AbstractJavaRDDLike.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/juanCuello/sparkdemo/TextSearch.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/juanCuello/sparkdemo/JavaTC.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/juanCuello/sparkdemo/WordCounterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Spark-WordCount-BASIC.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audit-field-validation.AR-IT02939.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readme">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/juanCuello/sparkdemo/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/parquet/parquet-column/1.10.1/parquet-column-1.10.1.jar!/org/apache/parquet/it/unimi/dsi/fastutil/Function.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/juanCuello/Domain/Record.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/juanCuello/sparkdemo/WordCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>java-word-count</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,6 +1,11 @@
 # DA Academy
 ## Python - Linux - Storage - Big data - Cloud Ecosystem
 
+
+![Globant](assets/globant.jpg)
+
+## Welcome to the academy, learning time has begun
+
 ![Workout](assets/workout.gif)
 
 Please, use this repository as a base for you training phase. The idea is to
@@ -53,7 +58,7 @@ exercises.
 
 ### Objective
 
-This course teaches the basics of Data Architecture with the complementary stack needed for a real project.
+This course teaches the basics of Data Architecture with the complementary stack needed for a real project. More information can be found within the [academy site](https://sites.google.com/globant.com/da-academy/home).
 
 → [index](#index)
 
@@ -61,11 +66,22 @@ This course teaches the basics of Data Architecture with the complementary stack
 
 The training is aimed to beginners. A basic knowledge on OOP and databases is desired, though. Any additional knowledge is beneficial.
 
+The goal of the acade,y is to gain data related skills. Globant will keep a record of the evaluation score of each participant, and will take it into account for future positions.
+
+*Note: The completion of the course does not mean you will become a Data Architect automatically, nor will you be assigned to a Data project immediately.*
+
 → [index](#index)
 
 ### Duration
 
 20 days ( 40 hours - week ) / 40 days (20 hours - week).
+
+→ [index](#index)
+
+### Technical Assistance
+
+You can contact other Training participants or any available tutor if you need
+technical assistance. Communications will take place over [Globant Slack](https://globant.slack.com) on our own channel.
 
 → [index](#index)
 
@@ -87,6 +103,10 @@ The training is aimed to beginners. A basic knowledge on OOP and databases is de
 3. You can choose whichever IDE you want, it could be [PyCharm](https://www.jetbrains.com/pycharm/), [Visual Studio Code](https://code.visualstudio.com/).
 
 4. Slack Account + headset (For eventual zoom audio calls). Please, upload a profile photo to your Slack account so we can easily associate your face with your name.
+
+5. Create your own [GitHub](https://github.com/) account. Follow this [guideline](https://help.github.com/articles/set-up-git) to setup your account. Also you can read further about Git in [Try Git](https://try.github.io/levels/1/challenges/1) or [Learn Git Branching](http://pcottle.github.io/learnGitBranching/).
+
+6. Fork this repo https://github.corp.globant.com/big-data-studio/da-academy to use as a base to host the project code. Read [this](https://help.github.com/articles/fork-a-repo/) for instructions.
 
 → [index](#index) 
 
@@ -118,7 +138,49 @@ The Academy will be filled up on a *first-come, first-serve* basis.
 
 Applicants may be placed on a waiting list and notified of acceptance when space becomes available on future iterations of the training, which will be held on a monthly basis. 
 
+Accepted students will have access to premium udemy courses on the program study track, support from Globant's subject experts, weekly check-up meetings, code-reviews of the practices, and a final evaluation which will be stored on Globant profile's files. 
+
+*If you are waiting for your acceptance email, you can start with the free-part of the training course.*
+
+[Link to Registration form](https://docs.google.com/forms/d/e/1FAIpQLSe_FoHNnmHnn3a-Sh9L8rl1SDZsWKrshiwe4v5R0wZOdi9OmQ/viewform)
+
+
+### Learning Days ###
+
+During each week you will grab the fundamentals of the key building blocks for usual DA challenges.
+
+On each topic you will have to:
+
+1. ### Enroll courses: ###
+Each week counts with a special course link which you can visit to enroll it.
+
+2. ### Read: ###
+We will provide you with documentation related with current sprint content so you can have a background reference, guide and examples to complete the following practice.
+
+3. ### Practice: ###
+You will implement the previously gathered knowledge in simple coding/setting up activities.
+Most important task numbers are listed in the "*Key Points*" section for each day and they should get most of your attention; if you feel you don’t have enough time to complete all tasks, start with these ones when possible.
+
+4. ### Commit: ###
+You will commit all your code on a daily basis, when you finish your practice.
+
 → [index](#index)
+
+### Individual performance ###
+
+After each lecture, you will be given several related exercices which act like a bonus. 
+
+General requirements:
+
+1. Corrections will be made against your fork **master** branch. You can create any additional branch for testing purposes, but ensure your latest changes are in the main branch.
+
+2. Exercices should be solved **individually**.   
+
+3. Extra **documentation** is recommended (e.g., create a *spring_comments.txt* file indicating what has been done and where within your project).
+
+4. After each topic, you will find two types of exercices. The **Practice** section is considered mandatory for everyone. The **Challenges!!** section is optional (of course, try to tackle it too. Every additional task acts like a bonus).
+
+5. There's an **Auto assessment** section after each subject which will help you understand how you're doing. If this becomes too difficult, then you should go back and make a second read. This said, try not to leave concepts/exercices for the end. Every subject is important and it helps (in some way, it is required) to understand the following subject.  
 
 ### Prepare your environment ###
 
@@ -138,7 +200,7 @@ Software development with Python
 
 #### Python
 
-1. [Acamica Python Training](https://acamica.com/cursos/485/)
+1. [Acamica Python Training](https://globant.acamica.com/cursos/485/)
 
 2. https://www.udemy.com/python-programming-beginners/
 
@@ -218,7 +280,7 @@ Add additional methods:
 - A method to show the matrix on screen as a matrix.
 
 A 3x6 matrix can be defined at the class instantiation time like this:
-	Matrix([[1,2,3,4,5,6],
+Matrix([[1,2,3,4,5,6],
 	[10,11,12,13,14,15],
 	[-1,-2,-3,-4,-5,-6]])
 
@@ -291,7 +353,7 @@ To begin with, we can classify data models in two big groups: relational and NoS
 
 1. [Intro to Relational Databases](https://www.udacity.com/course/intro-to-relational-databases--ud197)
 
-2. [NoSQL - Acamica](https://acamica.com/cursos/412/)
+2. [NoSQL - Acamica](https://globant.acamica.com/cursos/412/)
 
 3. [NoSQL Fundamentals Guide](https://docs.google.com/document/d/1d8DYf6F9p74Cm5hvPwo6njdGazu01y4sqZG1mmIxLWY/edit)
 
@@ -591,7 +653,7 @@ In this section, you will learn some of the basics of AWS and GCP, being able to
 
 4. [AWS Cloud Practitioner Essentials: Architecting](https://www.aws.training/learningobject/wbc?id=16332)
 
-5. [Learn GCP: Google Cloud Data Engineer Express Course!](https://udemy.com/organization-manage/insight/1510852/)
+5. [Learn GCP: Google Cloud Data Engineer Express Course!](https://globant.udemy.com/organization-manage/insight/1510852/)
 
 → [index](#index)
 
@@ -731,3 +793,9 @@ Commit your practice code.
 → [index](#index)
 
 ---
+
+## UPON TRAINING COMPLETION
+
+Please do not forget to fill in our feedback form to help us improve the training: [link](https://docs.google.com/forms/d/e/1FAIpQLScI2a9bJLz3p3XboqL7-Yp7KpLtSm6hHdfSmeGbpAXxbKBWuw/viewform)
+
+→ [index](#index)
